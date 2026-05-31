@@ -1,0 +1,69 @@
+{
+  "label": "2026-05-31",
+  "date": "2026-05-31",
+  "generated_at": "2026-05-31T20:42:48",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202605/31/2605.27659v1-transferable-reinforcement-learning-via-probabilistic-latent-embeddings-and-dynamic-policy-adaptation-for-sim-to-real-deployment",
+      "section": "deep",
+      "title_en": "Transferable Reinforcement Learning via Probabilistic Latent Embeddings and Dynamic Policy Adaptation for Sim-to-Real Deployment",
+      "authors": "Gengyue Han, Yiheng Feng",
+      "date": "2026-05-26",
+      "pdf": "https://arxiv.org/pdf/2605.27659v1",
+      "score": "8.0",
+      "evidence": "通过概率潜在嵌入和动态策略适应实现策略迁移",
+      "tldr": "针对深度强化学习从模拟器部署到真实世界时的Sim2Real差距导致性能下降和安全问题，提出一种基于概率潜在嵌入和动态策略适应的迁移框架。该框架利用元学习推断环境潜在上下文，并结合分布强化学习根据估计精度动态调整风险水平，在早期部署阶段优先保障安全，随后通过快速策略适应提升效率。方法在保持安全的同时有效缩小仿真与现实的性能差距。",
+      "tags": "query:opd",
+      "abstract_en": "Due to limited resources and public safety concerns, deep reinforcement learning (RL) agents for many cyber-physical systems (e.g., autonomous vehicles) are first trained in simulators. However, when deployed in real world environments, they often suffer from performance degradation or safety violations because of the inevitable Sim2Real gap. Existing zero-shot approaches, such as robust safe RL and domain randomization, mitigate this issue but typically at the cost of degraded performance or residual safety risks when experiencing unmodeled system dynamics. To address these limitations, we propose a novel reinforcement learning framework that enables safe and efficient policy transfer via probabilistic latent embeddings and dynamic policy adaptation. We consider a family of Constrained Markov Decision Processes (CMDPs) under different environment contexts. By leveraging latent context variable in meta-RL, the proposed framework infers the latent representation of the environment from simulated experiences. Furthermore, it incorporates a distributional RL formulation, which allows risk levels of the deployed policy to be adjusted dynamically, based on the estimation accuracy of the latent context variable. This strategy promotes safety at the early deployment stage and improves efficiency through fast policy adaptation under the Sim2Real gap.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/31/2605.24810v1-cross-domain-energy-guided-diffusion-generation-for-off-dynamics-reinforcement-learning",
+      "section": "quick",
+      "title_en": "Cross-Domain Energy-Guided Diffusion Generation for Off-Dynamics Reinforcement Learning",
+      "authors": "Yu Yang, Yihong Guo, Anqi Liu, Pan Xu",
+      "date": "2026-05-24",
+      "pdf": "https://arxiv.org/pdf/2605.24810v1",
+      "score": "7.0",
+      "evidence": "通过轨迹生成的跨域策略迁移",
+      "tldr": "异动态离线强化学习中，现有方法受限于源数据集，无法合成新目标行为。本文提出CEDGE框架，训练源域轨迹扩散模型，通过能量引导（分解为回报、域和行为能量）将生成样本适配到目标域，无需重训练模型。在ODRL基准上，轨迹级能量引导生成改善了扩散规划，合成数据显著提升下游目标策略学习。该方法高效适应新动态，为跨域数据生成提供了新思路。",
+      "tags": "query:opd",
+      "abstract_en": "Off-dynamics offline reinforcement learning seeks to learn a target-domain policy from a large source dataset and a limited target dataset under mismatched transition dynamics. Existing approaches such as reward augmentation and data filtering are constrained to the source dataset and cannot synthesize new target behavior to improve coverage beyond the collected source trajectories. While recent model-based methods attempt to address this by learning target-aware dynamics, the generated experience is constructed only at the transition level, which leads to accumulated errors over long horizons. These limitations necessitate a shift toward trajectory-level generation for off-dynamics offline RL. We propose CEDGE, a Cross-domain Energy-guided Diffusion GEneration framework. CEDGE trains a trajectory diffusion model on source-domain trajectories and adapts the generated samples to the target domain through energy guidance. This guidance is derived by minimizing the distribution mismatch between the source and desired target-domain trajectories and is decomposed into return, domain, and behavior energy components. The resulting energy-guided trajectories are useful both for direct planning and as synthetic data for policy learning. Since target adaptation is achieved via energy guidance rather than retraining the diffusion model, CEDGE can be efficiently adapted to new target dynamics compared to previous methods. Experiments on the ODRL benchmark demonstrate that trajectory-level energy-guided generation improves diffusion planning under dynamics shifts and produces synthetic data that improves downstream target policy learning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/31/2605.29198v1-guidance-contrastive-token-credit-assignment-for-discrete-policy-optimization",
+      "section": "quick",
+      "title_en": "Guidance Contrastive Token Credit Assignment for Discrete Policy Optimization",
+      "authors": "Shufan Li, Konstantinos Kallidromitis, Akash Gokul Yusuke Kato, Kazuki Kozuka, Aditya Grover",
+      "date": "2026-05-28",
+      "pdf": "https://arxiv.org/pdf/2605.29198v1",
+      "score": "6.0",
+      "evidence": "基于组优势的在线策略强化学习方法",
+      "tldr": "现有基于组优势的强化学习方法（如GRPO和DAPO）因依赖样本级奖励而导致所有token的信用分配相同，忽略了token级贡献。本文提出指导对比策略优化（GCPO），通过对比模型在正负提示下的预测差异，为每个token分配比例优势，突出语义相关区域。在文本到图像生成和链式推理任务中，GCPO一致优于GRPO和DAPO基线，验证了其作为通用离散策略优化策略的有效性。",
+      "tags": "query:opd",
+      "abstract_en": "Group-advantage-based reinforcement learning methods, such as GRPO and DAPO, have demonstrated strong performance across diverse domains, including mathematical reasoning and text-to-image generation. However, their reliance on sample-level rewards introduces a key limitation as uniform credit assignment across all tokens fails to capture fine-grained, token-level contributions. To address this issue, we propose Guidance Contrastive Policy Optimization (GCPO), a novel algorithm that enables per-token credit assignment by contrasting model predictions under positive and negative prompts. Rather than uniformly broadcasting sample-level advantages, GCPO assigns token-level advantages proportional to the difference between these contrastive predictions, allowing more precise and informative learning signals. Empirically, we find that GCPO emphasizes semantically relevant regions such as visual areas aligned with textual prompts in text-to-image generation, and critical keywords within reasoning traces for chain-of-thought tasks. Through extensive experiments, GCPO consistently outperforms GRPO and DAPO baselines on both text-to-image generation and chain-of-thought reasoning benchmarks, demonstrating its effectiveness as a general and scalable optimization strategy for discrete policy learning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/31/2605.30201v1-hpo-hysteretic-policy-optimization-for-stable-and-efficient-training-under-sparse-reward-regime",
+      "section": "quick",
+      "title_en": "HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime",
+      "authors": "Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang",
+      "date": "2026-05-28",
+      "pdf": "https://arxiv.org/pdf/2605.30201v1",
+      "score": "6.0",
+      "evidence": "面向稀疏奖励的滞后在线策略优化方法",
+      "tldr": "针对GRPO在稀疏可验证奖励下早期更新负优势样本多、长度归一化依赖输出长度的问题，提出滞回策略优化（HPO），通过降低负优势更新权重和采用平均长度归一化来稳定训练；进一步提出自适应HPO（A-HPO），基于批次优势符号统计自动设置滞回权重。在TeleLogs任务中，A-HPO最终奖励达0.84，比GRPO高15%；在Countdown任务中，对1.5B-7B模型的初始困难配置提升最大。该方法无需调参即可平衡正负优势贡献，提升训练稳定性和效率。",
+      "tags": "query:opd",
+      "abstract_en": "We investigate a narrow but common failure mode of GRPO-style reinforcement learning in the context of sparse verifiable rewards: early updates contain more responses with negative advantages than those with positive advantages, while response-level length normalization ties the magnitude of the update to the length of the output. We propose Hysteretic Policy Optimization (HPO), a minimal modification of GRPO that reduces the weight of negative-advantage updates and replaces per-response length normalization with mean-length normalization. We further introduce Adaptive HPO (A-HPO), which sets the hysteretic weight based on batch-level advantage-sign statistics, thereby removing the need for tuning a fixed hysteretic weight. In our TeleLogs and Countdown experiments, A-HPO improves the reward per update compared to GRPO, with the largest gains in early sparse reward regimes. On TeleLogs, A-HPO achieves a final reward of 0.84, outperforming SAPO by 5%, GSPO by 11%, and GRPO by 15%, while maintaining a comparable response-length. On Countdown, A-HPO achieves the largest gains in initial and most difficult configurations across 1.5B-7B models. Ablation studies on the hysteretic weight show that the gains of A-HPO come from better balancing the contributions of positive and negative advantages compared to positive-only or fully symmetric updates.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
