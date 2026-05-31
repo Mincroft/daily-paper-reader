@@ -25,3 +25,57 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: OPD
+      description: 请帮我查找与On-Policy Distillation相关的高质量论文
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: on-policy distillation
+          keyword_cn: on-policy蒸馏
+          query: on-policy distillation reinforcement learning
+        - keyword: knowledge distillation reinforcement learning
+          keyword_cn: 强化学习知识蒸馏
+          query: knowledge distillation in reinforcement learning
+        - keyword: teacher student reinforcement learning
+          keyword_cn: 强化学习师生框架
+          query: teacher-student framework for reinforcement learning
+        - keyword: on-policy learning
+          keyword_cn: on-policy学习
+          query: on-policy learning methods
+        - keyword: policy transfer reinforcement learning
+          keyword_cn: 强化学习策略迁移
+          query: policy transfer in reinforcement learning
+      intent_queries:
+        - query: on policy distillation methods for reinforcement learning
+          query_cn: 强化学习中的on policy蒸馏方法
+          enabled: true
+          source: manual
+          note: ''
+        - query: improving sample efficiency with on policy distillation
+          query_cn: 通过on policy蒸馏提高样本效率
+          enabled: true
+          source: manual
+          note: ''
+        - query: teacher student distillation in reinforcement learning
+          query_cn: 强化学习中的师生蒸馏
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-05-31T15:25:52.317Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
