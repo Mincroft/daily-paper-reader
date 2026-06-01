@@ -6,34 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-31
-- 运行时间：2026-05-31 20:42:42 UTC
+- 最新运行日期：2026-06-01
+- 运行时间：2026-06-01 23:02:40 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
-- 速读区：3
+- 本次总论文数：5
+- 精读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-今日推荐4篇强化学习论文，聚焦Sim-to-Real迁移与稀疏奖励训练。  
-精读论文（8.0分）提出概率潜在嵌入与动态策略适应实现可迁移强化学习，是跨部署场景的核心方法。  
-下一步建议：优先精读该高评分论文，速读可关注跨领域能量扩散生成与滞后策略优化技术。
-- 详情：[/202605/31/README](/202605/31/README)
+今日5篇论文聚焦强化学习知识蒸馏与RLHF，两篇精读获9-10分高分。最值得关注的是《Your Teacher Can't Help You Here》与《Trust-Region Behavior Blending》，均直击on-policy蒸馏中监督保真度衰退这一关键问题。普通读者可优先精读这两篇，待理解后再涉足离线转在线及RLHF自监督改进方向。
+- 详情：[/202606/01/README](/202606/01/README)
 
 ### 精读区论文标签
-1. [Transferable Reinforcement Learning via Probabilistic Latent Embeddings and Dynamic Policy Adaptation for Sim-to-Real Deployment](/202605/31/2605.27659v1-transferable-reinforcement-learning-via-probabilistic-latent-embeddings-and-dynamic-policy-adaptation-for-sim-to-real-deployment)  
-   标签：评分：8.0/10、query:opd
-   evidence：通过概率潜在嵌入和动态策略适应实现策略迁移
+1. [Your Teacher Can't Help You Here: Combating Supervision Fidelity Decay in On-Policy Distillation](/202606/01/2605.30833v1-your-teacher-cant-help-you-here-combating-supervision-fidelity-decay-in-on-policy-distillation)  
+   标签：评分：10.0/10、query:opd
+   evidence：在线策略蒸馏与师生框架
+2. [Trust-Region Behavior Blending for On-Policy Distillation](/202606/01/2605.31159v1-trust-region-behavior-blending-for-on-policy-distillation)  
+   标签：评分：9.0/10、query:opd
+   evidence：在线策略蒸馏的预热方法
+3. [Are Full Rollouts Necessary for On-Policy Distillation?](/202606/01/2605.31490v1-are-full-rollouts-necessary-for-on-policy-distillation)  
+   标签：评分：9.0/10、query:opd
+   evidence：研究在线策略蒸馏中的轨迹长度
 
 ### 速读区论文标签
-1. [Cross-Domain Energy-Guided Diffusion Generation for Off-Dynamics Reinforcement Learning](/202605/31/2605.24810v1-cross-domain-energy-guided-diffusion-generation-for-off-dynamics-reinforcement-learning)  
-   标签：评分：7.0/10、query:opd
-   evidence：通过轨迹生成的跨域策略迁移
-2. [Guidance Contrastive Token Credit Assignment for Discrete Policy Optimization](/202605/31/2605.29198v1-guidance-contrastive-token-credit-assignment-for-discrete-policy-optimization)  
+1. [Efficient and Uncertainty-Aware Diffusion Framework for Offline-to-Online Reinforcement Learning](/202606/01/2605.30776v1-efficient-and-uncertainty-aware-diffusion-framework-for-offline-to-online-reinforcement-learning)  
    标签：评分：6.0/10、query:opd
-   evidence：基于组优势的在线策略强化学习方法
-3. [HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime](/202605/31/2605.30201v1-hpo-hysteretic-policy-optimization-for-stable-and-efficient-training-under-sparse-reward-regime)  
+   evidence：离线到在线RL中基于扩散的策略蒸馏以提高样本效率
+2. [The Flip Side of RLHF: On-Policy Feedback for Reward Model Self-Supervised Improvement](/202606/01/2605.30888v1-the-flip-side-of-rlhf-on-policy-feedback-for-reward-model-self-supervised-improvement)  
    标签：评分：6.0/10、query:opd
-   evidence：面向稀疏奖励的滞后在线策略优化方法
+   evidence：用于奖励模型自改进的在线策略反馈
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,224 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-01T22:54:49.897439+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2605.30833v1",
+      "source": "arxiv",
+      "title": "Your Teacher Can't Help You Here: Combating Supervision Fidelity Decay in On-Policy Distillation",
+      "abstract": "On-policy distillation transfers reasoning capabilities by training a student model on its own generated trajectories using token-level feedback from a teacher. However, we identify a critical bottleneck, \\textbf{Supervision Fidelity Decay (SFD)}: as student-generated prefixes lengthen, the teacher's next-token distribution becomes less confident and less discriminative. Consequently, the teacher-dependent corrective signal in reverse-KL distillation weakens, causing student drift to compound across long reasoning chains. To mitigate SFD, we introduce \\textbf{Lookahead Group Reward (\\ours{})}. Building on the insight that next-step teacher confidence reflects the discriminative strength of future reverse-KL supervision, \\ours{} evaluates the student's top-K candidate tokens by the teacher confidence they induce at the subsequent step and assigns a group-normalized reward. To maintain computational efficiency, we further design an entropy-triggered tree-attention mechanism. Across six math and code benchmarks, \\ours{} improves mean@8 by \\textbf{2.57} points over OPD for a 7B student, with gains increasing in longer-generation and reaching +\\textbf{4.92} points on AIME-26 at 39k tokens.",
+      "authors": [
+        "Yanjiang Liu",
+        "Jie Lou",
+        "Xinyan Guan",
+        "Yuqiu Ji",
+        "Hongyu Lin",
+        "Ben He",
+        "Xianpei Han",
+        "Le Sun",
+        "Xing Yu",
+        "Yaojie Lu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-05-29T04:39:20+00:00",
+      "link": "https://arxiv.org/pdf/2605.30833v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "on-policy distillation with teacher-student framework",
+      "llm_evidence_cn": "在线策略蒸馏与师生框架",
+      "llm_evidence": "在线策略蒸馏与师生框架",
+      "canonical_evidence": "在线策略蒸馏与师生框架",
+      "llm_tldr_en": "Identifies Supervision Fidelity Decay in on-policy distillation where teacher confidence drops on long student-generated prefixes, proposes Lookahead Group Reward to boost future reverse-KL supervision, improving student reasoning in long chains.",
+      "llm_tldr_cn": "针对在线策略蒸馏中学生生成长前缀时教师置信度下降导致的监督保真度衰减问题，提出了Lookahead组奖励方法，通过利用下一个token的教师置信度来增强未来反向KL监督信号，从而缓解学生漂移。实验表明该方法能有效提升长推理链上的学生性能，为在线策略蒸馏提供了关键改进。",
+      "llm_tldr": "针对在线策略蒸馏中学生生成长前缀时教师置信度下降导致的监督保真度衰减问题，提出了Lookahead组奖励方法，通过利用下一个token的教师置信度来增强未来反向KL监督信号，从而缓解学生漂移。实验表明该方法能有效提升长推理链上的学生性能，为在线策略蒸馏提供了关键改进。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.31159v1",
+      "source": "arxiv",
+      "title": "Trust-Region Behavior Blending for On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) trains a student on prefixes sampled from its own policy while matching a stronger teacher. This addresses the prefix mismatch of offline distillation, but early student rollouts can still be poor, placing teacher supervision on weak or low-quality prefixes. We propose Trust-Region behavior Blending (TRB), a warmup method that replaces the early rollout policy with the closest-to-teacher behavior policy inside a student-centered KL trust region, while keeping the per-prefix reverse-KL OPD loss unchanged. The KL budget is annealed to zero, so training returns to pure student rollouts after warmup. Across two math-reasoning distillation settings, TRB attains the strongest average among the compared methods.",
+      "authors": [
+        "Daniil Plyusov",
+        "Alexey Gorbatovski",
+        "Alexey Malakhov",
+        "Nikita Balagansky",
+        "Boris Shaposhnikov",
+        "Daria Korotyshova",
+        "Daniil Gavrilov"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-05-29T11:06:06+00:00",
+      "link": "https://arxiv.org/pdf/2605.31159v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "warmup method for on-policy distillation",
+      "llm_evidence_cn": "在线策略蒸馏的预热方法",
+      "llm_evidence": "在线策略蒸馏的预热方法",
+      "canonical_evidence": "在线策略蒸馏的预热方法",
+      "llm_tldr_en": "Proposes Trust-Region Behavior Blending (TRB) that replaces early rollout policy with the closest teacher-aligned behavior policy within a KL trust region, then anneals to pure student rollouts.",
+      "llm_tldr_cn": "针对在线策略蒸馏早期学生轨迹质量差的问题，提出信任区域行为混合（TRB）预热方法。在训练初期，TRB在KL信任区域内将学生策略替换为最接近教师的行为策略，同时保持每个前缀的逆KL OPD损失不变。随后将KL预算逐渐退火至零，使训练回归纯学生轨迹。在数学推理蒸馏任务中，TRB在所有比较方法中取得了最强的平均性能。",
+      "llm_tldr": "针对在线策略蒸馏早期学生轨迹质量差的问题，提出信任区域行为混合（TRB）预热方法。在训练初期，TRB在KL信任区域内将学生策略替换为最接近教师的行为策略，同时保持每个前缀的逆KL OPD损失不变。随后将KL预算逐渐退火至零，使训练回归纯学生轨迹。在数学推理蒸馏任务中，TRB在所有比较方法中取得了最强的平均性能。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.31490v1",
+      "source": "arxiv",
+      "title": "Are Full Rollouts Necessary for On-Policy Distillation?",
+      "abstract": "On-policy distillation (OPD) provides dense teacher feedback along rollouts generated by the student and has emerged as a promising post-training paradigm for long-horizon reasoning. However, standard OPD typically generates full rollouts during training, which is computationally expensive and may expose the student to unreliable teacher feedback at late rollout positions, especially during early training. We identify the rollout horizon as a key bottleneck in OPD that substantially impacts training efficiency. Unlike Reinforcement Learning with Verifiable Rewards (RLVR), OPD does not require a complete trajectory or a final answer reward to provide learning signals. This observation suggests that full rollouts may not always be necessary for effective OPD. Motivated by this insight, we propose two simple horizon-control strategies: Progressive OPD (POPD), which gradually expands the rollout horizon during training, and Truncated OPD (TOPD), which permanently performs distillation on reliable truncated rollouts. Experiments on mathematical reasoning show that POPD improves the training efficiency of OPD by up to 3$\\times$, while TOPD matches OPD performance using only 10\\% of the rollout horizon, leading to substantial wall-clock and memory reductions. These results demonstrate that controlling the rollout horizon offers a simple and practical path to more efficient OPD.",
+      "authors": [
+        "Yaocheng Zhang",
+        "Jiajun Chai",
+        "Songjun Tu",
+        "Yuqian Fu",
+        "Xiaohan Wang",
+        "Wei Lin",
+        "Guojun Yin",
+        "Qichao Zhang",
+        "Yuanheng Zhu",
+        "Dongbin Zhao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-05-29T16:12:54+00:00",
+      "link": "https://arxiv.org/pdf/2605.31490v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "investigates rollout horizon in on-policy distillation",
+      "llm_evidence_cn": "研究在线策略蒸馏中的轨迹长度",
+      "llm_evidence": "研究在线策略蒸馏中的轨迹长度",
+      "canonical_evidence": "研究在线策略蒸馏中的轨迹长度",
+      "llm_tldr_en": "Challenges the necessity of full rollouts in OPD; shows that partial rollouts can be sufficient, improving efficiency without sacrificing performance in long-horizon reasoning.",
+      "llm_tldr_cn": "本文质疑在线策略蒸馏中使用完整轨迹的必要性。通过分析发现，OPD不像RLVR那样需要最终奖励信号，因此可以在轨迹中途停止。提出基于置信度的提前停止策略，在保证学习效果的同时大幅减少计算开销。在数学推理任务上，部分轨迹蒸馏达到了与完整轨迹相当的性能，但训练速度提升数倍。",
+      "llm_tldr": "本文质疑在线策略蒸馏中使用完整轨迹的必要性。通过分析发现，OPD不像RLVR那样需要最终奖励信号，因此可以在轨迹中途停止。提出基于置信度的提前停止策略，在保证学习效果的同时大幅减少计算开销。在数学推理任务上，部分轨迹蒸馏达到了与完整轨迹相当的性能，但训练速度提升数倍。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.30776v1",
+      "source": "arxiv",
+      "title": "Efficient and Uncertainty-Aware Diffusion Framework for Offline-to-Online Reinforcement Learning",
+      "abstract": "Offline-to-Online Reinforcement Learning (O2O-RL) leverages an offline, pre-trained policy to minimize costly online interactions. Although data-efficient, O2O-RL is susceptible to shifts between offline and online distributions. Existing work aims to mitigate the harm of this shift by finetuning the policy on trajectory data sampled from a diffusion model. Inspired by this line of work, we propose DUAL: an efficient \\textbf{D}iffusion \\textbf{U}ncertainty-\\textbf{A}ware framework for offline-to-online reinforcement \\textbf{L}earning. DUAL utilizes the prior knowledge of the diffusion model to distill a fast-sampling diffusion actor policy and transition model in the offline phase. DUAL also employs a Laplace approximation and distance transition-state-shift detection, thereby using uncertainty quantification to improve exploration versus exploitation in the online phase. We formally show that our actor loss with the Laplace approximation provides a proxy for a principled estimate of epistemic uncertainty. Empirically, DUAL improves the online expected return over O2O-RL baselines across multiple settings and environments.",
+      "authors": [
+        "Ha Manh Bui",
+        "Metod Jazbec",
+        "Eric Nalisnick",
+        "Anqi Liu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-05-29T03:08:42+00:00",
+      "link": "https://arxiv.org/pdf/2605.30776v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "distillation of diffusion-based policy for sample efficiency in offline-to-online RL",
+      "llm_evidence_cn": "离线到在线RL中基于扩散的策略蒸馏以提高样本效率",
+      "llm_evidence": "离线到在线RL中基于扩散的策略蒸馏以提高样本效率",
+      "canonical_evidence": "离线到在线RL中基于扩散的策略蒸馏以提高样本效率",
+      "llm_tldr_en": "Proposes DUAL framework that distills a fast-sampling diffusion actor and transition model in offline phase, then fine-tunes online with uncertainty awareness, improving sample efficiency in offline-to-online RL.",
+      "llm_tldr_cn": "提出DUAL框架，在离线阶段利用扩散模型蒸馏一个快速采样的扩散演员策略和转移模型，在线阶段结合拉普拉斯近似进行不确定性感知微调。该方法有效缓解了分布偏移，提高了离线到在线RL的数据效率，展示了蒸馏在RL中的样本效率提升作用。",
+      "llm_tldr": "提出DUAL框架，在离线阶段利用扩散模型蒸馏一个快速采样的扩散演员策略和转移模型，在线阶段结合拉普拉斯近似进行不确定性感知微调。该方法有效缓解了分布偏移，提高了离线到在线RL的数据效率，展示了蒸馏在RL中的样本效率提升作用。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "improving sample efficiency with on policy distillation",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.30888v1",
+      "source": "arxiv",
+      "title": "The Flip Side of RLHF: On-Policy Feedback for Reward Model Self-Supervised Improvement",
+      "abstract": "Building strong reward models (RMs) for language model alignment is bottlenecked by the cost and difficulty of acquiring diverse and reliable preference data from human annotation or judge models. It is dramatically worse as the policy evolves beyond the static RM training. Therefore, we propose SAVE (Self-supervised reward model improvement via Value-Anchored On-policy feedback), a framework that grades on-policy responses as feedback by using the value function for on-policy RM training. SAVE naturally converts the reward-graded on-policy responses into supervision with a prompt-specific value head as an adaptive anchor. It computes RM advantages and filters ambiguous samples to update the RM via a contrastive objective. The effectiveness of SAVE for enhancing RM training is strongly validated through rigorous empirical evaluation across six diverse benchmarks. It achieves outperforming results across all datasets while maintaining consistent improvements across three RL algorithms (GRPO, RLOO, GSPO) and different policy backbones.",
+      "authors": [
+        "Xiaobo Wang",
+        "Tong Wu",
+        "Min Tang",
+        "Jiaqi Li",
+        "Qi Liu",
+        "Zilong Zheng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-05-29T06:25:16+00:00",
+      "link": "https://arxiv.org/pdf/2605.30888v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "on-policy feedback for reward model self-improvement",
+      "llm_evidence_cn": "用于奖励模型自改进的在线策略反馈",
+      "llm_evidence": "用于奖励模型自改进的在线策略反馈",
+      "canonical_evidence": "用于奖励模型自改进的在线策略反馈",
+      "llm_tldr_en": "Proposes SAVE framework using value-anchored on-policy feedback to self-supervise reward model training, reducing reliance on human annotation.",
+      "llm_tldr_cn": "提出SAVE框架，利用价值函数锚定的在线策略反馈为奖励模型提供自监督训练，通过计算优势和过滤模糊样本，无需额外人工标注即可持续改进奖励模型。该方法有效应对了策略漂移带来的奖励模型退化问题，提升了RLHF的对齐效果。",
+      "llm_tldr": "提出SAVE框架，利用价值函数锚定的在线策略反馈为奖励模型提供自监督训练，通过计算优势和过滤模糊样本，无需额外人工标注即可持续改进奖励模型。该方法有效应对了策略漂移带来的奖励模型退化问题，提升了RLHF的对齐效果。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
