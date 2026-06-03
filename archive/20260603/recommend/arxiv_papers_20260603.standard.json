@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-03T21:49:04.009987+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.00424v1",
+      "source": "arxiv",
+      "title": "Weak Critics Make Strong Learners: On-Policy Critique Distillation for Scalable Oversight",
+      "abstract": "As large language models become stronger, weak supervisors may fail to provide reliable labels, preferences, or final judgments for complex outputs, limiting both weak-to-strong generalization and scalable oversight. We study a more tractable form of weak supervision: using a weak model as a critic rather than as a labeler or judge. Instead of solving the task or selecting the correct answer, the weak critic only needs to provide a non-misleading revision direction that helps the strong model better use its own knowledge. We call this setting *weak-critic strong oversight*. We first show that weak critiques can improve frozen strong models at inference time, and that critique quality is key to this improvement. We then propose progressive on-policy critique distillation (**OPCD**), which filters high-quality critiques and distills critic-guided behavior into the strong model through adaptive self-teacher signals. Experiments on reasoning and alignment benchmarks show that our method improves strong models over training epochs, suggesting an effective path for scalable oversight with weak supervision.",
+      "authors": [
+        "Can Jin",
+        "Jiakang Li",
+        "Rui Wu",
+        "Eddy Zhang",
+        "Dimitris N. Metaxas"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-05-29T23:21:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.00424v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "proposes on-policy critique distillation for scalable oversight",
+      "llm_evidence_cn": "提出在策略评论蒸馏用于可扩展监督",
+      "llm_evidence": "提出在策略评论蒸馏用于可扩展监督",
+      "canonical_evidence": "提出在策略评论蒸馏用于可扩展监督",
+      "llm_tldr_en": "Introduces weak-critic strong oversight: using a weak model as a critic to provide revision directions via on-policy critique distillation, enabling scalable oversight.",
+      "llm_tldr_cn": "该论文研究了一种更易实现的弱监督形式：使用弱模型作为评论家而非标注员或裁判。弱评论家只需提供非误导性的修正方向，帮助强模型更好运用自身知识。论文提出渐进式在策略评论蒸馏（progressive on-policy critique distillation），在推理时利用弱批判改善冻结的强模型，并通过蒸馏训练使强模型学会自我批评。实验表明该方法在复杂推理任务上实现了弱到强的有效泛化。",
+      "llm_tldr": "该论文研究了一种更易实现的弱监督形式：使用弱模型作为评论家而非标注员或裁判。弱评论家只需提供非误导性的修正方向，帮助强模型更好运用自身知识。论文提出渐进式在策略评论蒸馏（progressive on-policy critique distillation），在推理时利用弱批判改善冻结的强模型，并通过蒸馏训练使强模型学会自我批评。实验表明该方法在复杂推理任务上实现了弱到强的有效泛化。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.27293v1",
+      "source": "arxiv",
+      "title": "BASIS: Batchwise Advantage Estimation from Single-Rollout Information Sharing for LLM Reasoning",
+      "abstract": "Reinforcement learning with verifiable rewards has become a standard recipe for improving the reasoning abilities of large language models. Existing algorithms face a tradeoff between computational efficiency and sample efficiency in value estimation and policy learning. We introduce BASIS, a critic-free post-training algorithm designed to address this tradeoff. At each online training step, BASIS samples only one rollout per prompt, but leverages rich information across prompts in the entire batch to improve value function estimation. Our experiments demonstrate that BASIS reduces MSE in value function estimation by 69% compared to REINFORCE++, a representative single-rollout baseline, and achieves lower MSE with one rollout than group mean estimators with 8 rollouts. This improvement in value estimation translates to better policy optimization: using substantially less training time, BASIS achieves performance close to multi-rollout GRPO-type baselines and often outperforms single-rollout REINFORCE-type baselines.",
+      "authors": [
+        "Shijin Gong",
+        "Erhan Xu",
+        "Kai Ye",
+        "Francesco Quinzan",
+        "Giulia Livieri",
+        "Chengchun Shi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-05-26T17:06:41+00:00",
+      "link": "https://arxiv.org/pdf/2605.27293v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "on-policy RL algorithm for LLM reasoning with batch advantage sharing",
+      "llm_evidence_cn": "用于大语言模型推理的在策略RL算法，利用批次优势共享",
+      "llm_evidence": "用于大语言模型推理的在策略RL算法，利用批次优势共享",
+      "canonical_evidence": "用于大语言模型推理的在策略RL算法，利用批次优势共享",
+      "llm_tldr_en": "BASIS is a critic-free on-policy algorithm that samples one rollout per prompt and leverages batch-level information to improve value estimation for LLM reasoning.",
+      "llm_tldr_cn": "该论文针对大语言模型推理中的强化学习算法在计算效率和样本效率间的权衡，提出了BASIS方法。该方法无需评论家，在每个在线步骤仅对每个提示采样一次轨迹，但利用整个批次的信息来改进价值函数估计。实验表明，BASIS相比REINFORCE++等基线，价值估计均方误差降低69%，且仅用一次采样即达到较低误差。",
+      "llm_tldr": "该论文针对大语言模型推理中的强化学习算法在计算效率和样本效率间的权衡，提出了BASIS方法。该方法无需评论家，在每个在线步骤仅对每个提示采样一次轨迹，但利用整个批次的信息来改进价值函数估计。实验表明，BASIS相比REINFORCE++等基线，价值估计均方误差降低69%，且仅用一次采样即达到较低误差。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.30861v1",
+      "source": "arxiv",
+      "title": "Distilling LLM Feedback for Lean Theorem Proving",
+      "abstract": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO. However, this algorithm suffers from sparse rewards, limited exploration, and mode collapse. Building upon recent works on self-distillation, we propose Feedback Distillation, a training method where the model is trained to match, at the token level, its own distribution conditioned on privileged feedback produced by a language model. Feedback Distillation offers token-level supervision and can inject external knowledge. Evaluating our method for Lean4 theorem-proving, we find that Feedback Distillation maintains greater diversity in generated trajectories than GRPO, yielding higher policy entropy and better pass@k scaling. The two methods are complementary: initializing GRPO from a Feedback Distillation checkpoint outperforms either method alone. All in all, our results suggest a promising avenue to improve post-training for complex reasoning.",
+      "authors": [
+        "Gaetan Narozniak",
+        "Gérard Biau",
+        "Rémi Munos",
+        "Ahmad Rammal",
+        "Pierre Marion"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-05-29T05:35:00+00:00",
+      "link": "https://arxiv.org/pdf/2605.30861v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Feedback Distillation for token-level supervision in RL post-training, related to knowledge distillation in RL",
+      "llm_evidence_cn": "反馈蒸馏提供令牌级监督，与强化学习中的知识蒸馏相关",
+      "llm_evidence": "反馈蒸馏提供令牌级监督，与强化学习中的知识蒸馏相关",
+      "canonical_evidence": "反馈蒸馏提供令牌级监督，与强化学习中的知识蒸馏相关",
+      "llm_tldr_en": "Proposes Feedback Distillation, a method that trains a model to match its own distribution conditioned on privileged feedback from an LLM, offering token-level supervision and diversity in theorem proving.",
+      "llm_tldr_cn": "GRPO在定理证明中遭遇稀疏奖励和模式坍塌。本文提出反馈蒸馏，训练模型匹配在教师反馈条件下的自身分布，提供令牌级监督。在Lean4推理中，反馈蒸馏比GRPO具有更高的策略熵和pass@k扩展，为RL后训练提供了多样化的token级监督方案。",
+      "llm_tldr": "GRPO在定理证明中遭遇稀疏奖励和模式坍塌。本文提出反馈蒸馏，训练模型匹配在教师反馈条件下的自身分布，提供令牌级监督。在Lean4推理中，反馈蒸馏比GRPO具有更高的策略熵和pass@k扩展，为RL后训练提供了多样化的token级监督方案。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

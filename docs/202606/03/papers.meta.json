@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-03",
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T21:51:48",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/03/2606.00424v1-weak-critics-make-strong-learners-on-policy-critique-distillation-for-scalable-oversight",
+      "section": "deep",
+      "title_en": "Weak Critics Make Strong Learners: On-Policy Critique Distillation for Scalable Oversight",
+      "authors": "Can Jin, Jiakang Li, Rui Wu, Eddy Zhang, Dimitris N. Metaxas",
+      "date": "2026-05-29",
+      "pdf": "https://arxiv.org/pdf/2606.00424v1",
+      "score": "10.0",
+      "evidence": "提出在策略评论蒸馏用于可扩展监督",
+      "tldr": "当大型语言模型能力超越人类时，弱监督者难以提供可靠标签，使得可扩展监督面临挑战。本文提出一种弱批评者强监督框架，利用弱模型作为批评者提供非误导的修订方向，并设计渐进式在线批评蒸馏（OPCD）方法，通过过滤高质量批评及自适应自我教师信号将批评指导的行为蒸馏到强模型中。在GSM8K等数学推理和Anthropic HH等对齐基准上，该方法随训练轮次持续提升强模型性能，且批评质量直接影响增益幅度。该工作展示了弱批评者监督的有效性，为实现可扩展的弱到强泛化提供了新路径。",
+      "tags": "query:opd",
+      "abstract_en": "As large language models become stronger, weak supervisors may fail to provide reliable labels, preferences, or final judgments for complex outputs, limiting both weak-to-strong generalization and scalable oversight. We study a more tractable form of weak supervision: using a weak model as a critic rather than as a labeler or judge. Instead of solving the task or selecting the correct answer, the weak critic only needs to provide a non-misleading revision direction that helps the strong model better use its own knowledge. We call this setting *weak-critic strong oversight*. We first show that weak critiques can improve frozen strong models at inference time, and that critique quality is key to this improvement. We then propose progressive on-policy critique distillation (**OPCD**), which filters high-quality critiques and distills critic-guided behavior into the strong model through adaptive self-teacher signals. Experiments on reasoning and alignment benchmarks show that our method improves strong models over training epochs, suggesting an effective path for scalable oversight with weak supervision.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/03/2605.27293v1-basis-batchwise-advantage-estimation-from-single-rollout-information-sharing-for-llm-reasoning",
+      "section": "quick",
+      "title_en": "BASIS: Batchwise Advantage Estimation from Single-Rollout Information Sharing for LLM Reasoning",
+      "authors": "Shijin Gong, Erhan Xu, Kai Ye, Francesco Quinzan, Giulia Livieri, Chengchun Shi",
+      "date": "2026-05-26",
+      "pdf": "https://arxiv.org/pdf/2605.27293v1",
+      "score": "6.0",
+      "evidence": "用于大语言模型推理的在策略RL算法，利用批次优势共享",
+      "tldr": "强化学习提升LLM推理时面临样本与计算效率权衡。BASIS在每个提示仅采样一次rollout，但利用批次内跨提示信息共享改进价值函数估计，相比REINFORCE++降低MSE达69%，一次rollout误差低于组均值估计八次rollout。该方法使用更少训练时间达到接近多rollout方法的性能，并优于单rollout基线。",
+      "tags": "query:opd",
+      "abstract_en": "Reinforcement learning with verifiable rewards has become a standard recipe for improving the reasoning abilities of large language models. Existing algorithms face a tradeoff between computational efficiency and sample efficiency in value estimation and policy learning. We introduce BASIS, a critic-free post-training algorithm designed to address this tradeoff. At each online training step, BASIS samples only one rollout per prompt, but leverages rich information across prompts in the entire batch to improve value function estimation. Our experiments demonstrate that BASIS reduces MSE in value function estimation by 69% compared to REINFORCE++, a representative single-rollout baseline, and achieves lower MSE with one rollout than group mean estimators with 8 rollouts. This improvement in value estimation translates to better policy optimization: using substantially less training time, BASIS achieves performance close to multi-rollout GRPO-type baselines and often outperforms single-rollout REINFORCE-type baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/03/2605.30861v1-distilling-llm-feedback-for-lean-theorem-proving",
+      "section": "quick",
+      "title_en": "Distilling LLM Feedback for Lean Theorem Proving",
+      "authors": "Gaetan Narozniak, Gérard Biau, Rémi Munos, Ahmad Rammal, Pierre Marion",
+      "date": "2026-05-29",
+      "pdf": "https://arxiv.org/pdf/2605.30861v1",
+      "score": "6.0",
+      "evidence": "反馈蒸馏提供令牌级监督，与强化学习中的知识蒸馏相关",
+      "tldr": "面向推理模型的后训练通常结合监督微调和基于可验证奖励的强化学习（如GRPO），但存在奖励稀疏、探索有限和模式坍缩问题。本文提出反馈蒸馏方法，让模型在token级别匹配自身在语言模型提供的特权反馈下的分布，从而提供细粒度监督并注入外部知识。在Lean4定理证明任务上，反馈蒸馏相比GRPO保持更高的策略熵和更好的pass@k扩展性，且两者互补：用反馈蒸馏初始化GRPO优于单独使用任一方法。",
+      "tags": "query:opd",
+      "abstract_en": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO. However, this algorithm suffers from sparse rewards, limited exploration, and mode collapse. Building upon recent works on self-distillation, we propose Feedback Distillation, a training method where the model is trained to match, at the token level, its own distribution conditioned on privileged feedback produced by a language model. Feedback Distillation offers token-level supervision and can inject external knowledge. Evaluating our method for Lean4 theorem-proving, we find that Feedback Distillation maintains greater diversity in generated trajectories than GRPO, yielding higher policy entropy and better pass@k scaling. The two methods are complementary: initializing GRPO from a Feedback Distillation checkpoint outperforms either method alone. All in all, our results suggest a promising avenue to improve post-training for complex reasoning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
