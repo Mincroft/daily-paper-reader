@@ -6,47 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-04
-- 运行时间：2026-06-04 20:56:23 UTC
+- 最新运行日期：2026-06-05
+- 运行时间：2026-06-05 21:49:30 UTC
 - 运行状态：成功
-- 本次总论文数：9
-- 精读区：6
-- 速读区：3
+- 本次总论文数：5
+- 精读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-今天共精读6篇、速读3篇论文，重点聚焦强化学习与策略优化。最值得关注的是满分论文《Self-Distilled Policy Gradient》和9分论文《GAPD》，分别提出自蒸馏策略梯度以及将“金牌动作”蒸馏用于知识库问答中的智能体强化学习。建议首先精读这两篇高分论文，可显著提升你对该领域策略优化与知识推理任务最新进展的理解。
-- 详情：[/202606/04/README](/202606/04/README)
+今日聚焦策略蒸馏与表示蒸馏优化，两篇满分论文深入探讨同策蒸馏中的粒度与表示学习。
+最值得关注两个方向：通过“先过滤再重加权”优化蒸馏粒度，以及同策表示蒸馏的提出，均获满分评价。
+建议优先精读两篇10分论文，掌握蒸馏技术中的重加权策略与表示迁移方法。
+- 详情：[/202606/05/README](/202606/05/README)
 
 ### 精读区论文标签
-1. [Self-Distilled Policy Gradient](/202606/04/2606.04036v1-self-distilled-policy-gradient)  
+1. [Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation](/202606/05/2606.02684v2-filter-then-reweight-rethinking-optimization-granularity-in-on-policy-distillation)  
    标签：评分：10.0/10、query:opd
-   evidence：在线策略自蒸馏策略梯度
-2. [GAPD: Gold-Action Policy Distillation for Agentic Reinforcement Learning in Knowledge Base Question Answering](/202606/04/2605.29584v2-gapd-gold-action-policy-distillation-for-agentic-reinforcement-learning-in-knowledge-base-question-answering)  
+   evidence：直接研究在线蒸馏，提出过滤-重加权方法
+2. [OPRD: On-Policy Representation Distillation](/202606/05/2606.06021v1-oprd-on-policy-representation-distillation)  
+   标签：评分：10.0/10、query:opd
+   evidence：提出在线策略表示蒸馏（OPRD），将OPD扩展到隐藏状态空间
+3. [Interpretable Policy Distillation for Power Grid Topology Control](/202606/05/2606.00561v1-interpretable-policy-distillation-for-power-grid-topology-control)  
    标签：评分：9.0/10、query:opd
-   evidence：知识库问答中面向智能体强化学习的金牌动作策略蒸馏
-3. [Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding](/202606/04/2606.00564v1-decomposed-on-policy-distillation-for-vision-language-reasoning-steering-gradients-for-visual-grounding)  
-   标签：评分：9.0/10、query:opd
-   evidence：多模态视觉-语言推理的逐策略蒸馏，分解损失
-4. [Trust Region On-Policy Distillation](/202606/04/2606.01249v2-trust-region-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：信任区域逐策略蒸馏提供稳定的令牌级监督
-5. [Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation](/202606/04/2606.02684v1-filter-then-reweight-rethinking-optimization-granularity-in-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：直接提出在线策略蒸馏的轨迹与令牌级过滤重加权
-6. [When Should the Teacher Move? Temporal Coupling and Stability in Self On-Policy Distillation](/202606/04/2606.03532v1-when-should-the-teacher-move-temporal-coupling-and-stability-in-self-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：自逐策略蒸馏中教师更新调度的时间耦合与稳定性
+   evidence：策略蒸馏、教师-学生框架、PPO、可解释代理模型
 
 ### 速读区论文标签
-1. [Faster Synchronous On-Policy RL via Straggler-Aware Group Sizing](/202606/04/2606.02218v1-faster-synchronous-on-policy-rl-via-straggler-aware-group-sizing)  
+1. [Emergence of Exploration in Policy Gradient Reinforcement Learning via Retrying](/202606/05/2606.00151v1-emergence-of-exploration-in-policy-gradient-reinforcement-learning-via-retrying)  
    标签：评分：6.0/10、query:opd
-   evidence：在线策略RL中的掉队者缓解
-2. [Policy and World Modeling Co-Training for Language Agents](/202606/04/2606.02388v1-policy-and-world-modeling-co-training-for-language-agents)  
+   evidence：通过重试机制涌现探索的在线强化学习方法
+2. [Dynamics Are Learned, Not Told: Semi-Supervised Discovery of Latent Dynamics Geometries For Zero-Shot Policy Adaptation](/202606/05/2606.02280v1-dynamics-are-learned-not-told-semi-supervised-discovery-of-latent-dynamics-geometries-for-zero-shot-policy-adaptation)  
    标签：评分：6.0/10、query:opd
-   evidence：在线策略RL与世界模型协同训练
-3. [Rollout-Level Advantage-Prioritized Experience Replay for GRPO](/202606/04/2606.04560v1-rollout-level-advantage-prioritized-experience-replay-for-grpo)  
-   标签：评分：6.0/10、query:opd
-   evidence：通过经验回放提升在线策略RL样本效率
+   evidence：通过潜在动力学进行零样本策略适应
 
 
 <div class="dpr-home-promo-card">

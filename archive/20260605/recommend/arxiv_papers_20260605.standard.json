@@ -1,0 +1,225 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-05T21:45:08.245900+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.02684v2",
+      "source": "arxiv",
+      "title": "Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation",
+      "abstract": "On-Policy distillation (OPD) in large language models is shifting from full-trace KL supervision toward more selective training paradigms. Recent OPD methods increasingly focus on selecting which trajectories to learn from, which tokens are most informative, and which supervision signals are most reliable. Motivated by this trend, we rethink optimization granularity of OPD and propose \\fireicon\\ FiRe-OPD (Filter, then Reweight), which jointly adjusts supervision signals at both trajectory and token levels. In details, FiRe-OPD first filters trajectories to remove low-quality rollout samples, and then applies soft reweighting within the retained trajectories to emphasize informative tokens. Compared with hard token selection, FiRe-OPD leverages a soft-weighting mechanism to effectively mitigate information loss and enhance optimization stability, thereby achieving finer-grained OPD optimization. We validate the effectiveness of FiRe-OPD across strong-to-weak, single-teacher, and multi-teacher settings, and demonstrate its superiority over recent token-level OPD methods ( (e.g., +6.25 on AIME 2024 in strong-to-weak, +18.81 on Miner in multi-teacher). Our code is available at https://github.com/YuYingLi0/FiRe-OPD.",
+      "authors": [
+        "Yuying Li",
+        "Leqi Zheng",
+        "Yongzi Yu",
+        "Wenrui Zhou",
+        "Xuchang Zhong",
+        "Xing Hu",
+        "Jing Jin",
+        "Hangjie Yuan",
+        "Tao Feng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-01T17:58:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.02684v2",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "directly addresses on-policy distillation with filter-then-reweight",
+      "llm_evidence_cn": "直接研究在线蒸馏，提出过滤-重加权方法",
+      "llm_evidence": "直接研究在线蒸馏，提出过滤-重加权方法",
+      "canonical_evidence": "直接研究在线蒸馏，提出过滤-重加权方法",
+      "llm_tldr_en": "FiRe-OPD improves on-policy distillation by filtering low-quality trajectories and reweighting informative tokens at both trajectory and token levels.",
+      "llm_tldr_cn": "本文聚焦在线蒸馏（OPD）中全轨迹KL监督低效的问题，提出FiRe-OPD方法。该方法在轨迹层面过滤低质量样本，在词元层面进行软重加权以强调信息量大的词元。相比硬选择，FiRe-OPD在保持计算开销的同时提升了蒸馏效果。这项工作是OPD领域优化粒度的新探索。",
+      "llm_tldr": "本文聚焦在线蒸馏（OPD）中全轨迹KL监督低效的问题，提出FiRe-OPD方法。该方法在轨迹层面过滤低质量样本，在词元层面进行软重加权以强调信息量大的词元。相比硬选择，FiRe-OPD在保持计算开销的同时提升了蒸馏效果。这项工作是OPD领域优化粒度的新探索。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06021v1",
+      "source": "arxiv",
+      "title": "OPRD: On-Policy Representation Distillation",
+      "abstract": "On-policy distillation (OPD) supervises the student only in output space by matching next-token probabilities. This output-only paradigm has two limits: (1) sampling variance from Monte Carlo KL estimates over large vocabularies (e.g., Qwen's ~150k tokens) persists throughout training, and (2) it treats the teacher as a black-box, discarding all intermediate hidden states after the LM head. We propose On-Policy Representation Distillation (OPRD), which lifts distillation into hidden-state space by aligning student and teacher representations across selected layers on the same rollouts, bypassing the LM head entirely. Theoretically, OPRD eliminates sampling variance and provides richer per-layer structural information. Empirically, OPRD closes the student-teacher gap on AIME 2024/2025 and AIMO, while output-space OPD baselines plateau below the teacher. OPRD also trains 1.44x faster and uses 54% less memory than top-k OPD. Code: https://github.com/ShenzhiYang2000/OPRD.",
+      "authors": [
+        "Shenzhi Yang",
+        "Guangcheng Zhu",
+        "Bowen Song",
+        "Haobo Wang",
+        "Mingxuan Xia",
+        "Xing Zheng",
+        "Yingfan Ma",
+        "Zhongqi Chen",
+        "Weiqiang Wang",
+        "Gang Chen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-04T11:13:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.06021v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Proposes On-Policy Representation Distillation (OPRD), a direct extension of OPD to hidden-state space",
+      "llm_evidence_cn": "提出在线策略表示蒸馏（OPRD），将OPD扩展到隐藏状态空间",
+      "llm_evidence": "提出在线策略表示蒸馏（OPRD），将OPD扩展到隐藏状态空间",
+      "canonical_evidence": "提出在线策略表示蒸馏（OPRD），将OPD扩展到隐藏状态空间",
+      "llm_tldr_en": "OPRD eliminates sampling variance in OPD by aligning student and teacher representations in hidden-state space, closing the gap on AIME 2024.",
+      "llm_tldr_cn": "该论文指出传统OPD仅在输出空间匹配概率，存在采样方差大且丢弃中间表示的问题。提出OPRD，在隐藏状态空间对齐师生表示，绕过LM头，理论上消除了采样方差并提供了更多结构信息。在AIME 2024等基准上缩小了师生差距，是OPD领域的重要改进。",
+      "llm_tldr": "该论文指出传统OPD仅在输出空间匹配概率，存在采样方差大且丢弃中间表示的问题。提出OPRD，在隐藏状态空间对齐师生表示，绕过LM头，理论上消除了采样方差并提供了更多结构信息。在AIME 2024等基准上缩小了师生差距，是OPD领域的重要改进。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.00561v1",
+      "source": "arxiv",
+      "title": "Interpretable Policy Distillation for Power Grid Topology Control",
+      "abstract": "Deep reinforcement learning (RL) offers a promising route to real-time power grid operation, yet large neural policies are costly to evaluate, hard to deploy on constrained hardware, and opaque to operators. We ask whether a Proximal Policy Optimization (PPO) agent for grid topology control can be compressed into compact tree-based surrogates without losing operational performance. A PPO teacher is trained on Grid2Op's standard 14-bus environment with a stability-oriented reward, using stress-focused data collection on critical, high-loading states. The policy is then distilled into a decision tree and a random forest. Across held-out validation episodes, both surrogates exceed the teacher in mean reward and survival length at a fraction of the inference cost. The decision tree shows high exact-action agreement with the PPO argmax and near-complete agreement within its top-ranked actions, while remaining small enough to be inspected directly. Feature-importance analysis reveals a representational shift: the PPO policy relies mainly on line-loading signals, while the distilled tree is driven primarily by bus-topology variables. These results suggest that stress-focused distillation can convert a black-box neural controller into a lightweight, auditable rule-like surrogate suited for real-time deployment, while also surfacing risks tied to deterministic actions and topology-specific generalization.",
+      "authors": [
+        "Aleksandra Dmitruka",
+        "Karlis Freivalds"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-05-30T06:32:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.00561v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "policy distillation, teacher-student, PPO, interpretable surrogates",
+      "llm_evidence_cn": "策略蒸馏、教师-学生框架、PPO、可解释代理模型",
+      "llm_evidence": "策略蒸馏、教师-学生框架、PPO、可解释代理模型",
+      "canonical_evidence": "策略蒸馏、教师-学生框架、PPO、可解释代理模型",
+      "llm_tldr_en": "This paper distills a PPO teacher for grid topology control into decision trees and random forests, achieving better mean reward and survival length than the teacher at a fraction of inference cost.",
+      "llm_tldr_cn": "针对深度强化学习策略在电网拓扑控制中部署成本高且不透明的挑战，本文利用Proximal Policy Optimization（PPO）训练教师策略，并将其蒸馏为决策树和随机森林等紧凑可解释模型。在标准14节点电网环境中，蒸馏后的代理模型在平均奖励和生存时长上均超越教师策略，同时大幅降低推理成本。",
+      "llm_tldr": "针对深度强化学习策略在电网拓扑控制中部署成本高且不透明的挑战，本文利用Proximal Policy Optimization（PPO）训练教师策略，并将其蒸馏为决策树和随机森林等紧凑可解释模型。在标准14节点电网环境中，蒸馏后的代理模型在平均奖励和生存时长上均超越教师策略，同时大幅降低推理成本。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher student distillation in reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.00151v1",
+      "source": "arxiv",
+      "title": "Emergence of Exploration in Policy Gradient Reinforcement Learning via Retrying",
+      "abstract": "In reinforcement learning (RL), agents benefit from exploration only because they repeatedly encounter similar states: trying different actions can improve performance or reduce uncertainty; without such retries, a greedy policy is optimal. We formalize this intuition with ReMax, an objective that evaluates a policy by the expected maximum return over $M$ samples, where $M$ is a positive integer, while accounting for return uncertainty. Optimizing this objective induces stochastic exploration as an emergent property, without explicit bonus terms. For efficient policy optimization, we derive a new policy-gradient formulation for ReMax and introduce ReMax PPO (RePPO), a PPO variant that optimizes ReMax while generalizing the discrete retry count $M$ to a continuous parameter $m > 0$, enabling fine-grained control of exploration. Empirically, RePPO promotes exploration, without any explicit exploration bonuses, on the MinAtar and Craftax benchmarks.",
+      "authors": [
+        "Soichiro Nishimori",
+        "Paavo Parmas",
+        "Sotetsu Koyamada",
+        "Tadashi Kozuno",
+        "Toshinori Kitamura",
+        "Shin Ishii",
+        "Yutaka Matsuo"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-05-29T03:35:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.00151v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "on-policy RL with emergent exploration via retrying",
+      "llm_evidence_cn": "通过重试机制涌现探索的在线强化学习方法",
+      "llm_evidence": "通过重试机制涌现探索的在线强化学习方法",
+      "canonical_evidence": "通过重试机制涌现探索的在线强化学习方法",
+      "llm_tldr_en": "ReMax PPO induces exploration as an emergent property in on-policy RL by optimizing expected maximum return over multiple samples.",
+      "llm_tldr_cn": "本文形式化了强化学习中重试带来的探索优势，提出ReMax目标函数以期望最大回报评价策略，并推导出策略梯度形式RePPO。该方法无需显式探索奖励就能涌现随机探索，是一类新的在线强化学习方法。实验证明RePPO在多种环境中提升了样本效率和最终性能。",
+      "llm_tldr": "本文形式化了强化学习中重试带来的探索优势，提出ReMax目标函数以期望最大回报评价策略，并推导出策略梯度形式RePPO。该方法无需显式探索奖励就能涌现随机探索，是一类新的在线强化学习方法。实验证明RePPO在多种环境中提升了样本效率和最终性能。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.02280v1",
+      "source": "arxiv",
+      "title": "Dynamics Are Learned, Not Told: Semi-Supervised Discovery of Latent Dynamics Geometries For Zero-Shot Policy Adaptation",
+      "abstract": "Real-world dynamics shifts pose a critical challenge for reinforcement learning in robotics, as policies tightly coupled to nominal environments often fail catastrophically when physical conditions change. Most existing methods rely on encoding explicitly identified physical parameters into a latent context, a parameter-centric paradigm that depends on pre-specified axes of variation and becomes brittle under unmodeled or compound dynamics changes. We revisit dynamics adaptation from an outcome-centric perspective: rather than telling policies what the dynamics are, we enable them to learn how dynamics affect interaction outcomes. Theoretically, this is grounded in a monotonic relationship between target-domain regret and the Lipschitz constant of a trajectory dynamics encoder. Practically, this constant can be upper-bounded through contrastive learning, yielding a smooth, task-relevant latent topology without privileged dynamics information. On MuJoCo benchmarks, our method consistently outperforms parameter-centric baselines under severe dynamics shifts, including unmodeled and time-varying parameters, while also improving in-distribution stability and latent interpretability. Overall, these results validate that controlling latent geometry is a principled mechanism for robust adaptation.",
+      "authors": [
+        "Zhiming Xu",
+        "Weitao Zhou",
+        "Xianghui Pan",
+        "Nanshan Deng",
+        "Chengju Liu",
+        "Qijun Chen",
+        "Chenpeng Yao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-01T14:05:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.02280v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "zero-shot policy adaptation via latent dynamics",
+      "llm_evidence_cn": "通过潜在动力学进行零样本策略适应",
+      "llm_evidence": "通过潜在动力学进行零样本策略适应",
+      "canonical_evidence": "通过潜在动力学进行零样本策略适应",
+      "llm_tldr_en": "Proposes semi-supervised discovery of latent dynamics geometries for zero-shot policy adaptation, learning how dynamics affect outcomes rather than encoding parameters.",
+      "llm_tldr_cn": "该研究针对机器人强化学习中动力学变化导致策略失效的问题，提出半监督发现潜在动力学几何结构的方法。通过结果中心视角让策略学习动力学如何影响交互结果，而非依赖预设参数。实验证明该方法在多种未建模动力学变化下实现零样本策略适应，为策略迁移提供了新思路。",
+      "llm_tldr": "该研究针对机器人强化学习中动力学变化导致策略失效的问题，提出半监督发现潜在动力学几何结构的方法。通过结果中心视角让策略学习动力学如何影响交互结果，而非依赖预设参数。实验证明该方法在多种未建模动力学变化下实现零样本策略适应，为策略迁移提供了新思路。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "policy transfer in reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
