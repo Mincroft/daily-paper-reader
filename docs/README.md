@@ -6,37 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-05
-- 运行时间：2026-06-05 21:49:30 UTC
+- 最新运行日期：2026-06-06
+- 运行时间：2026-06-06 20:51:41 UTC
 - 运行状态：成功
-- 本次总论文数：5
-- 精读区：3
-- 速读区：2
+- 本次总论文数：6
+- 精读区：2
+- 速读区：4
 
 ### 今日简报（AI）
-今日聚焦策略蒸馏与表示蒸馏优化，两篇满分论文深入探讨同策蒸馏中的粒度与表示学习。
-最值得关注两个方向：通过“先过滤再重加权”优化蒸馏粒度，以及同策表示蒸馏的提出，均获满分评价。
-建议优先精读两篇10分论文，掌握蒸馏技术中的重加权策略与表示迁移方法。
-- 详情：[/202606/05/README](/202606/05/README)
+今日精读《Constitutional On-Policy Safe Distillation》和《Physics-Guided Policy Optimization with Self-Distillation》两篇9.0分论文，分别聚焦安全策略蒸馏与物理引导优化。最值得关注的方向是安全蒸馏与物理知识引导强化学习的结合，既能提升策略安全性又能利用领域先验。建议优先阅读精读文章，再浏览速读中关于丰富反馈与多任务学习的内容以扩展视野。
+- 详情：[/202606/06/README](/202606/06/README)
 
 ### 精读区论文标签
-1. [Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation](/202606/05/2606.02684v2-filter-then-reweight-rethinking-optimization-granularity-in-on-policy-distillation)  
-   标签：评分：10.0/10、query:opd
-   evidence：直接研究在线蒸馏，提出过滤-重加权方法
-2. [OPRD: On-Policy Representation Distillation](/202606/05/2606.06021v1-oprd-on-policy-representation-distillation)  
-   标签：评分：10.0/10、query:opd
-   evidence：提出在线策略表示蒸馏（OPRD），将OPD扩展到隐藏状态空间
-3. [Interpretable Policy Distillation for Power Grid Topology Control](/202606/05/2606.00561v1-interpretable-policy-distillation-for-power-grid-topology-control)  
+1. [Constitutional On-Policy Safe Distillation](/202606/06/2606.03089v1-constitutional-on-policy-safe-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：策略蒸馏、教师-学生框架、PPO、可解释代理模型
+   evidence：直接研究RL中的on-policy自蒸馏用于安全对齐
+2. [Physics-Guided Policy Optimization with Self-Distillation](/202606/06/2606.03620v1-physics-guided-policy-optimization-with-self-distillation)  
+   标签：评分：9.0/10、query:opd
+   evidence：LLM后训练中的自蒸馏策略优化
 
 ### 速读区论文标签
-1. [Emergence of Exploration in Policy Gradient Reinforcement Learning via Retrying](/202606/05/2606.00151v1-emergence-of-exploration-in-policy-gradient-reinforcement-learning-via-retrying)  
+1. [Reinforcement Learning from Rich Feedback with Distributional DAgger](/202606/06/2606.05152v1-reinforcement-learning-from-rich-feedback-with-distributional-dagger)  
+   标签：评分：7.0/10、query:opd
+   evidence：使用教师分布的分布化DAgger进行模仿学习
+2. [GPU-Parallel Multi-Task Reinforcement Learning with Demonstration Guided Policy Optimization](/202606/06/2606.03335v1-gpu-parallel-multi-task-reinforcement-learning-with-demonstration-guided-policy-optimization)  
    标签：评分：6.0/10、query:opd
-   evidence：通过重试机制涌现探索的在线强化学习方法
-2. [Dynamics Are Learned, Not Told: Semi-Supervised Discovery of Latent Dynamics Geometries For Zero-Shot Policy Adaptation](/202606/05/2606.02280v1-dynamics-are-learned-not-told-semi-supervised-discovery-of-latent-dynamics-geometries-for-zero-shot-policy-adaptation)  
+   evidence：在策略演示引导的多任务强化学习
+3. [QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards](/202606/06/2606.03968v1-qubric-co-designing-queries-and-rubrics-for-rl-beyond-verifiable-rewards)  
    标签：评分：6.0/10、query:opd
-   evidence：通过潜在动力学进行零样本策略适应
+   evidence：基于教师提取关键点的标尺强化学习
+4. [Selective-Advantage Entropy-Adaptive Horizon GRPO: Asymmetric Token-Level Discounting for Efficient Reinforcement Learning of Language Models](/202606/06/2606.05434v1-selective-advantage-entropy-adaptive-horizon-grpo-asymmetric-token-level-discounting-for-efficient-reinforcement-learning-of-language-models)  
+   标签：评分：6.0/10、query:opd
+   evidence：自适应视野的在策略强化学习算法
 
 
 <div class="dpr-home-promo-card">

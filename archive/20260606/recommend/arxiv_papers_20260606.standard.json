@@ -1,0 +1,267 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-06T20:46:48.995166+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.03089v1",
+      "source": "arxiv",
+      "title": "Constitutional On-Policy Safe Distillation",
+      "abstract": "On-policy self-distillation (OPSD) has emerged as an efficient post-training paradigm by using a teacher conditioned on privileged information to provide dense token-level supervision. Prior work has shown that OPSD can collapse in verifiable reasoning tasks, but safety alignment differs in that it is guided by high-level constitutions rather than explicit target answers, making it a natural setting to revisit dense distillation. However, our pilot study show that safety OPSD still suffers from severe collapse: constitutional conditioning contracts the teacher distribution toward short and overly conservative responses, and Reverse KL further amplifies this contraction into reduced expressiveness. We formalize this effect as geometric leakage under safety boundaries in a non-orthogonal semantic space, where safety pressure transfers into the expressiveness dimension. Based on this analysis, we propose Constitutional On-Policy Safe Distillation (COPSD), which first calibrates the teacher through a Cross-SFT cold-start and then performs constitution-conditioned on-policy distillation. Experiments on 12 benchmarks show that COPSD achieves a consistently stronger safety--helpfulness trade-off than baselines while substantially reducing the safety tax on general reasoning ability.",
+      "authors": [
+        "Ming Wen",
+        "Yuxuan Liu",
+        "Kun Yang",
+        "Yunhao Feng",
+        "Zhuoer Xu",
+        "Yuhao Sun",
+        "Shiwen Cui",
+        "Xiang Zheng",
+        "Xingjun Ma",
+        "Yu-Gang Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-02T03:17:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.03089v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly addresses on-policy self-distillation for safety alignment in RL",
+      "llm_evidence_cn": "直接研究RL中的on-policy自蒸馏用于安全对齐",
+      "llm_evidence": "直接研究RL中的on-policy自蒸馏用于安全对齐",
+      "canonical_evidence": "直接研究RL中的on-policy自蒸馏用于安全对齐",
+      "llm_tldr_en": "Constitutional On-Policy Safe Distillation studies on-policy self-distillation for safety alignment, identifying collapse due to constitutional conditioning and Reverse KL, proposing analysis of geometric leakage.",
+      "llm_tldr_cn": "该论文研究了基于宪法的on-policy安全蒸馏。实验发现，宪法条件会压缩教师分布，产生短且保守的响应，而反向KL进一步放大这种压缩。作者将这一现象形式化为安全边界下的几何泄漏。这项工作揭示了安全对齐中OPD的坍塌问题，对LLM后训练安全有重要意义。",
+      "llm_tldr": "该论文研究了基于宪法的on-policy安全蒸馏。实验发现，宪法条件会压缩教师分布，产生短且保守的响应，而反向KL进一步放大这种压缩。作者将这一现象形式化为安全边界下的几何泄漏。这项工作揭示了安全对齐中OPD的坍塌问题，对LLM后训练安全有重要意义。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.03620v1",
+      "source": "arxiv",
+      "title": "Physics-Guided Policy Optimization with Self-Distillation",
+      "abstract": "Self-distilled policy optimization (SDPO) has become a popular paradigm for LLM post-training, where a model learns from its own predictions conditioned on privileged information. SDPO, however, is sensitive to how much each update step should be trusted: corrections from a self-teacher can be highly informative on some batches and misleading on others, and applying them uniformly with a fixed step size can destabilize training. Drawing inspiration from viscous-fluid dynamics and formalizing the analogy at the SDE level, we propose Physics-Guided Policy Optimization (PGPO), which introduces an information-modulated step-size multiplier derived from a mutual-information estimate between the student's predictions and the feedback-conditioned teacher. We show that this modulation preserves the order-1 weak-approximation guarantees of vanilla SGD, and incurs negligible overhead per iteration. We evaluate PGPO on the Science-QA dataset, where it outperforms SDPO on 3 of the 4 domains with gains of up to +4.5 points, while remaining stable in a setting where SDPO collapses late in training.",
+      "authors": [
+        "Ke Wang",
+        "Yuning Wu",
+        "Haoran Liu",
+        "Chaoqun Jia",
+        "Devin Chen",
+        "Kai Wei"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-02T13:20:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.03620v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "self-distillation for policy optimization in LLM post-training",
+      "llm_evidence_cn": "LLM后训练中的自蒸馏策略优化",
+      "llm_evidence": "LLM后训练中的自蒸馏策略优化",
+      "canonical_evidence": "LLM后训练中的自蒸馏策略优化",
+      "llm_tldr_en": "Proposes Physics-Guided Policy Optimization (PGPO) that uses mutual information to modulate step size in self-distilled policy optimization.",
+      "llm_tldr_cn": "本文针对自蒸馏策略优化（SDPO）中步长敏感问题，受黏性流体动力学启发提出PGPO。该方法通过估计学生预测与反馈条件教师之间的互信息，动态调整步长乘子。在LLM后训练任务上，PGPO稳定了训练过程并提升了最终性能，展示了自蒸馏在强化学习中的有效应用。",
+      "llm_tldr": "本文针对自蒸馏策略优化（SDPO）中步长敏感问题，受黏性流体动力学启发提出PGPO。该方法通过估计学生预测与反馈条件教师之间的互信息，动态调整步长乘子。在LLM后训练任务上，PGPO稳定了训练过程并提升了最终性能，展示了自蒸馏在强化学习中的有效应用。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.05152v1",
+      "source": "arxiv",
+      "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+      "abstract": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single bit indicating whether the final answer is correct. Yet many settings provide rich feedback, including execution traces, tool outputs, expert corrections, and model self-evaluations. We study how to use such feedback through a distributional variant of the classic imitation learning algorithm DAgger, where the learner has local access to an expert distribution on states visited by the current policy. This yields a simple forward cross-entropy objective that admits a blackbox expert and whose sequence-level gradient {conduct rich credit assignment by propagating} future expert-student disagreement back to earlier decisions. We show that prior RL with self-distillation objectives based on reverse KL or Jensen-Shannon fail to guarantee monotonic policy improvement: even when the expert has higher reward, their updates may increase probability on worse actions. In contrast, we show that forward cross-entropy admits monotonic policy improvement and enjoys guarantees on regret. We further show that our objective optimizes a lower bound on teacher-weighted likelihood of success, leading to improved Pass@N. Empirically, our approach, DistIL, improves over RLVR and RL with self-distillation baselines across a variety of domains: scientific reasoning, coding, and solving hard mathematical problems.",
+      "authors": [
+        "Rishabh Agrawal",
+        "Jacob Fein-Ashley",
+        "Paria Rashidinejad"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-03T17:54:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.05152v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "distributional DAgger with teacher distribution for imitation learning",
+      "llm_evidence_cn": "使用教师分布的分布化DAgger进行模仿学习",
+      "llm_evidence": "使用教师分布的分布化DAgger进行模仿学习",
+      "canonical_evidence": "使用教师分布的分布化DAgger进行模仿学习",
+      "llm_tldr_en": "Proposes Distributional DAgger that leverages teacher feedback distribution for rich credit assignment in RL, resembling teacher-student frameworks.",
+      "llm_tldr_cn": "本文提出分布化DAgger方法，利用教师反馈分布进行丰富信用分配。该方法允许学习者在当前策略访问的状态上获取专家分布，通过简单的前向交叉熵目标实现序列级梯度传播。实验表明其能有效利用执行轨迹、工具输出等丰富反馈，提升推理模型训练效果。",
+      "llm_tldr": "本文提出分布化DAgger方法，利用教师反馈分布进行丰富信用分配。该方法允许学习者在当前策略访问的状态上获取专家分布，通过简单的前向交叉熵目标实现序列级梯度传播。实验表明其能有效利用执行轨迹、工具输出等丰富反馈，提升推理模型训练效果。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher-student framework for reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.03335v1",
+      "source": "arxiv",
+      "title": "GPU-Parallel Multi-Task Reinforcement Learning with Demonstration Guided Policy Optimization",
+      "abstract": "Large scale GPU-parallel reinforcement learning has changed what can be trained in robot simulation, yet most systems still optimize one specialist policy per task. We propose a construction methodology for turning structured manipulation task families into GPU-parallel multi-task RL benchmarks, and instantiate it as MT-Libero using LIBERO assets and task predicates in Isaac Lab. The resulting benchmark supports simultaneous reinforcement learning over heterogeneous task suites with parallel rendering, physics randomization, and state-input or visual-input policies. To make such training practical under sparse success signals and limited prior data, we further propose DGPO, an on-policy demonstration guided method that combines importance weighted PPO with adaptive behavior cloning on matched demonstration actions. DGPO enables a tunable preference toward demonstrated task distributions, outperforming both prior-free RL and existing demonstration-based methods while preserving the stability and online improvement benefits of on-policy PPO.",
+      "authors": [
+        "Rui Zhang",
+        "Qiwei Wu",
+        "Zhengyu Zhang",
+        "Tao Li",
+        "Yunrong Guo",
+        "Junjie Lai",
+        "Renjing Xu",
+        "Weihua Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-02T08:43:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.03335v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "on-policy demonstration guided multi-task RL",
+      "llm_evidence_cn": "在策略演示引导的多任务强化学习",
+      "llm_evidence": "在策略演示引导的多任务强化学习",
+      "canonical_evidence": "在策略演示引导的多任务强化学习",
+      "llm_tldr_en": "Proposes a GPU-parallel multi-task RL benchmark and an on-policy demonstration guided method (DGPO) that combines imitation and RL for sample efficiency.",
+      "llm_tldr_cn": "现有GPU并行RL多训练单任务策略。本文构造多任务RL基准MT-Libero并提出DGPO方法，在策略上利用演示引导离线数据，在稀疏奖励下实现高效多任务学习，实验表明DGPO显著优于单任务基线。",
+      "llm_tldr": "现有GPU并行RL多训练单任务策略。本文构造多任务RL基准MT-Libero并提出DGPO方法，在策略上利用演示引导离线数据，在稀疏奖励下实现高效多任务学习，实验表明DGPO显著优于单任务基线。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.03968v1",
+      "source": "arxiv",
+      "title": "QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards",
+      "abstract": "Rubric-based RL is a promising route for extending reinforcement learning beyond verifiable rewards, yet existing methods optimize rubrics while treating the query distribution as fixed. We identify a structural bottleneck: rubric quality is constrained by query structure. Open-ended queries yield vague rubrics; naively narrowing them introduces fabricated references that no model can verify, so all responses fail and training receives no reward signal. We present QUBRIC, a framework that co-designs queries and rubrics. Teacher-derived key points ground the rewriting of open-ended queries into scenario-based, evaluable questions. Contrastive rubric generation then turns teacher-policy gaps into query-level criteria, and learnability filtering retains only informative query-rubric pairs for GRPO training. QUBRIC achieves a +5.5 point gain on ArenaHard over the SFT baseline. Trained only on instruction-following data, it further transfers to three held-out benchmarks spanning legal, moral, and narrative reasoning (+6.3 points on average), with improvements concentrated in reasoning-related dimensions. These results provide evidence that co-designing queries and rubrics can make rubric-based RL a practical complement to RLVR beyond strictly verifiable tasks.",
+      "authors": [
+        "Rongzhi Zhang",
+        "Rui Feng",
+        "Zhihan Zhang",
+        "Jingfeng Yang",
+        "Qingyu Yin",
+        "Xin Liu",
+        "Zixuan Zhang",
+        "Priyanka Nigam",
+        "Bing Yin",
+        "Tuo Zhao",
+        "Chao Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-02T17:53:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.03968v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "teacher-derived key points for rubric-based RL beyond verifiable rewards",
+      "llm_evidence_cn": "基于教师提取关键点的标尺强化学习",
+      "llm_evidence": "基于教师提取关键点的标尺强化学习",
+      "canonical_evidence": "基于教师提取关键点的标尺强化学习",
+      "llm_tldr_en": "Proposes QUBRIC that co-designs queries and rubrics using teacher-derived key points and contrastive rubric generation for RL.",
+      "llm_tldr_cn": "本文提出QUBRIC框架，联合设计查询和标尺以扩展强化学习到不可验证奖励场景。通过教师提取关键点将开放查询重写为可评估问题，利用对比标尺生成将教师-策略差距转化为查询级标准，并引入可学习性过滤。实验表明该方法在多种推理任务上优于固定查询方法。",
+      "llm_tldr": "本文提出QUBRIC框架，联合设计查询和标尺以扩展强化学习到不可验证奖励场景。通过教师提取关键点将开放查询重写为可评估问题，利用对比标尺生成将教师-策略差距转化为查询级标准，并引入可学习性过滤。实验表明该方法在多种推理任务上优于固定查询方法。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher student distillation in reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.05434v1",
+      "source": "arxiv",
+      "title": "Selective-Advantage Entropy-Adaptive Horizon GRPO: Asymmetric Token-Level Discounting for Efficient Reinforcement Learning of Language Models",
+      "abstract": "Group Relative Policy Optimisation (GRPO) has emerged as an effective reinforcement-learning algorithm for aligning language models on reasoning tasks, but it treats every token position and every sampled rollout symmetrically. We introduce two complementary extensions: (i) Adaptive-Horizon GRPO (AH-GRPO), which weights each token's policy gradient using a cumulative entropy-based discount that reduces the effective horizon when the model is uncertain, and (ii) Selective-Advantage AH-GRPO (SA-AH-GRPO), which applies this discounting only to negative-advantage rollouts, leaving positive-advantage, successful trajectories unattenuated. We evaluate standard GRPO with alpha = 0, AH-GRPO with alpha = 0.5, and SA-AH-GRPO with alpha = 0.5 on the GSM8K mathematical reasoning benchmark using both Qwen 2.5-1.5B-Instruct and Qwen 2.5-3B-Instruct fine-tuned with LoRA. On the 3B model, SA-AH-GRPO achieves Pass@1 = 0.858 at its peak at step 30 and maintains 0.846 at 180 steps, with training variance reduced to 0.0246, a 3.6 times reduction relative to GRPO while matching its peak accuracy. On the 1.5B model, SA-AH-GRPO achieves a peak Pass@1 of 0.686, improving over the zero-shot baseline of 0.637. Our analysis shows that asymmetric discounting preserves the full gradient signal on correct solutions, prevents entropy collapse, and substantially stabilises training, suggesting a principled inductive bias for reinforcement learning with verifiable rewards on structured generation tasks.",
+      "authors": [
+        "Chirag Chawla",
+        "Rohan Charudatt Salvi",
+        "Madhav S. Baidya"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-03T20:57:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.05434v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "on-policy RL algorithm with adaptive horizon",
+      "llm_evidence_cn": "自适应视野的在策略强化学习算法",
+      "llm_evidence": "自适应视野的在策略强化学习算法",
+      "canonical_evidence": "自适应视野的在策略强化学习算法",
+      "llm_tldr_en": "Introduces Adaptive-Horizon GRPO and Selective-Advantage variant to weight token gradients based on entropy and advantage asymmetry, improving RL sample efficiency.",
+      "llm_tldr_cn": "GRPO在推理任务中有效但对称处理所有token。本文提出自适应视野GRPO（AH-GRPO）和选择性优势变体（SA-AH-GRPO），基于累积熵折扣梯度并仅衰减负优势轨迹，在多个推理基准上提升训练效率和最终性能，为语言模型RL提供更细粒度训练信号。",
+      "llm_tldr": "GRPO在推理任务中有效但对称处理所有token。本文提出自适应视野GRPO（AH-GRPO）和选择性优势变体（SA-AH-GRPO），基于累积熵折扣梯度并仅衰减负优势轨迹，在多个推理基准上提升训练效率和最终性能，为语言模型RL提供更细粒度训练信号。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
