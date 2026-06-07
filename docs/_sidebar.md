@@ -1,6 +1,11 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-07 <!--dpr-date:20260607-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/07/2606.05718v1-vicur-visual-cues-as-recoverable-privilege-for-multimodal-on-policy-distillation" data-sidebar-item="{&quot;title&quot;: &quot;ViCuR: Visual Cues as Recoverable Privilege for Multimodal On-Policy Distillation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.05718v1-vicur-visual-cues-as-recoverable-privilege-for-multimodal-on-policy-distillation&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;opd&quot;}], &quot;evidence&quot;: &quot;ViCuR将OPD扩展到多模态推理，使用视觉线索作为特权&quot;}">ViCuR: Visual Cues as Recoverable Privilege for Multimodal On-Policy Distillation</a>
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/07/2606.04560v2-rollout-level-advantage-prioritized-experience-replay-for-grpo" data-sidebar-item="{&quot;title&quot;: &quot;Rollout-Level Advantage-Prioritized Experience Replay for GRPO&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.04560v2-rollout-level-advantage-prioritized-experience-replay-for-grpo&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;opd&quot;}], &quot;evidence&quot;: &quot;基于GRPO的在线强化学习，通过经验回放提升样本效率&quot;}">Rollout-Level Advantage-Prioritized Experience Replay for GRPO</a>
   * 2026-06-06 <!--dpr-date:20260606-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/06/2606.03089v1-constitutional-on-policy-safe-distillation" data-sidebar-item="{&quot;title&quot;: &quot;Constitutional On-Policy Safe Distillation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.03089v1-constitutional-on-policy-safe-distillation&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;opd&quot;}], &quot;evidence&quot;: &quot;直接研究RL中的on-policy自蒸馏用于安全对齐&quot;}">Constitutional On-Policy Safe Distillation</a>
