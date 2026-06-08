@@ -1,0 +1,353 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-08T21:43:04.396813+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2606.07000v1",
+      "source": "arxiv",
+      "title": "Teaching the Way, Not the Answer: Privileged Tutoring Distillation for Multimodal Policy Optimization",
+      "abstract": "Recent post-training methods, particularly Reinforcement Learning with Verifiable Rewards (RLVR), have significantly enhanced the reasoning ability of Large Vision-Language Models (LVLMs). However, the sparse nature of verifiable rewards provides little token-level supervision for failed rollouts, often leading to inefficient exploration in complex multimodal reasoning tasks. Although policy distillation can offer dense guidance, external teacher based methods introduce substantial computational overhead, while answer conditioned tuning methods may expose answer-level information and induce shortcut-like generation behavior. To address these limitations, we propose PTD-PO, a Privileged Tutoring Distillation Policy Optimization framework for RLVR that provides dense guidance without exposing the answer to the student policy. Specifically, PTD-PO constructs structured privileged hints from spatial attention guidance and intermediate textual reasoning steps, and uses them through in-context learning to produce step-wise token-distribution supervision. The student is still optimized under the original answer-free context, and its failed rollouts are aligned with the hint-augmented reference model at the token-distribution level. To further stabilize distillation under the distribution shift between guided and unguided contexts, we introduce a Top-K Jensen-Shannon divergence objective that focuses alignment on informative token probabilities while reducing memory overhead. Experiments on LVLMs ranging from 2B to 8B parameters show that PTD-PO consistently outperforms RLVR and distillation baselines, mitigates entropy collapse, and improves complex multimodal reasoning performance.",
+      "authors": [
+        "Shizhe Xiang",
+        "Ke An",
+        "Wenlong Yu",
+        "Yue Liu",
+        "Jian Luan",
+        "Pei Fu",
+        "Qilong Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-05T07:43:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.07000v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "privileged tutoring distillation for multimodal policy optimization",
+      "llm_evidence_cn": "多模态策略优化中的特权教师蒸馏",
+      "llm_evidence": "多模态策略优化中的特权教师蒸馏",
+      "canonical_evidence": "多模态策略优化中的特权教师蒸馏",
+      "llm_tldr_en": "Proposes PTD-PO, a privileged tutoring distillation method that provides dense token-level supervision from a teacher model to improve sample efficiency in multimodal RLVR, outperforming existing methods.",
+      "llm_tldr_cn": "现有强化学习后训练方法在复杂多模态推理任务中存在奖励稀疏、探索效率低的问题。虽然策略蒸馏可以提供密集指导，但外部教师方法计算开销大，答案条件调整可能导致捷径行为。为此本文提出PTD-PO，一种特权教师蒸馏策略优化方法，利用教师模型的内部表示提供密集的 token 级监督，避免外部推理开销。实验表明该方法有效提升了多模态推理性能。该方法融合了教师-学生蒸馏和强化学习，为多模态策略优化提供了新思路。",
+      "llm_tldr": "现有强化学习后训练方法在复杂多模态推理任务中存在奖励稀疏、探索效率低的问题。虽然策略蒸馏可以提供密集指导，但外部教师方法计算开销大，答案条件调整可能导致捷径行为。为此本文提出PTD-PO，一种特权教师蒸馏策略优化方法，利用教师模型的内部表示提供密集的 token 级监督，避免外部推理开销。实验表明该方法有效提升了多模态推理性能。该方法融合了教师-学生蒸馏和强化学习，为多模态策略优化提供了新思路。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.07082v1",
+      "source": "arxiv",
+      "title": "On the Geometry of On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood. We characterize the trajectory of OPD updates in parameter space and compare it with supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). A suite of parameter-space diagnostics consistently places OPD in a relaxed off-principal regime: compared with SFT, its updates affect fewer weights and avoid principal directions more strongly, while compared with RLVR, they remain less tightly constrained. Beyond this static localization, OPD exhibits subspace locking: its cumulative updates rapidly enter a narrow low-dimensional channel. Constraining training to the update subspace formed early in training preserves OPD performance but substantially degrades SFT, indicating that the locked subspace is functionally sufficient for OPD. Control experiments further show that sparsifying the update tokens and shifting rollout generation off-policy preserve the rank dynamics, whereas mixing the OPD objective with RLVR changes them. Overall, these results suggest that OPD is not merely an intermediate point between SFT and RLVR, but induces its own update geometry in parameter space.",
+      "authors": [
+        "Zhennan Shen",
+        "Yanshu Li",
+        "Qingyu Yin",
+        "Chak Tou Leong",
+        "Zhilin Wang",
+        "Yanxu Chen",
+        "Rongduo Han",
+        "Sunbowen Lee",
+        "Yi R. Fung"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-05T09:20:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.07082v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "characterizes trajectory of OPD updates in parameter space",
+      "llm_evidence_cn": "表征在线策略蒸馏更新的参数空间轨迹",
+      "llm_evidence": "表征在线策略蒸馏更新的参数空间轨迹",
+      "canonical_evidence": "表征在线策略蒸馏更新的参数空间轨迹",
+      "llm_tldr_en": "This paper analyzes the geometry of on-policy distillation updates, revealing relaxed off-principal regime and subspace locking dynamics.",
+      "llm_tldr_cn": "在线策略蒸馏（OPD）的优化动态尚不明确。本文通过参数空间诊断对比OPD与SFT和RLVR，发现OPD更新落在松弛离主方向区域，影响更少权重，并表现出子空间锁定现象。将训练限制在早期形成的更新子空间可保持性能，为理解OPD收敛行为提供理论洞见。",
+      "llm_tldr": "在线策略蒸馏（OPD）的优化动态尚不明确。本文通过参数空间诊断对比OPD与SFT和RLVR，发现OPD更新落在松弛离主方向区域，影响更少权重，并表现出子空间锁定现象。将训练限制在早期形成的更新子空间可保持性能，为理解OPD收敛行为提供理论洞见。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.05800v1",
+      "source": "arxiv",
+      "title": "SALT: When More Rollouts Don't Help in Group-Based Policy Optimization and How to Make Them Matter",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) often adopts GRPO-style group-relative updates, sampling multiple rollouts per prompt to construct normalized learning signals. However, merely increasing the number of rollouts does not reliably strengthen learning: under GRPO-style group normalization, per-rollout policy-gradient features can concentrate into a low-rank, signed geometry, causing substantial cancellation during aggregation and weakening the effective update. We address this failure mode with SALT, a Subspace-Adaptive geometry pLug-in componenT that uses sample-wise gradient geometry to reweight the coefficients of group-relative updates. SALT estimates a dominant shared subspace from the mini-batch Gram geometry, decomposes group-relative coefficients into shared and residual channels, and adaptively amplifies the residual channel when signed cancellation is severe. Across diverse reasoning-oriented RLVR benchmarks and model scales, SALT improves effective update geometry and performance without modifying the reward model or the rollout sampling procedure",
+      "authors": [
+        "Powei Chang",
+        "Jinpeng Zhang",
+        "Chaoqun Sun",
+        "MiniWell Tsao",
+        "Lianrui Li",
+        "Jianxiang Xiang",
+        "Chenyu Wang",
+        "Yukang Gao",
+        "Dongying Kong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-04T07:29:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.05800v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "addresses failure mode in GRPO, an on-policy RL method",
+      "llm_evidence_cn": "解决GRPO这一在线策略RL方法中的失效模式",
+      "llm_evidence": "解决GRPO这一在线策略RL方法中的失效模式",
+      "canonical_evidence": "解决GRPO这一在线策略RL方法中的失效模式",
+      "llm_tldr_en": "SALT identifies low-rank signed gradient cancellation in GRPO group updates and proposes a subspace-adaptive reweighting component to make additional rollouts beneficial.",
+      "llm_tldr_cn": "该论文发现GRPO组归一化下，更多的rollout并不总能增强学习，因为梯度特征会集中在低秩符号几何中导致大量抵消。提出SALT组件，通过估计小批量Gram矩阵的主导子空间来重新加权组相对更新的系数。实验显示SALT提高了更新有效性和最终性能。",
+      "llm_tldr": "该论文发现GRPO组归一化下，更多的rollout并不总能增强学习，因为梯度特征会集中在低秩符号几何中导致大量抵消。提出SALT组件，通过估计小批量Gram矩阵的主导子空间来重新加权组相对更新的系数。实验显示SALT提高了更新有效性和最终性能。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.01619v1",
+      "source": "arxiv",
+      "title": "ReSkill: Reconciling Skill Creation with Policy Optimization in Agentic RL",
+      "abstract": "Agentic reinforcement learning (RL) enables LLM agents to improve continuously from environment rewards, yet the resulting policies do not systematically accumulate reusable strategies that generalize across tasks. Modular skills can provide such reusable strategies, yet existing skill-augmented RL methods decouple skill creation from policy optimization, risking adopting skills that conflict with the evolving policy. Inspired by Anthropic's Skill Creator, we introduce ReSkill, an RL-in-the-loop skill creation framework that reconciles skill evolution with policy learning. ReSkill exploits the group-wise structure of GRPO to naturally embed three mechanisms with only marginal additional overhead: (1) an assertion-driven skill creator that diagnoses failures from past experience and proposes conditional, trigger-based skill revisions; (2) within-group rollout sampling that enables controlled comparison of skill versions, capturing which version best supports the policy's ongoing learning; and (3) Thompson Sampling with adaptive discounting to balance exploration and exploitation in skill version selection as the policy evolves. Across several domains, ReSkill consistently outperforms existing memory and skill-based RL methods, with the largest gains on unseen tasks. Analysis of the skill lifecycle shows skills being automatically created, tested, refined, and pruned as the policy improves, demonstrating reconciled skill-policy co-evolution.",
+      "authors": [
+        "Zelin He",
+        "Haotian Lin",
+        "Boran Han",
+        "Wei Zhu",
+        "Haoyang Fang",
+        "Bernie Wang",
+        "Xuan Zhu",
+        "Runze Li",
+        "Matthew Reimherr"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-06-01T03:12:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.01619v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "uses GRPO, an on-policy RL method, for skill creation",
+      "llm_evidence_cn": "使用GRPO这一在线策略RL方法进行技能创建",
+      "llm_evidence": "使用GRPO这一在线策略RL方法进行技能创建",
+      "canonical_evidence": "使用GRPO这一在线策略RL方法进行技能创建",
+      "llm_tldr_en": "ReSkill proposes an RL-in-the-loop skill creation framework that integrates skill creation with policy optimization using GRPO, enabling reusable skill accumulation without decoupling.",
+      "llm_tldr_cn": "该论文针对智能体强化学习策略无法系统积累可复用技能的问题，提出ReSkill框架，利用GRPO的组结构在线嵌入技能创建机制，协调技能演化与策略学习。实验显示该方法在不增加显著开销的情况下提升跨任务泛化能力。",
+      "llm_tldr": "该论文针对智能体强化学习策略无法系统积累可复用技能的问题，提出ReSkill框架，利用GRPO的组结构在线嵌入技能创建机制，协调技能演化与策略学习。实验显示该方法在不增加显著开销的情况下提升跨任务泛化能力。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.06967v1",
+      "source": "arxiv",
+      "title": "GenPO++: Generative Policy Optimization with Jacobian-free Likelihood Ratios",
+      "abstract": "Generative policies provide expressive and multimodal action distributions, making them attractive for reinforcement learning (RL) in complex continuous-control tasks. Among them, flow-based policies are especially appealing because they generate actions through deterministic transport maps. However, applying such generative policies to likelihood-based on-policy learning remains limited by the difficulty of evaluating the probability of executed actions. Existing flow RL methods either replace the true action-density ratio with approximate surrogates, which can introduce biased updates, or recover exact likelihoods through dummy-action augmentation, which enlarges the policy space and increases computation. In this work, we propose GenPO++, a reversible generative policy optimization framework that uses history states as auxiliary memory in a high-order reversible ODE solver, yielding exact inversion without changing the original action dimension. The resulting generative policy map has a log-determinant determined only by fixed solver coefficients, enabling exact and Jacobian-free likelihood-ratio computation. This design preserves the expressiveness of generative flow policies while avoiding both action ratio bias and dummy-action overhead. We evaluate GenPO++ on large-scale simulated control, fine-tuning, and real-world robotic manipulation tasks, where it achieves competitive or superior performance over state-of-the-art on-policy RL methods, while improving training stability and computational efficiency.",
+      "authors": [
+        "Ke Hu",
+        "Shutong Ding",
+        "Panxin Tao",
+        "Jingya Wang",
+        "Ye Shi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-05T06:54:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.06967v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "likelihood-based on-policy learning for generative policies",
+      "llm_evidence_cn": "基于似然的在线策略学习用于生成策略",
+      "llm_evidence": "基于似然的在线策略学习用于生成策略",
+      "canonical_evidence": "基于似然的在线策略学习用于生成策略",
+      "llm_tldr_en": "GenPO++ enables likelihood-based on-policy learning for flow-based generative policies using Jacobian-free likelihood ratios, avoiding biased updates or increased computation.",
+      "llm_tldr_cn": "生成策略在连续控制任务中具有优势，但基于似然的在线策略学习因难以评估执行动作概率而受限。本文提出GenPO++，采用无雅可比似然比实现精确概率评估，无需哑元增强，从而支持流模型策略的在线学习。实验验证其在复杂连续控制任务中的有效性。",
+      "llm_tldr": "生成策略在连续控制任务中具有优势，但基于似然的在线策略学习因难以评估执行动作概率而受限。本文提出GenPO++，采用无雅可比似然比实现精确概率评估，无需哑元增强，从而支持流模型策略的在线学习。实验验证其在复杂连续控制任务中的有效性。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.02194v1",
+      "source": "arxiv",
+      "title": "Coherent Off-Policy Improvement of Large Behavior Models with Learned Rewards",
+      "abstract": "Distilling expert demonstration data into large generative models using behavioral cloning is a scalable approach to learning capable policies for robotic control, particularly for dexterous manipulation. Reinforcement learning (RL) can be used as a means to finetune these policies further using additional experience. An open question is whether RL is more sample-efficient than collecting more human demonstrations. Prior work has finetuned large pretrained policies in a scalable fashion by applying RL to a smaller residual policy that corrects the pretrained model. However, for the typical sparse reward tasks, RL algorithms can struggle to optimize the behavior in a sample-efficient manner. We explore inverse reinforcement learning, where a dense reward function is learned from expert demonstrations, potentially reducing the challenge of RL finetuning. We specifically consider coherent imitation learning, an IRL method that facilitates improvement of the BC policy through using a specific reward formulation with theoretical guarantees. We show that our IRL method maintains or improves the performance of pi-0.5 on all six sparse manipulation tasks and achieves a $\\geq 90\\%$ success rate on five out of six complex manipulation tasks, outperforming RL-based baselines using sparse rewards. By ensuring our initial pretrained finetuning policy is optimal for our initial reward and critic, our method circumvents the initial drop commonly seen in RL finetuning and enables faster improvement.",
+      "authors": [
+        "Christian Scherer",
+        "Joe Watson",
+        "Theo Gruner",
+        "Daniel Palenicek",
+        "Ingmar Posner",
+        "Jan Peters"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-01T12:49:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.02194v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "distilling expert demonstration data with behavioral cloning and RL finetuning",
+      "llm_evidence_cn": "通过行为克隆蒸馏专家数据并利用强化学习微调",
+      "llm_evidence": "通过行为克隆蒸馏专家数据并利用强化学习微调",
+      "canonical_evidence": "通过行为克隆蒸馏专家数据并利用强化学习微调",
+      "llm_tldr_en": "Explores combining behavioral cloning distillation of expert data with RL finetuning for robotic policies, showing that inverse RL can provide dense rewards to improve sample efficiency in sparse reward settings.",
+      "llm_tldr_cn": "该论文将专家演示数据通过行为克隆蒸馏到大规模生成模型中，并利用强化学习（RL）进一步微调策略。针对稀疏奖励任务中RL样本效率低的问题，探索逆强化学习以提供密集奖励。实验表明，逆RL可以显著提升微调效率。该方法涉及知识蒸馏与强化学习的结合，属于policy distillation范畴，但侧重于off-policy改进。",
+      "llm_tldr": "该论文将专家演示数据通过行为克隆蒸馏到大规模生成模型中，并利用强化学习（RL）进一步微调策略。针对稀疏奖励任务中RL样本效率低的问题，探索逆强化学习以提供密集奖励。实验表明，逆RL可以显著提升微调效率。该方法涉及知识蒸馏与强化学习的结合，属于policy distillation范畴，但侧重于off-policy改进。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.04536v1",
+      "source": "arxiv",
+      "title": "Scaling Self-Evolving Agents via Parametric Memory",
+      "abstract": "Existing memory-augmented LLM agents store past experience exclusively in prompt space, as textual summaries or retrieved passages, while keeping model parameters frozen throughout a rollout. Such agents can \\emph{look up} what they have seen but cannot \\emph{learn from} it: their policy is unchanged by experience, and any information dropped from the context is permanently lost. We introduce \\texttt{TMEM}, a self-evolving parametric memory framework in which the agent not only compresses history into explicit memory but also absorbs distilled supervision into fast LoRA weights $Δ_t$ via lightweight online updates, genuinely altering its future behavior within a single episode. We formalize this as an agentic decision process with fast-weight rollout dynamics: actions are sampled from $π_{θ_0+Δ_t}$, while extraction actions produce supervision that updates $Δ_t$ for subsequent decisions. This view makes the extraction policy directly optimizable by RL: training $θ_0$ improves not only task actions but also the quality of the data used for online LoRA adaptation. We further propose SVD-based initialization of the LoRA subspace to accelerate online convergence. Experiments on LoCoMo, LongMemEval-S, multi-objective search, and CL-Bench show that \\texttt{TMEM} consistently outperforms summary-based and retrieval-based baselines across different model scales.",
+      "authors": [
+        "Tao Ren",
+        "Weiyao Luo",
+        "Hui Yang",
+        "Rongzhi Zhu",
+        "Xiang Huang",
+        "Yuchuan Wu",
+        "Bingxue Chou",
+        "Jieping Ye",
+        "Jiafeng Liang",
+        "Yongbin Li",
+        "Yijie Peng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-03T07:18:31+00:00",
+      "link": "https://arxiv.org/pdf/2606.04536v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "absorbs distilled supervision into fast LoRA weights, akin to knowledge distillation",
+      "llm_evidence_cn": "将蒸馏监督吸收到LoRA权重中，类似于知识蒸馏",
+      "llm_evidence": "将蒸馏监督吸收到LoRA权重中，类似于知识蒸馏",
+      "canonical_evidence": "将蒸馏监督吸收到LoRA权重中，类似于知识蒸馏",
+      "llm_tldr_en": "Introduces TMEM, a parametric memory framework where agents absorb distilled supervision online, enabling self-evolution akin to online distillation.",
+      "llm_tldr_cn": "针对现有记忆增强智能体只能查询历史而无法学习的问题，本文提出TMEM框架——通过快速在线更新将蒸馏监督吸收到LoRA权重中，实现单幕内的行为改变。该方法形式上是一种在线蒸馏过程，使智能体能从经验中真正学习。尽管主要聚焦于记忆，其蒸馏机制与知识蒸馏在强化学习中的思想相通。",
+      "llm_tldr": "针对现有记忆增强智能体只能查询历史而无法学习的问题，本文提出TMEM框架——通过快速在线更新将蒸馏监督吸收到LoRA权重中，实现单幕内的行为改变。该方法形式上是一种在线蒸馏过程，使智能体能从经验中真正学习。尽管主要聚焦于记忆，其蒸馏机制与知识蒸馏在强化学习中的思想相通。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.06058v1",
+      "source": "arxiv",
+      "title": "MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following",
+      "abstract": "Reinforcement learning with verifiable rewards is ideal for multi-constraint instruction following, yet standard group-relative policy optimization (GRPO) becomes unstable under discrete, low-dispersion rewards, where within-group reward distributions are frequently homogeneous. We identify and formalize three pathologies of z-score group normalization in this regime: low-variance amplification, mean-centering blindness, and zero-variance collapse. To address them, we propose MDP-GRPO, which stabilizes learning through (1) multi-temperature sampling to increase reward dispersion, (2) dual-anchor advantages to restore gradients in homogeneous groups and stop mean-centering blindness, (3) prospect-theoretic shaping to bound updates and penalize violations based on Kahneman and Tversky's theory, and (4) asymmetric KL regularization. Evaluated on FollowBench, IFEval, and a curated multi-constraint dataset, MDP-GRPO outperforms standard GRPO, improving strict constraint satisfaction by up to 5.0% on Llama-3.2-3B. Our method also enables stable convergence with small group sizes while preserving general capabilities on MMLU and ARC.",
+      "authors": [
+        "Mohammad Mahdi Salmani-Zarchi",
+        "Zahra Rahimi",
+        "Heshaam Faili",
+        "Mohammad Javad Dousti"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-04T11:58:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.06058v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "improves GRPO, an on-policy RL method",
+      "llm_evidence_cn": "改进GRPO这一在线策略RL方法",
+      "llm_evidence": "改进GRPO这一在线策略RL方法",
+      "canonical_evidence": "改进GRPO这一在线策略RL方法",
+      "llm_tldr_en": "MDP-GRPO stabilizes GRPO under discrete low-dispersion rewards by multi-temperature sampling, dual-anchor advantages, and prospect shaping, enabling reliable multi-constraint instruction following.",
+      "llm_tldr_cn": "该论文发现标准GRPO在离散低分散奖励下不稳定，出现低方差放大、均值中心盲点等病态问题。提出MDP-GRPO，通过多温度采样增加奖励分散度、双锚优势恢复梯度以及前景理论塑造，稳定学习过程。实验证明在多项指令跟随任务中有效。",
+      "llm_tldr": "该论文发现标准GRPO在离散低分散奖励下不稳定，出现低方差放大、均值中心盲点等病态问题。提出MDP-GRPO，通过多温度采样增加奖励分散度、双锚优势恢复梯度以及前景理论塑造，稳定学习过程。实验证明在多项指令跟随任务中有效。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
