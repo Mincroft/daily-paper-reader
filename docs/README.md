@@ -6,48 +6,54 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-08
-- 运行时间：2026-06-08 21:49:38 UTC
+- 最新运行日期：2026-06-09
+- 运行时间：2026-06-09 21:58:59 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：2
-- 速读区：6
+- 本次总论文数：10
+- 精读区：6
+- 速读区：4
 
 ### 今日简报（AI）
-今日日报聚焦多模态策略优化与在线策略蒸馏，共收录8篇论文，其中精读2篇、速读6篇。
+今日精读两大知识蒸馏力作，满分论文聚焦策略表征与轨迹优化。
 
-最值得关注的两篇精读论文：特权教师蒸馏法《Teaching the Way, Not the Answer》和在线蒸馏几何分析《On the Geometry of On-Policy Distillation》，均获9.0高分。
+最值得关注：《OPRD》与《Trajectory-Refined Distillation》均获满分，前者提出在线策略表征蒸馏，后者通过轨迹细化提升蒸馏效率，为强化学习模型压缩打开新思路。
 
-建议优先精读这两篇，掌握多模态策略优化的核心方法；速读中《SALT》《GenPO++》也值得快速了解。
-- 详情：[/202606/08/README](/202606/08/README)
+建议优先精读这两篇满分论文，再结合速读中的可解释策略树与长时序信用分配方法，系统提升高效迁移与可解释性。
+- 详情：[/202606/09/README](/202606/09/README)
 
 ### 精读区论文标签
-1. [Teaching the Way, Not the Answer: Privileged Tutoring Distillation for Multimodal Policy Optimization](/202606/08/2606.07000v1-teaching-the-way-not-the-answer-privileged-tutoring-distillation-for-multimodal-policy-optimization)  
-   标签：评分：9.0/10、query:opd
-   evidence：多模态策略优化中的特权教师蒸馏
-2. [On the Geometry of On-Policy Distillation](/202606/08/2606.07082v1-on-the-geometry-of-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：表征在线策略蒸馏更新的参数空间轨迹
+1. [OPRD: On-Policy Representation Distillation](/202606/09/2606.06021v2-oprd-on-policy-representation-distillation)  
+   标签：评分：10.0/10、query:opd
+   evidence：在策略表示蒸馏，OPRD
+2. [Trajectory-Refined Distillation](/202606/09/2606.08432v1-trajectory-refined-distillation)  
+   标签：评分：10.0/10、query:opd
+   evidence：直接针对大语言模型在线策略蒸馏，提出轨迹级纠正方法
+3. [Thinking Without Images: Internalizing Visual Manipulation with On-Policy Self-Distillation](/202606/09/2606.08719v1-thinking-without-images-internalizing-visual-manipulation-with-on-policy-self-distillation)  
+   标签：评分：10.0/10、query:opd
+   evidence：提出通过在线策略自蒸馏内化视觉操作推理
+4. [Stabilizing On-Policy Distillation for MLLM Reasoning with Global Normalization](/202606/09/2606.09091v1-stabilizing-on-policy-distillation-for-mllm-reasoning-with-global-normalization)  
+   标签：评分：10.0/10、query:opd
+   evidence：直接研究多模态大语言模型推理中的在线策略蒸馏
+5. [SG-OPD: Sign-Gated On-Policy Distillation via Sign-Consistency Gating and Phased Teacher Sampling](/202606/09/2606.09304v1-sg-opd-sign-gated-on-policy-distillation-via-sign-consistency-gating-and-phased-teacher-sampling)  
+   标签：评分：10.0/10、query:opd
+   evidence：提出一种新的在线策略蒸馏方法，包括符号一致性门控和分阶段教师采样
+6. [Breaking the Tokenizer Barrier: On-Policy Distillation across Model Families](/202606/09/2606.09456v1-breaking-the-tokenizer-barrier-on-policy-distillation-across-model-families)  
+   标签：评分：10.0/10、query:opd
+   evidence：直接解决跨分词器的在线策略蒸馏问题，核心OPD挑战
 
 ### 速读区论文标签
-1. [SALT: When More Rollouts Don't Help in Group-Based Policy Optimization and How to Make Them Matter](/202606/08/2606.05800v1-salt-when-more-rollouts-dont-help-in-group-based-policy-optimization-and-how-to-make-them-matter)  
+1. [Distilling LLM Reasoning into an Interpretable Policy Tree for Human-AI Collaboration](/202606/09/2606.08596v1-distilling-llm-reasoning-into-an-interpretable-policy-tree-for-human-ai-collaboration)  
+   标签：评分：8.0/10、query:opd
+   evidence：将LLM推理蒸馏为可解释的策略树，用于人机协作
+2. [PBSD: Privileged Bayesian Self-Distillation for Long-Horizon Credit Assignment](/202606/09/2606.09348v1-pbsd-privileged-bayesian-self-distillation-for-long-horizon-credit-assignment)  
+   标签：评分：8.0/10、query:opd
+   evidence：提出贝叶斯自蒸馏用于强化学习中的信用分配，属于知识蒸馏
+3. [Flow-based Policy Adaptation without Policy Updates](/202606/09/2606.06461v1-flow-based-policy-adaptation-without-policy-updates)  
    标签：评分：7.0/10、query:opd
-   evidence：解决GRPO这一在线策略RL方法中的失效模式
-2. [GenPO++: Generative Policy Optimization with Jacobian-free Likelihood Ratios](/202606/08/2606.06967v1-genpo-generative-policy-optimization-with-jacobian-free-likelihood-ratios)  
-   标签：评分：7.0/10、query:opd
-   evidence：基于似然的在线策略学习用于生成策略
-3. [ReSkill: Reconciling Skill Creation with Policy Optimization in Agentic RL](/202606/08/2606.01619v1-reskill-reconciling-skill-creation-with-policy-optimization-in-agentic-rl)  
+   evidence：基于流的动作分布匹配到专家行为
+4. [Momentum for Reasoning: Dense Intrinsic Signals in Policy Optimization](/202606/09/2606.08815v1-momentum-for-reasoning-dense-intrinsic-signals-in-policy-optimization)  
    标签：评分：6.0/10、query:opd
-   evidence：使用GRPO这一在线策略RL方法进行技能创建
-4. [Coherent Off-Policy Improvement of Large Behavior Models with Learned Rewards](/202606/08/2606.02194v1-coherent-off-policy-improvement-of-large-behavior-models-with-learned-rewards)  
-   标签：评分：6.0/10、query:opd
-   evidence：通过行为克隆蒸馏专家数据并利用强化学习微调
-5. [Scaling Self-Evolving Agents via Parametric Memory](/202606/08/2606.04536v1-scaling-self-evolving-agents-via-parametric-memory)  
-   标签：评分：6.0/10、query:opd
-   evidence：将蒸馏监督吸收到LoRA权重中，类似于知识蒸馏
-6. [MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following](/202606/08/2606.06058v1-mdp-grpo-stabilized-group-relative-policy-optimization-for-multi-constraint-instruction-following)  
-   标签：评分：6.0/10、query:opd
-   evidence：改进GRPO这一在线策略RL方法
+   evidence：策略优化，GRPO，在策略学习
 
 
 <div class="dpr-home-promo-card">
