@@ -1,0 +1,301 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-11T21:49:54.683711+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.07082v2",
+      "source": "arxiv",
+      "title": "On the Geometry of On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood. We characterize the trajectory of OPD updates in parameter space and compare it with supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR). A suite of parameter-space diagnostics consistently places OPD in a relaxed off-principal regime: compared with SFT, its updates affect fewer weights and avoid principal directions more strongly, while compared with RLVR, they remain less tightly constrained. Beyond this static localization, OPD exhibits subspace locking: its cumulative updates rapidly enter a narrow low-dimensional channel. Constraining training to the update subspace formed early in training preserves OPD performance but substantially degrades SFT, indicating that the locked subspace is functionally sufficient for OPD. Control experiments further show that sparsifying the update tokens and shifting rollout generation off-policy preserve the rank dynamics, whereas mixing the OPD objective with RLVR changes them. Overall, these results suggest that OPD is not merely an intermediate point between SFT and RLVR, but induces its own update geometry in parameter space.",
+      "authors": [
+        "Zhennan Shen",
+        "Yanshu Li",
+        "Qingyu Yin",
+        "Chak Tou Leong",
+        "Zhilin Wang",
+        "Yanxu Chen",
+        "Rongduo Han",
+        "Sunbowen Lee",
+        "Yi R. Fung"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-05T09:20:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.07082v2",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "theoretical study on on-policy distillation geometry",
+      "llm_evidence_cn": "对在线策略蒸馏训练动态的几何分析",
+      "llm_evidence": "对在线策略蒸馏训练动态的几何分析",
+      "canonical_evidence": "对在线策略蒸馏训练动态的几何分析",
+      "llm_tldr_en": "Characterizes OPD updates in parameter space revealing relaxed off-principal regime and subspace locking, compared to SFT and RLVR.",
+      "llm_tldr_cn": "针对在线策略蒸馏（OPD）训练动态理解不足的问题，论文在参数空间表征OPD更新轨迹，并与监督微调（SFT）和基于可验证奖励的强化学习（RLVR）进行比较。发现OPD处于松弛的非主方向状态，累积更新迅速进入窄低维通道（子空间锁定）。约束训练到早期形成的子空间可保持性能。揭示了OPD的独特几何性质。",
+      "llm_tldr": "针对在线策略蒸馏（OPD）训练动态理解不足的问题，论文在参数空间表征OPD更新轨迹，并与监督微调（SFT）和基于可验证奖励的强化学习（RLVR）进行比较。发现OPD处于松弛的非主方向状态，累积更新迅速进入窄低维通道（子空间锁定）。约束训练到早期形成的子空间可保持性能。揭示了OPD的独特几何性质。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11559v1",
+      "source": "arxiv",
+      "title": "HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation",
+      "abstract": "Reinforcement learning typically improves multi-turn agent capabilities through the terminal outcome of the trajectories, which makes it difficult to determine credit assignments for each intermediate turns. Recent on-policy self-distillation methods offer a promising alternative by converting privileged feedback into dense token-level supervision through a self-teacher. Our study is motivated by the unexpected performance degradation observed when naively extending this paradigm to multi-turn settings, which we attribute to a lack of alignment between privileged feedback, such as successful trajectories or terminal outcomes, and the student's current decision context. We introduce HERO, a hindsight-enhanced self-distillation framework that uses next environment observations as locally aligned feedback. After each rollout, HERO reflects on the completed interaction to convert each observation into a compact turn-level diagnosis, that captures actionable feedback about the original action such as its necessity, validity or failure cause. On TauBench and WebShop, HERO improves task success and reduces unnecessary turns over environment-feedback-only self-distillation and GRPO. It is especially effective under limited training turn budgets, where successful rollouts are rare and GRPO provides weak reward-contrast signals.",
+      "authors": [
+        "Haoran Liu",
+        "Yuwei Zhang",
+        "Xiyao Li",
+        "Bohan Lyu",
+        "Jingbo Shang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-10T01:35:34+00:00",
+      "link": "https://arxiv.org/pdf/2606.11559v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "on-policy self-distillation for multi-turn RL",
+      "llm_evidence_cn": "在线策略自蒸馏方法用于多轮强化学习",
+      "llm_evidence": "在线策略自蒸馏方法用于多轮强化学习",
+      "canonical_evidence": "在线策略自蒸馏方法用于多轮强化学习",
+      "llm_tldr_en": "Proposes HERO, a hindsight-enhanced self-distillation framework to align privileged feedback with student context in multi-turn on-policy RL, improving credit assignment and performance.",
+      "llm_tldr_cn": "针对在线策略自蒸馏在多轮强化学习中因反馈与决策上下文不对齐而性能下降的问题，提出HERO框架，通过事后增强机制将环境观测转化为对齐的密集监督信号。实验表明HERO有效提升多轮任务性能，缓解信用分配困难，为在线策略蒸馏在复杂多步决策中提供新思路。",
+      "llm_tldr": "针对在线策略自蒸馏在多轮强化学习中因反馈与决策上下文不对齐而性能下降的问题，提出HERO框架，通过事后增强机制将环境观测转化为对齐的密集监督信号。实验表明HERO有效提升多轮任务性能，缓解信用分配困难，为在线策略蒸馏在复杂多步决策中提供新思路。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11627v1",
+      "source": "arxiv",
+      "title": "When Context Returns: Toward Robust Internalization in On-Policy Distillation",
+      "abstract": "Recent work has shown that on-policy distillation can internalize privileged context, such as system prompts or task hints, into a student model so that the context is no longer needed at inference time. Although this approach successfully improves the student's no-context performance, we identify an interesting and previously unstudied phenomenon: in many settings, reintroducing the original privileged context to the distilled student actually degrades its performance, even on instances it already solves correctly without context. We term this context-induced degradation and argue that robust internalization demands not only matching the teacher's context-conditioned behavior, but also remaining stable when the context is reintroduced, a property we call context removability. Motivated by this observation, we propose a lightweight consistency regularizer that first anchors the student's no-context output via stop-gradient, then penalizes the context-conditioned output for deviating from it via forward KL divergence. This simple addition requires only one extra forward pass per training step, yet it effectively mitigates context-induced degradation and, in many cases, even improves no-context performance. Across 12 configurations spanning diverse domains and model families, our method improves context-conditioned accuracy in the majority of settings, reduces context-induced harm in 11 out of 12 settings, and effectively eliminates response-length inflation. A mechanistic case study further confirms that context removability is achieved at the representation level, with hidden states remaining nearly identical regardless of whether the context is present.",
+      "authors": [
+        "Xun Wang",
+        "Ruishuo Chen",
+        "Zhuoran Li",
+        "Yu Chen",
+        "Longbo Huang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-10T03:43:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.11627v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Directly studies on-policy distillation for robust internalization",
+      "llm_evidence_cn": "直接研究在线策略蒸馏中的鲁棒内化",
+      "llm_evidence": "直接研究在线策略蒸馏中的鲁棒内化",
+      "canonical_evidence": "直接研究在线策略蒸馏中的鲁棒内化",
+      "llm_tldr_en": "Identifies context-induced degradation in on-policy distillation and proposes robust internalization criteria.",
+      "llm_tldr_cn": "本文发现在线策略蒸馏中重新引入原始上下文会降低学生模型性能，称之为上下文诱导退化。提出鲁棒内化不仅需要匹配教师行为，还需在上下文重新引入时保持稳定。该工作深化了在线策略蒸馏的理解。",
+      "llm_tldr": "本文发现在线策略蒸馏中重新引入原始上下文会降低学生模型性能，称之为上下文诱导退化。提出鲁棒内化不仅需要匹配教师行为，还需在上下文重新引入时保持稳定。该工作深化了在线策略蒸馏的理解。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11709v1",
+      "source": "arxiv",
+      "title": "RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation",
+      "abstract": "On-policy self-distillation (OPSD) provides dense, token-level supervision for reasoning models by aligning a model's own distribution with the distribution it produces under privileged context, typically a verified solution. However, we show that the learning signal drawn from this distributional gap concentrates on style tokens rather than task-bearing ones, as the hinted model tends to produce more direct, shorter outputs. We term this pathology \\emph{privilege-induced style drift}, which destabilizes training or causes response length to shrink. To address this, we propose \\textbf{RLCSD} (Reinforcement Learning with Contrastive on-policy Self-Distillation), which mitigates this drift by contrasting the teacher-student gap under a correct hint against that under a wrong hint, suppressing the style shift that conditioning on a hint tends to induce regardless of correctness, and yielding a signal that is more concentrated on task-bearing tokens. Experiments on Qwen3 (1.7B/4B/8B) and Olmo-3-7B-Think across mathematical and logical reasoning show that RLCSD consistently outperforms GRPO and prior OPSD methods. We further show that the contrastive principle is general: it plugs into existing OPSD methods to improve them, and its underlying insight extends to the broader cross-model on-policy distillation setting.",
+      "authors": [
+        "Leyi Pan",
+        "Shuchang Tao",
+        "Yunpeng Zhai",
+        "Lingzhe Zhang",
+        "Zhaoyang Liu",
+        "Bolin Ding",
+        "Aiwei Liu",
+        "Lijie Wen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-06-10T06:31:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.11709v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes contrastive on-policy self-distillation for RL",
+      "llm_evidence_cn": "提出对比在线策略自蒸馏方法",
+      "llm_evidence": "提出对比在线策略自蒸馏方法",
+      "canonical_evidence": "提出对比在线策略自蒸馏方法",
+      "llm_tldr_en": "Identifies privilege-induced style drift in on-policy self-distillation and introduces contrastive RLCSD to mitigate it.",
+      "llm_tldr_cn": "本文发现在线策略自蒸馏中特权上下文会导致风格漂移，即学习信号集中在风格词而非任务词上。提出RLCSD，通过对比教师-学生差距来缓解此问题，稳定训练并避免输出长度收缩。该方法为在线策略蒸馏提供了改进方案。",
+      "llm_tldr": "本文发现在线策略自蒸馏中特权上下文会导致风格漂移，即学习信号集中在风格词而非任务词上。提出RLCSD，通过对比教师-学生差距来缓解此问题，稳定训练并避免输出长度收缩。该方法为在线策略蒸馏提供了改进方案。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on policy distillation methods for reinforcement learning",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.05152v2",
+      "source": "arxiv",
+      "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+      "abstract": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single bit indicating whether the final answer is correct. Yet many settings provide rich feedback, including execution traces, tool outputs, expert corrections, and model self-evaluations. We study how to use such feedback through a distributional variant of the classic imitation learning algorithm DAgger, where the learner has local access to an expert distribution on states visited by the current policy. This yields a simple forward cross-entropy objective that admits a blackbox expert and whose sequence-level gradient {conduct rich credit assignment by propagating} future expert-student disagreement back to earlier decisions. We show that prior RL with self-distillation objectives based on reverse KL or Jensen-Shannon fail to guarantee monotonic policy improvement: even when the expert has higher reward, their updates may increase probability on worse actions. In contrast, we show that forward cross-entropy admits monotonic policy improvement and enjoys guarantees on regret. We further show that our objective optimizes a lower bound on teacher-weighted likelihood of success, leading to improved Pass@N. Empirically, our approach, DistIL, improves over RLVR and RL with self-distillation baselines across a variety of domains: scientific reasoning, coding, and solving hard mathematical problems.",
+      "authors": [
+        "Rishabh Agrawal",
+        "Jacob Fein-Ashley",
+        "Paria Rashidinejad"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-03T17:54:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.05152v2",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uses distributional DAgger, a teacher-student framework",
+      "llm_evidence_cn": "使用分布式DAgger，属于师生框架",
+      "llm_evidence": "使用分布式DAgger，属于师生框架",
+      "canonical_evidence": "使用分布式DAgger，属于师生框架",
+      "llm_tldr_en": "Distributional DAgger extends imitation learning by leveraging rich feedback (e.g., execution traces) via a forward cross-entropy objective with local expert distributions, enabling efficient credit assignment.",
+      "llm_tldr_cn": "传统RLVR仅利用二进制奖励，忽视了丰富反馈。本文提出分布式DAgger，通过访问当前策略状态下专家分布，采用前向交叉熵目标实现序列级梯度信贷分配。该方法将DAgger扩展至分布化设置，适用于多种反馈形式。实验表明其显著提升推理任务中的样本效率和最终性能，是师生框架在RL中的有效应用。",
+      "llm_tldr": "传统RLVR仅利用二进制奖励，忽视了丰富反馈。本文提出分布式DAgger，通过访问当前策略状态下专家分布，采用前向交叉熵目标实现序列级梯度信贷分配。该方法将DAgger扩展至分布化设置，适用于多种反馈形式。实验表明其显著提升推理任务中的样本效率和最终性能，是师生框架在RL中的有效应用。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher-student framework for reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.10321v1",
+      "source": "arxiv",
+      "title": "Baseline-Free Policy Optimization for Neural Combinatorial Optimization",
+      "abstract": "Neural combinatorial optimization (NCO) trains autoregressive policies to solve routing problems. The standard training algorithm, REINFORCE with a rollout baseline, requires maintaining and periodically updating a frozen copy of the policy for variance reduction. This baseline introduces a structural vulnerability: on harder instances, a poor baseline produces noisy gradient estimates that can destabilize training. We evaluate Group Relative Policy Optimization (GRPO), an algorithm from large language model alignment that eliminates the baseline entirely by normalizing advantages within groups of sampled trajectories. In a controlled comparison of five RL algorithms on TSP and CVRP benchmarks within the RL4CO framework, we find that: (i) GRPO avoids the training collapse observed with REINFORCE on TSP-100, where performance degrades from cost 9.8 to 52.1 immediately after the warmup phase and does not recover under extended training; (ii) at matched gradient updates, GRPO achieves solution quality within 2% of POMO, a strong AM-based multi-start baseline, while requiring no external baseline; and (iii) P3O, a pairwise preference algorithm also from the alignment literature, is competitive on TSP but shows higher variability on CVRP. These results identify GRPO as a promising baseline-free alternative for NCO, particularly in settings where baseline-dependent training becomes fragile.",
+      "authors": [
+        "Carlos S. Sepúlveda",
+        "Gonzalo A. Ruz"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO",
+        "math.OC"
+      ],
+      "published": "2026-06-09T02:18:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.10321v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Evaluates GRPO, an on-policy reinforcement learning algorithm, for neural combinatorial optimization",
+      "llm_evidence_cn": "评估GRPO这种在线策略强化学习算法在组合优化中的应用",
+      "llm_evidence": "评估GRPO这种在线策略强化学习算法在组合优化中的应用",
+      "canonical_evidence": "评估GRPO这种在线策略强化学习算法在组合优化中的应用",
+      "llm_tldr_en": "Compares five RL algorithms including GRPO for NCO, showing GRPO avoids baseline instability and is competitive.",
+      "llm_tldr_cn": "针对神经组合优化中REINFORCE基线不稳定的问题，本文评估了来自大语言模型对齐的GRPO算法，它通过组内轨迹归一化优势消除了基线。在TSP和CVRP基准上的控制实验表明，GRPO避免了基线带来的梯度噪声，并达到了有竞争力的性能。该工作展示了在线策略方法在组合优化中的潜力。",
+      "llm_tldr": "针对神经组合优化中REINFORCE基线不稳定的问题，本文评估了来自大语言模型对齐的GRPO算法，它通过组内轨迹归一化优势消除了基线。在TSP和CVRP基准上的控制实验表明，GRPO避免了基线带来的梯度噪声，并达到了有竞争力的性能。该工作展示了在线策略方法在组合优化中的潜力。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.12281v1",
+      "source": "arxiv",
+      "title": "CCKS: Consensus-based Communication and Knowledge Sharing",
+      "abstract": "In Decentralized Training and Decentralized Execution (DTDE) for cooperative Multi-Agent Reinforcement Learning (MARL), action-advising-based knowledge sharing promotes interpretable and scalable cooperation among agents. However, current action advising approaches often adhere too much to the teacher's guidance without evaluating teacher-student compatibility, which causes excessive advising, suboptimal stability, and degraded performance. To overcome these challenges, this paper presents a Consensus-based Communication and Knowledge Sharing (CCKS) framework, which allows agents to adopt recommendations based on consensus-derived constraints and to follow the teacher's instructions more smartly. This mechanism enables agents to balance exploration and learning from experienced teachers, improving overall performance. The key is the consensus model construction, for which we propose to employ contrastive learning to construct consensus models based on local observations in the agents' training phase. In action selection, agents score and choose actions based on consensus and shared knowledge. Designed as a plug-and-play solution, CCKS integrates seamlessly with existing DTDE algorithms. Experiments conducted in the Google Research Football environment and the complex StarCraft II Multi-Agent Challenge demonstrate that the integration with CCKS significantly improves cooperation efficiency, learning speed, and overall performance compared with current DTDE baselines. The code is available at https://github.com/yuanxpy/CCKS.",
+      "authors": [
+        "Jinyuan Zu",
+        "Xiaowei Lv",
+        "Yongcai Wang",
+        "Deying Li",
+        "Yunjun Han",
+        "Wenping Chen",
+        "Fengyi Zhang",
+        "Naiqi Wu"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-10T16:20:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.12281v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Teacher-student action advising with consensus constraints in MARL",
+      "llm_evidence_cn": "多智能体强化学习中基于共识约束的师生行动建议",
+      "llm_evidence": "多智能体强化学习中基于共识约束的师生行动建议",
+      "canonical_evidence": "多智能体强化学习中基于共识约束的师生行动建议",
+      "llm_tldr_en": "Proposes CCKS, a consensus-based communication framework for multi-agent RL that improves teacher-student knowledge sharing by constraining advice adoption via consensus, enhancing stability and performance.",
+      "llm_tldr_cn": "针对多智能体强化学习中行动建议方法过度依赖教师指导而导致不稳定的问题，提出基于共识的通信与知识共享（CCKS）框架。该框架通过共识约束机制让智能体有选择地采纳教师建议，平衡探索与利用。在多个合作任务中，CCKS提升了整体稳定性和任务性能，改善了师生间的知识传递效率。",
+      "llm_tldr": "针对多智能体强化学习中行动建议方法过度依赖教师指导而导致不稳定的问题，提出基于共识的通信与知识共享（CCKS）框架。该框架通过共识约束机制让智能体有选择地采纳教师建议，平衡探索与利用。在多个合作任务中，CCKS提升了整体稳定性和任务性能，改善了师生间的知识传递效率。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher student distillation in reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

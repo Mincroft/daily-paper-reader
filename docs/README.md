@@ -6,41 +6,45 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-10
-- 运行时间：2026-06-10 22:37:04 UTC
+- 最新运行日期：2026-06-11
+- 运行时间：2026-06-11 21:53:20 UTC
 - 运行状态：成功
 - 本次总论文数：7
-- 精读区：4
-- 速读区：3
+- 精读区：5
+- 速读区：2
 
 ### 今日简报（AI）
-今日精读两篇满分论文，聚焦在线策略蒸馏与特权引导残差方法。最值得关注的是《OPRD》和《Beyond Absolute Imitation》，均获10分，探讨在线策略蒸馏的改进。建议优先精读这两篇满分论文，理解其核心思路。
-- 详情：[/202606/10/README](/202606/10/README)
+今日精选7篇论文，聚焦策略蒸馏与自我改进方法，两篇精读均获9.0高分。
+
+最值得关注的是策略蒸馏的几何理论基础，以及HERO环境反思自我蒸馏机制，分别揭示了蒸馏训练的内禀几何与智能体自主进化新路径。
+
+建议优先精读这两篇高分工作，它们为强化学习中的知识迁移与模型自主提升提供了实用启发。
+- 详情：[/202606/11/README](/202606/11/README)
 
 ### 精读区论文标签
-1. [OPRD: On-Policy Representation Distillation](/202606/10/2606.06021v3-oprd-on-policy-representation-distillation)  
-   标签：评分：10.0/10、query:opd
-   evidence：提出在策略表征蒸馏方法，增强学生-教师对齐
-2. [Beyond Absolute Imitation: Anchored Residual Guidance for Privileged On-Policy Distillation](/202606/10/2606.10385v1-beyond-absolute-imitation-anchored-residual-guidance-for-privileged-on-policy-distillation)  
-   标签：评分：10.0/10、query:opd
-   evidence：直接关注基于锚定残差引导的特权在线策略蒸馏
-3. [OPRD: On-Policy Representation Distillation](/202606/10/2606.06021v2-oprd-on-policy-representation-distillation)  
+1. [On the Geometry of On-Policy Distillation](/202606/11/2606.07082v2-on-the-geometry-of-on-policy-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：在策略表示蒸馏用于强化学习
-4. [MARCH: Model-Assisted Reinforcement Learning for the Perceptive Control of Humanoids over Sparse Footholds](/202606/10/2606.10288v1-march-model-assisted-reinforcement-learning-for-the-perceptive-control-of-humanoids-over-sparse-footholds)  
+   evidence：对在线策略蒸馏训练动态的几何分析
+2. [HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation](/202606/11/2606.11559v1-hero-hindsight-enhanced-reflection-from-environment-observations-for-agentic-self-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：强化学习中的教师-学生蒸馏用于人形机器人运动
+   evidence：在线策略自蒸馏方法用于多轮强化学习
+3. [When Context Returns: Toward Robust Internalization in On-Policy Distillation](/202606/11/2606.11627v1-when-context-returns-toward-robust-internalization-in-on-policy-distillation)  
+   标签：评分：9.0/10、query:opd
+   evidence：直接研究在线策略蒸馏中的鲁棒内化
+4. [RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation](/202606/11/2606.11709v1-rlcsd-reinforcement-learning-with-contrastive-on-policy-self-distillation)  
+   标签：评分：9.0/10、query:opd
+   evidence：提出对比在线策略自蒸馏方法
+5. [Reinforcement Learning from Rich Feedback with Distributional DAgger](/202606/11/2606.05152v2-reinforcement-learning-from-rich-feedback-with-distributional-dagger)  
+   标签：评分：8.0/10、query:opd
+   evidence：使用分布式DAgger，属于师生框架
 
 ### 速读区论文标签
-1. [An Agency-Transferring Model-Free Policy Enhancement Technique](/202606/10/2606.09825v1-an-agency-transferring-model-free-policy-enhancement-technique)  
+1. [Baseline-Free Policy Optimization for Neural Combinatorial Optimization](/202606/11/2606.10321v1-baseline-free-policy-optimization-for-neural-combinatorial-optimization)  
    标签：评分：7.0/10、query:opd
-   evidence：提出代理转移技术，将基线策略嵌入RL训练过程
-2. [SocraticPO: Policy Optimization via Interactive Guidance](/202606/10/2606.09887v1-socraticpo-policy-optimization-via-interactive-guidance)  
-   标签：评分：7.0/10、query:opd
-   evidence：教师学生框架，利用自然语言指导进行策略优化
-3. [ConTraIRL: Factorized Contrastive Abstractions for Transferable IRL](/202606/10/2606.03017v1-contrairl-factorized-contrastive-abstractions-for-transferable-irl)  
+   evidence：评估GRPO这种在线策略强化学习算法在组合优化中的应用
+2. [CCKS: Consensus-based Communication and Knowledge Sharing](/202606/11/2606.12281v1-ccks-consensus-based-communication-and-knowledge-sharing)  
    标签：评分：6.0/10、query:opd
-   evidence：通过因式分解奖励推理在IRL中实现策略迁移
+   evidence：多智能体强化学习中基于共识约束的师生行动建议
 
 
 <div class="dpr-home-promo-card">
