@@ -6,45 +6,31 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-11
-- 运行时间：2026-06-11 21:53:20 UTC
+- 最新运行日期：2026-06-12
+- 运行时间：2026-06-12 21:41:45 UTC
 - 运行状态：成功
-- 本次总论文数：7
-- 精读区：5
-- 速读区：2
+- 本次总论文数：3
+- 精读区：2
+- 速读区：1
 
 ### 今日简报（AI）
-今日精选7篇论文，聚焦策略蒸馏与自我改进方法，两篇精读均获9.0高分。
-
-最值得关注的是策略蒸馏的几何理论基础，以及HERO环境反思自我蒸馏机制，分别揭示了蒸馏训练的内禀几何与智能体自主进化新路径。
-
-建议优先精读这两篇高分工作，它们为强化学习中的知识迁移与模型自主提升提供了实用启发。
-- 详情：[/202606/11/README](/202606/11/README)
+今日精读两篇蒸馏领域高分论文，速读一篇LLM强化学习正则化研究。  
+重点关注如何规避在线策略蒸馏中的KL一致陷阱，以及反馈对齐在自蒸馏中的作用。  
+建议优先阅读精读论文以深入理解蒸馏优化技巧，速读论文可作补充参考。
+- 详情：[/202606/12/README](/202606/12/README)
 
 ### 精读区论文标签
-1. [On the Geometry of On-Policy Distillation](/202606/11/2606.07082v2-on-the-geometry-of-on-policy-distillation)  
+1. [Escaping the KL Agreement Trap in On-Policy Distillation](/202606/12/2606.09471v1-escaping-the-kl-agreement-trap-in-on-policy-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：对在线策略蒸馏训练动态的几何分析
-2. [HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation](/202606/11/2606.11559v1-hero-hindsight-enhanced-reflection-from-environment-observations-for-agentic-self-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：在线策略自蒸馏方法用于多轮强化学习
-3. [When Context Returns: Toward Robust Internalization in On-Policy Distillation](/202606/11/2606.11627v1-when-context-returns-toward-robust-internalization-in-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：直接研究在线策略蒸馏中的鲁棒内化
-4. [RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation](/202606/11/2606.11709v1-rlcsd-reinforcement-learning-with-contrastive-on-policy-self-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：提出对比在线策略自蒸馏方法
-5. [Reinforcement Learning from Rich Feedback with Distributional DAgger](/202606/11/2606.05152v2-reinforcement-learning-from-rich-feedback-with-distributional-dagger)  
+   evidence：直接研究在线蒸馏，识别并解决KL一致陷阱
+2. [The Role of Feedback Alignment in Self-Distillation](/202606/12/2606.11173v1-the-role-of-feedback-alignment-in-self-distillation)  
    标签：评分：8.0/10、query:opd
-   evidence：使用分布式DAgger，属于师生框架
+   evidence：自蒸馏中的师生框架，研究上下文反馈设计
 
 ### 速读区论文标签
-1. [Baseline-Free Policy Optimization for Neural Combinatorial Optimization](/202606/11/2606.10321v1-baseline-free-policy-optimization-for-neural-combinatorial-optimization)  
-   标签：评分：7.0/10、query:opd
-   evidence：评估GRPO这种在线策略强化学习算法在组合优化中的应用
-2. [CCKS: Consensus-based Communication and Knowledge Sharing](/202606/11/2606.12281v1-ccks-consensus-based-communication-and-knowledge-sharing)  
+1. [Rethinking the Divergence Regularization in LLM RL](/202606/12/2606.09821v1-rethinking-the-divergence-regularization-in-llm-rl)  
    标签：评分：6.0/10、query:opd
-   evidence：多智能体强化学习中基于共识约束的师生行动建议
+   evidence：针对大语言模型中的在线策略RL提出散度正则化改进，优化信任区域控制
 
 
 <div class="dpr-home-promo-card">

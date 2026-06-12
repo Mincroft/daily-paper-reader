@@ -1,0 +1,134 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-12T21:38:19.403547+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.09471v1",
+      "source": "arxiv",
+      "title": "Escaping the KL Agreement Trap in On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) provides dense token-level supervision by asking a teacher to score student-generated rollouts. However, when the student drifts into an unrecoverable prefix, the teacher may locally agree with the degraded state, producing low reverse KL but little corrective training signal. We identify this persistent regime as a low-KL agreement trap. Further analyses show that tokens during and after such traps produce less useful supervision signals. We propose KAT (KL Agreement Trap Termination), an online OPD termination rule that detects persistent low-KL agreement with a dynamic training-adaptive threshold. By filtering weak supervision from degenerate agreement, KAT improves avg@k accuracy by 2.66% and pass@k by 3.43% across four mathematical benchmarks, while reducing average rollout length by 59.73%.",
+      "authors": [
+        "Haoran Xin",
+        "Anhao Zhao",
+        "Ying Sun",
+        "Jin Li",
+        "Xiaoyu Shen",
+        "Hui Xiong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-06-08T13:28:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.09471v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly addresses on-policy distillation, identifies and solves KL agreement trap",
+      "llm_evidence_cn": "直接研究在线蒸馏，识别并解决KL一致陷阱",
+      "llm_evidence": "直接研究在线蒸馏，识别并解决KL一致陷阱",
+      "canonical_evidence": "直接研究在线蒸馏，识别并解决KL一致陷阱",
+      "llm_tldr_en": "KAT detects and terminates low-KL agreement traps in on-policy distillation, improving supervision quality and achieving significant gains on math reasoning tasks.",
+      "llm_tldr_cn": "在线蒸馏中，学生进入不可恢复前缀时教师可能产生局部一致，导致低KL陷阱和监督信号弱。本文识别这一现象并提出KAT规则，基于动态自适应阈值检测持续低KL一致并终止这些陷阱。在四个数学推理数据集上，avg@k提升2.66%，pass@k提升3.43%。该方法有效过滤了退化监督，提升了在线蒸馏的效果。",
+      "llm_tldr": "在线蒸馏中，学生进入不可恢复前缀时教师可能产生局部一致，导致低KL陷阱和监督信号弱。本文识别这一现象并提出KAT规则，基于动态自适应阈值检测持续低KL一致并终止这些陷阱。在四个数学推理数据集上，avg@k提升2.66%，pass@k提升3.43%。该方法有效过滤了退化监督，提升了在线蒸馏的效果。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11173v1",
+      "source": "arxiv",
+      "title": "The Role of Feedback Alignment in Self-Distillation",
+      "abstract": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this context remains largely unexplored.   We study context design for self-distillation by training a solver on feedback from a frozen critic. We compare three conditions: (i) a binary reward (GRPO), (ii) the reference solution, and (iii) a step-by-step critique aligned to the solver's reasoning trace.   Step-aligned critique yields the largest gains, outperforming GRPO by 16.11 points and reference-solution-conditioned self-distillation by 5.27 points (Avg@12). Per-token advantage analysis reveals why: step-aligned feedback targets only the tokens where reasoning fails, leaving correct behavior intact. Conditioning on the reference solution, by contrast, pressures the model to change its behavior at every token (even correct steps) because an alternative derivation inevitably differs in phrasing and approach. This suggests that structural alignment between feedback and the solver's reasoning is a key driver of self-distillation effectiveness.",
+      "authors": [
+        "Semih Kara",
+        "Oğuzhan Ersoy"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-09T17:50:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.11173v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "self-distillation with teacher-student framework, studies context design for feedback",
+      "llm_evidence_cn": "自蒸馏中的师生框架，研究上下文反馈设计",
+      "llm_evidence": "自蒸馏中的师生框架，研究上下文反馈设计",
+      "canonical_evidence": "自蒸馏中的师生框架，研究上下文反馈设计",
+      "llm_tldr_en": "Explores context design in self-distillation for RL, comparing binary reward, reference solution, and step-by-step critique as teacher signals for the student.",
+      "llm_tldr_cn": "该论文研究自蒸馏中上下文设计对蒸馏效果的影响。在强化学习场景中，使用冻结的批评器提供反馈，比较了二元奖励、参考答案和逐步批评三种上下文信号。实验表明，不同的上下文设计显著影响学生模型的蒸馏质量，强调了对齐师生推理过程的重要性。这项工作为在线蒸馏中的上下文选择提供了指导。",
+      "llm_tldr": "该论文研究自蒸馏中上下文设计对蒸馏效果的影响。在强化学习场景中，使用冻结的批评器提供反馈，比较了二元奖励、参考答案和逐步批评三种上下文信号。实验表明，不同的上下文设计显著影响学生模型的蒸馏质量，强调了对齐师生推理过程的重要性。这项工作为在线蒸馏中的上下文选择提供了指导。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.09821v1",
+      "source": "arxiv",
+      "title": "Rethinking the Divergence Regularization in LLM RL",
+      "abstract": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses this mismatch by replacing ratio-based clipping with a divergence-based mask, yielding a trust region defined by the sampled token's absolute probability shift. However, DPPO still relies on a hard mask: once a token crosses the trust-region boundary in a harmful direction, its gradient is discarded rather than corrected. To address this, we propose Divergence Regularized Policy Optimization (DRPO), which replaces the hard mask with a smooth advantage-weighted quadratic regularizer on policy shift. DRPO preserves the same trust-region geometry as DPPO while inducing bounded, continuous gradient weights that attenuate diverging updates and provide corrective signals beyond the boundary. Experiments across model scales, architectures, and precision settings show that DRPO improves the stability and efficiency of LLM RL training.",
+      "authors": [
+        "Jiarui Yao",
+        "Xiangxin Zhou",
+        "Penghui Qi",
+        "Wee Sun Lee",
+        "Liefeng Bo",
+        "Tianyu Pang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-08T17:58:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.09821v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Addresses divergence regularization for on-policy RL in LLMs, improving trust-region control",
+      "llm_evidence_cn": "针对大语言模型中的在线策略RL提出散度正则化改进，优化信任区域控制",
+      "llm_evidence": "针对大语言模型中的在线策略RL提出散度正则化改进，优化信任区域控制",
+      "canonical_evidence": "针对大语言模型中的在线策略RL提出散度正则化改进，优化信任区域控制",
+      "llm_tldr_en": "Rethinks divergence regularization in LLM RL; proposes a refined approach that better handles distributional shift in long-tailed vocabularies for on-policy learning.",
+      "llm_tldr_cn": "分析了现有LLM强化学习中基于裁剪的信任区域控制的局限性，指出在长尾词汇下重要性比率无法有效表示分布偏移。提出了基于散度掩码的改进方法，更精确地定义了信任区域，提高了在线策略RL的稳定性和效率。",
+      "llm_tldr": "分析了现有LLM强化学习中基于裁剪的信任区域控制的局限性，指出在长尾词汇下重要性比率无法有效表示分布偏移。提出了基于散度掩码的改进方法，更精确地定义了信任区域，提高了在线策略RL的稳定性和效率。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
