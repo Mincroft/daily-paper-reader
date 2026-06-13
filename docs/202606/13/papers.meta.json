@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-13",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T21:05:51",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/13/2606.08032v1-variational-proximal-policy-optimization",
+      "section": "quick",
+      "title_en": "Variational Proximal Policy Optimization",
+      "authors": "Ousmane Amadou Dia",
+      "date": "2026-06-06",
+      "pdf": "https://arxiv.org/pdf/2606.08032v1",
+      "score": "7.0",
+      "evidence": "提出变分近端策略优化用于在线策略学习",
+      "tldr": "针对强化学习中PPO的策略模式崩溃与分布漂移问题，本文提出变分近端策略优化（VP2O），将策略优化映射为混合专家架构上的Stein变分梯度下降，通过功能核与专家正交化损失实现几何近端控制。在33B/4B稀疏MoE模型上，Codeforces ELO提升179分，AIME数学推理token减少32%。该方法为偏好对齐提供了更鲁棒的粒子变分框架。",
+      "tags": "query:opd",
+      "abstract_en": "Reinforcement Learning from Human Feedback via Proximal Policy Optimization often suffers from policy mode collapse, brittle exploration loops, and distribution drift. This paper introduces Variational Proximal Policy Optimization (\\(\\textsc{VP}_2\\textsc{O}\\)), a particle-based variational inference framework that maps policy optimization to Stein Variational Gradient Descent within a Mixture-of-Experts architecture. By leveraging functional kernels over localized expert prototypes alongside an expert orthogonalization loss, \\(\\textsc{VP}_2\\textsc{O}\\) introduces a geometry-based proximal-control mechanism that can reduce reliance on fixed clipping or KL schedules. Our results on a 33B/4B sparse Mixture-of-Experts model show several improvements across complex reasoning benchmarks, establishing a \\(+\\mathbf{179}\\) ELO gain on Codeforces and a \\(\\mathbf{32\\%}\\) reduction in token count on AIME mathematical reasoning tasks.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

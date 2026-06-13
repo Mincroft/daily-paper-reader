@@ -6,31 +6,24 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-12
-- 运行时间：2026-06-12 21:41:45 UTC
+- 最新运行日期：2026-06-13
+- 运行时间：2026-06-13 21:05:45 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：2
+- 本次总论文数：1
+- 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今日精读两篇蒸馏领域高分论文，速读一篇LLM强化学习正则化研究。  
-重点关注如何规避在线策略蒸馏中的KL一致陷阱，以及反馈对齐在自蒸馏中的作用。  
-建议优先阅读精读论文以深入理解蒸馏优化技巧，速读论文可作补充参考。
-- 详情：[/202606/12/README](/202606/12/README)
+今日聚焦强化学习，精读《Variational Proximal Policy Optimization》。该论文提出变分近端策略优化，有望改善PPO算法的探索与稳定性。建议后续关注其理论证明及在连续控制任务上的表现。
+- 详情：[/202606/13/README](/202606/13/README)
 
 ### 精读区论文标签
-1. [Escaping the KL Agreement Trap in On-Policy Distillation](/202606/12/2606.09471v1-escaping-the-kl-agreement-trap-in-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：直接研究在线蒸馏，识别并解决KL一致陷阱
-2. [The Role of Feedback Alignment in Self-Distillation](/202606/12/2606.11173v1-the-role-of-feedback-alignment-in-self-distillation)  
-   标签：评分：8.0/10、query:opd
-   evidence：自蒸馏中的师生框架，研究上下文反馈设计
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Rethinking the Divergence Regularization in LLM RL](/202606/12/2606.09821v1-rethinking-the-divergence-regularization-in-llm-rl)  
-   标签：评分：6.0/10、query:opd
-   evidence：针对大语言模型中的在线策略RL提出散度正则化改进，优化信任区域控制
+1. [Variational Proximal Policy Optimization](/202606/13/2606.08032v1-variational-proximal-policy-optimization)  
+   标签：评分：7.0/10、query:opd
+   evidence：提出变分近端策略优化用于在线策略学习
 
 
 <div class="dpr-home-promo-card">

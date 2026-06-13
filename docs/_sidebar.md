@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-13 <!--dpr-date:20260613-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/13/2606.08032v1-variational-proximal-policy-optimization" data-sidebar-item="{&quot;title&quot;: &quot;Variational Proximal Policy Optimization&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.08032v1-variational-proximal-policy-optimization&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;opd&quot;}], &quot;evidence&quot;: &quot;提出变分近端策略优化用于在线策略学习&quot;}">Variational Proximal Policy Optimization</a>
   * 2026-06-12 <!--dpr-date:20260612-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/12/2606.09471v1-escaping-the-kl-agreement-trap-in-on-policy-distillation" data-sidebar-item="{&quot;title&quot;: &quot;Escaping the KL Agreement Trap in On-Policy Distillation&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.09471v1-escaping-the-kl-agreement-trap-in-on-policy-distillation&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;opd&quot;}], &quot;evidence&quot;: &quot;直接研究在线蒸馏，识别并解决KL一致陷阱&quot;}">Escaping the KL Agreement Trap in On-Policy Distillation</a>
