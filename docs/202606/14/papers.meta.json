@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-14",
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T21:03:23",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/14/2606.13657v1-dense-supervision-sparse-updates-on-the-sparsity-and-geometry-of-on-policy-distillation",
+      "section": "deep",
+      "title_en": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+      "authors": "Guo Yu, Wenlin Liu, Yulan Hu, Hao-Xuan Ma, Jun-Peng Jiang, Han-Jia Ye",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13657v1",
+      "score": "9.0",
+      "evidence": "分析同策略蒸馏更新的稀疏性与几何特性",
+      "tldr": "On-policy蒸馏（OPD）结合在线学生轨迹与密集教师监督，但其参数更新机制尚不明确。本研究分析多种语言与视觉-语言模型，发现OPD更新幅度小且坐标稀疏，主要分布在FFN层，训练发现的子网络可恢复全量性能。几何上，更新满秩但谱集中，倾向于修改源权重接近零的坐标。这些结果揭示密集教师监督并未使OPD变为普通密集参数重写，而是保留了在线后训练的重要几何特征。",
+      "tags": "query:opd",
+      "abstract_en": "On-policy distillation (\\textsc{OPD}) has recently become a prominent post-training recipe as it combines two desirable ingredients: on-policy student trajectories and dense teacher supervision, yet how this hybrid changes a model's parameters remains unclear. Across several language and vision-language model pairs and use cases, our analysis yields two main findings. On sparsity, \\textsc{OPD}-style updates are small and coordinate-sparse. They are distributed across layers and are usually FFN-heavy. This sparse structure is operationally useful: training only the discovered subnetwork recovers nearly the same performance as full \\textsc{OPD}. However, the sparsity-inducing SGD optimizer underperforms AdamW in our optimizer ablation, likely because dense teacher supervision preserves heterogeneous coordinate-wise gradient scales where AdamW's adaptive scaling remains useful. On geometry, the updates are numerically full-rank but spectrally concentrated; they lie mostly away from the principal singular subspaces of the source weights and fall disproportionately on coordinates where the source weights are close to zero. These findings suggest that dense teacher supervision does not turn \\textsc{OPD} into ordinary dense parameter rewriting; instead, \\textsc{OPD} retains important geometric signatures of on-policy post-training.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/14/2606.12634v1-keep-policy-gradient-in-charge-sibling-guided-credit-distillation-for-long-horizon-tool-use-agents",
+      "section": "deep",
+      "title_en": "Keep Policy Gradient in Charge: Sibling-Guided Credit Distillation for Long-Horizon Tool-Use Agents",
+      "authors": "Tianyu Ding, Jianhong Xin, Juan Pablo De la Cruz Weinstein",
+      "date": "2026-06-10",
+      "pdf": "https://arxiv.org/pdf/2606.12634v1",
+      "score": "8.0",
+      "evidence": "强化学习中用于信用分配的师生蒸馏",
+      "tldr": "长时域工具使用强化学习面临轨迹级优势稀疏问题。现有自蒸馏会无差别强化教师行为，放大有害捷径。本文提出兄弟引导信用蒸馏(SGCD)，动态采样成功/失败轨迹，由外部LLM对比总结生成步骤级信用参考，调整GRPO的token优势。在AppWorld和τ^3-airline上，SGCD显著优于GRPO基线，TGC和pass@1均有提升。",
+      "tags": "query:opd",
+      "abstract_en": "Long-horizon tool-use reinforcement learning can learn from outcome verification, but its   trajectory-level advantage is broadcast across many reasoning, API, and answer tokens.   Self-distillation promises a denser signal by reusing a policy's own rollouts or a privileged   teacher. We show, however, that direct token-level self-distillation can silently destroy tool use:   it rehearses teacher behavior without knowing which actions the verifier rewards, so useful skills   and harmful shortcuts are amplified together. We introduce Sibling-Guided Credit Distillation   (SGCD), which uses distillation for credit assignment rather than as a competing actor loss.   Dynamic sampling produces mixed successful and failed sibling rollouts; an external LLM summarizes   their contrast into a training-only stepwise credit reference; dense teacher/student divergence   drives credit reassignment; and bounded detached credit weights reshape GRPO token advantages. The   deployed student sees no external LLM, sibling evidence, or oracle. Across AppWorld and   $τ^3$-airline, SGCD improves over matched GRPO comparators: AppWorld TGC $42.9 \\to 45.6$ on   test_normal and $24.7 \\to 27.0$ on test_challenge, and $τ^3$-airline pass@1 $0.583 \\to 0.602$.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/14/2606.13106v1-demystifying-hidden-state-recurrence-switchable-latent-reasoning-with-on-policy-reinforcement-learning",
+      "section": "quick",
+      "title_en": "Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning",
+      "authors": "Jiayu Yang, Chao Chen, Shengen Wu, Yinhong Liu, Yuxuan Fan, Lujundong Li, Songning Lai, Chengwei Qin, Zhijiang Guo",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13106v1",
+      "score": "7.0",
+      "evidence": "同策略RL结合显式边界令牌用于潜在推理",
+      "tldr": "隐藏状态循环推理压缩推理长度，但难以用on-policy RL优化且缺乏因果可解释性。SWITCH框架在latent模式前后插入离散边界token<swi>和</swi>，使GRPO策略比处处可定义，并支持直接探测与因果干预。模型使用可见到latent课程与Switch-GRPO训练，效果优于先前方法。机理分析揭示边界token为学习到的切换策略，latent步骤执行重要计算且集中在单个隐态转换上。该工作表明隐藏状态循环既可用RL训练又可直接分析。",
+      "tags": "query:opd",
+      "abstract_en": "Latent chain-of-thought compresses reasoning by replacing visible reasoning traces with continuous hidden-state recurrence, but existing formulations are difficult to optimize with standard on-policy reinforcement learning (RL) and hard to interpret causally. Our key insight is that a single pair of explicit boundary tokens can address both issues at once: discrete entry and exit anchors make the latent block compatible with standard on-policy RL, and the same anchors offer a natural foothold for mechanistic analysis. Motivated by this, we propose SWITCH, a switchable latent reasoning framework. The model emits <swi> to enter latent mode and </swi> to exit. Because the boundaries are ordinary discrete tokens, the GRPO policy ratio is well-defined at every decision point. The same anchors also expose the latent steps to direct probing and causal intervention. We train the model with a visible-to-latent curriculum and a Switch-GRPO objective that propagates gradients through recurrent latent computation. SWITCH consistently outperforms prior hidden-state-recurrence latent reasoning approaches at similar scale. Mechanistic analysis through the boundary tokens further reveals three findings: (i) <swi> is a sharply localised, learned switching policy rather than a stylistic artefact; (ii) the latent step it opens performs problem-specific, causally important computation rather than acting as an inert placeholder; and (iii) that computation is concentrated at a single hidden-state transition on entry. Together, these results show that hidden-state-recurrence latent reasoning is both RL-trainable and open to direct mechanistic analysis, including of how on-policy RL itself improves the model from the inside.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/14/2606.10346v1-reasoning-or-memorization-direction-aware-diversity-exploration-in-llm-reinforcement-learning",
+      "section": "quick",
+      "title_en": "Reasoning or Memorization? Direction-Aware Diversity Exploration in LLM Reinforcement Learning",
+      "authors": "Jiangnan Xia, Yucheng Shi, Yu Yang, Kishan Panaganti, Zhenwen Liang, Ninghao Liu",
+      "date": "2026-06-09",
+      "pdf": "https://arxiv.org/pdf/2606.10346v1",
+      "score": "6.0",
+      "evidence": "提出面向同策略RL的方向感知探索方法",
+      "tldr": "现有LLM强化学习探索方法因未区分推理与记忆多样性，可能奖励记忆捷径而非真实推理改进。为此提出DiRL框架，通过从模型表示中提取内部推理-记忆方向，构建方向加权梯度特征并调整奖励，以放大推理对齐探索。在数学和通用推理基准上，DiRL显著超越多种现有探索方法，验证了方向感知探索的有效性。",
+      "tags": "query:opd",
+      "abstract_en": "Reinforcement learning has become a key paradigm for eliciting reasoning abilities in large language models, where exploration is crucial for discovering effective solution trajectories. Existing exploration methods typically encourage diversity in semantic or gradient spaces, without distinguishing what drives this diversity. A trajectory may appear novel because it follows a new reasoning process, or because it varies memorized patterns and shortcuts. Rewarding both cases equally may steer exploration toward memorization rather than genuine reasoning improvement. In this paper, we propose DiRL, a Direction-Aware Reinforcement Learning framework that anchors exploration to an internal reasoning-memorization direction of the policy. Specifically, DiRL extracts this direction from model representations, constructs direction-weighted gradient features to characterize rollout updates, and shapes rewards to amplify reasoning-aligned exploration while suppressing memorization-aligned variations. DiRL integrates seamlessly into standard Group Relative Policy Optimization (GRPO). Extensive experiments on mathematical and general reasoning benchmarks demonstrate the effectiveness of DiRL, showing significant improvements over various existing exploration methods.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

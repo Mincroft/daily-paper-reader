@@ -1,0 +1,179 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-14T20:59:58.833199+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.13657v1",
+      "source": "arxiv",
+      "title": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+      "abstract": "On-policy distillation (\\textsc{OPD}) has recently become a prominent post-training recipe as it combines two desirable ingredients: on-policy student trajectories and dense teacher supervision, yet how this hybrid changes a model's parameters remains unclear. Across several language and vision-language model pairs and use cases, our analysis yields two main findings. On sparsity, \\textsc{OPD}-style updates are small and coordinate-sparse. They are distributed across layers and are usually FFN-heavy. This sparse structure is operationally useful: training only the discovered subnetwork recovers nearly the same performance as full \\textsc{OPD}. However, the sparsity-inducing SGD optimizer underperforms AdamW in our optimizer ablation, likely because dense teacher supervision preserves heterogeneous coordinate-wise gradient scales where AdamW's adaptive scaling remains useful. On geometry, the updates are numerically full-rank but spectrally concentrated; they lie mostly away from the principal singular subspaces of the source weights and fall disproportionately on coordinates where the source weights are close to zero. These findings suggest that dense teacher supervision does not turn \\textsc{OPD} into ordinary dense parameter rewriting; instead, \\textsc{OPD} retains important geometric signatures of on-policy post-training.",
+      "authors": [
+        "Guo Yu",
+        "Wenlin Liu",
+        "Yulan Hu",
+        "Hao-Xuan Ma",
+        "Jun-Peng Jiang",
+        "Han-Jia Ye"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-11T17:54:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.13657v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "analyzes sparsity and geometry of on-policy distillation updates",
+      "llm_evidence_cn": "分析同策略蒸馏更新的稀疏性与几何特性",
+      "llm_evidence": "分析同策略蒸馏更新的稀疏性与几何特性",
+      "canonical_evidence": "分析同策略蒸馏更新的稀疏性与几何特性",
+      "llm_tldr_en": "Shows OPD updates are small and sparse, concentrated in FFN layers, enabling subnetwork training to match full OPD performance.",
+      "llm_tldr_cn": "本文深入分析了同策略蒸馏（OPD）如何改变模型参数，发现其更新具有稀疏性且主要集中在前馈网络层。这种稀疏结构具有实用价值：仅训练被发现的子网络即可获得接近完整OPD的性能。但优化器对比显示，稀疏性引导的SGD落后于AdamW。这些发现为理解OPD的工作原理和设计更高效蒸馏算法提供了基础。",
+      "llm_tldr": "本文深入分析了同策略蒸馏（OPD）如何改变模型参数，发现其更新具有稀疏性且主要集中在前馈网络层。这种稀疏结构具有实用价值：仅训练被发现的子网络即可获得接近完整OPD的性能。但优化器对比显示，稀疏性引导的SGD落后于AdamW。这些发现为理解OPD的工作原理和设计更高效蒸馏算法提供了基础。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.12634v1",
+      "source": "arxiv",
+      "title": "Keep Policy Gradient in Charge: Sibling-Guided Credit Distillation for Long-Horizon Tool-Use Agents",
+      "abstract": "Long-horizon tool-use reinforcement learning can learn from outcome verification, but its   trajectory-level advantage is broadcast across many reasoning, API, and answer tokens.   Self-distillation promises a denser signal by reusing a policy's own rollouts or a privileged   teacher. We show, however, that direct token-level self-distillation can silently destroy tool use:   it rehearses teacher behavior without knowing which actions the verifier rewards, so useful skills   and harmful shortcuts are amplified together. We introduce Sibling-Guided Credit Distillation   (SGCD), which uses distillation for credit assignment rather than as a competing actor loss.   Dynamic sampling produces mixed successful and failed sibling rollouts; an external LLM summarizes   their contrast into a training-only stepwise credit reference; dense teacher/student divergence   drives credit reassignment; and bounded detached credit weights reshape GRPO token advantages. The   deployed student sees no external LLM, sibling evidence, or oracle. Across AppWorld and   $τ^3$-airline, SGCD improves over matched GRPO comparators: AppWorld TGC $42.9 \\to 45.6$ on   test_normal and $24.7 \\to 27.0$ on test_challenge, and $τ^3$-airline pass@1 $0.583 \\to 0.602$.",
+      "authors": [
+        "Tianyu Ding",
+        "Jianhong Xin",
+        "Juan Pablo De la Cruz Weinstein"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-10T19:53:20+00:00",
+      "link": "https://arxiv.org/pdf/2606.12634v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "teacher-student distillation for credit assignment in RL",
+      "llm_evidence_cn": "强化学习中用于信用分配的师生蒸馏",
+      "llm_evidence": "强化学习中用于信用分配的师生蒸馏",
+      "canonical_evidence": "强化学习中用于信用分配的师生蒸馏",
+      "llm_tldr_en": "Introduces Sibling-Guided Credit Distillation (SGCD) which uses distillation for credit assignment in long-horizon tool-use RL, avoiding the pitfalls of direct self-distillation that amplifies harmful shortcuts. SGCD dynamically samples mixed successful and failed sibling trajectories to guide student learning.",
+      "llm_tldr_cn": "长程工具使用强化学习面临信用分配难题，直接的自蒸馏会无差别放大有用技能和有害捷径。本文提出兄弟引导信用蒸馏（SGCD），将蒸馏用于信用分配而非作为竞争性演员损失。通过动态采样混合成功和失败的兄弟轨迹，SGCD有效提升了工具使用任务的性能。实验表明该方法优于直接自蒸馏基线，为强化学习中的蒸馏提供了新的信用分配视角。",
+      "llm_tldr": "长程工具使用强化学习面临信用分配难题，直接的自蒸馏会无差别放大有用技能和有害捷径。本文提出兄弟引导信用蒸馏（SGCD），将蒸馏用于信用分配而非作为竞争性演员损失。通过动态采样混合成功和失败的兄弟轨迹，SGCD有效提升了工具使用任务的性能。实验表明该方法优于直接自蒸馏基线，为强化学习中的蒸馏提供了新的信用分配视角。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "teacher student distillation in reinforcement learning",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.13106v1",
+      "source": "arxiv",
+      "title": "Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning",
+      "abstract": "Latent chain-of-thought compresses reasoning by replacing visible reasoning traces with continuous hidden-state recurrence, but existing formulations are difficult to optimize with standard on-policy reinforcement learning (RL) and hard to interpret causally. Our key insight is that a single pair of explicit boundary tokens can address both issues at once: discrete entry and exit anchors make the latent block compatible with standard on-policy RL, and the same anchors offer a natural foothold for mechanistic analysis. Motivated by this, we propose SWITCH, a switchable latent reasoning framework. The model emits <swi> to enter latent mode and </swi> to exit. Because the boundaries are ordinary discrete tokens, the GRPO policy ratio is well-defined at every decision point. The same anchors also expose the latent steps to direct probing and causal intervention. We train the model with a visible-to-latent curriculum and a Switch-GRPO objective that propagates gradients through recurrent latent computation. SWITCH consistently outperforms prior hidden-state-recurrence latent reasoning approaches at similar scale. Mechanistic analysis through the boundary tokens further reveals three findings: (i) <swi> is a sharply localised, learned switching policy rather than a stylistic artefact; (ii) the latent step it opens performs problem-specific, causally important computation rather than acting as an inert placeholder; and (iii) that computation is concentrated at a single hidden-state transition on entry. Together, these results show that hidden-state-recurrence latent reasoning is both RL-trainable and open to direct mechanistic analysis, including of how on-policy RL itself improves the model from the inside.",
+      "authors": [
+        "Jiayu Yang",
+        "Chao Chen",
+        "Shengen Wu",
+        "Yinhong Liu",
+        "Yuxuan Fan",
+        "Lujundong Li",
+        "Songning Lai",
+        "Chengwei Qin",
+        "Zhijiang Guo"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-06-11T09:33:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.13106v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "on-policy RL with explicit boundary tokens for latent reasoning",
+      "llm_evidence_cn": "同策略RL结合显式边界令牌用于潜在推理",
+      "llm_evidence": "同策略RL结合显式边界令牌用于潜在推理",
+      "canonical_evidence": "同策略RL结合显式边界令牌用于潜在推理",
+      "llm_tldr_en": "Proposes SWITCH, using explicit boundary tokens to enable standard on-policy RL for latent reasoning, improving optimization and interpretability.",
+      "llm_tldr_cn": "针对潜在链式推理难以用同策略RL优化的问题，本文提出SWITCH框架，通过离散的入口和出口令牌使得潜在模块兼容标准同策略RL，同时提供因果解释的立足点。实验结果表明该方法有效提升了训练稳定性和模型可解释性，为潜在推理的实际部署铺平了道路。",
+      "llm_tldr": "针对潜在链式推理难以用同策略RL优化的问题，本文提出SWITCH框架，通过离散的入口和出口令牌使得潜在模块兼容标准同策略RL，同时提供因果解释的立足点。实验结果表明该方法有效提升了训练稳定性和模型可解释性，为潜在推理的实际部署铺平了道路。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10346v1",
+      "source": "arxiv",
+      "title": "Reasoning or Memorization? Direction-Aware Diversity Exploration in LLM Reinforcement Learning",
+      "abstract": "Reinforcement learning has become a key paradigm for eliciting reasoning abilities in large language models, where exploration is crucial for discovering effective solution trajectories. Existing exploration methods typically encourage diversity in semantic or gradient spaces, without distinguishing what drives this diversity. A trajectory may appear novel because it follows a new reasoning process, or because it varies memorized patterns and shortcuts. Rewarding both cases equally may steer exploration toward memorization rather than genuine reasoning improvement. In this paper, we propose DiRL, a Direction-Aware Reinforcement Learning framework that anchors exploration to an internal reasoning-memorization direction of the policy. Specifically, DiRL extracts this direction from model representations, constructs direction-weighted gradient features to characterize rollout updates, and shapes rewards to amplify reasoning-aligned exploration while suppressing memorization-aligned variations. DiRL integrates seamlessly into standard Group Relative Policy Optimization (GRPO). Extensive experiments on mathematical and general reasoning benchmarks demonstrate the effectiveness of DiRL, showing significant improvements over various existing exploration methods.",
+      "authors": [
+        "Jiangnan Xia",
+        "Yucheng Shi",
+        "Yu Yang",
+        "Kishan Panaganti",
+        "Zhenwen Liang",
+        "Ninghao Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-09T02:55:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.10346v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes direction-aware exploration for on-policy RL in LLMs",
+      "llm_evidence_cn": "提出面向同策略RL的方向感知探索方法",
+      "llm_evidence": "提出面向同策略RL的方向感知探索方法",
+      "canonical_evidence": "提出面向同策略RL的方向感知探索方法",
+      "llm_tldr_en": "Proposes DiRL for direction-aware diversity exploration in LLM reinforcement learning, distinguishing reasoning from memorization.",
+      "llm_tldr_cn": "针对强化学习中探索可能鼓励记忆而非推理的问题，本文提出DiRL框架，通过感知政策的内在推理-记忆方向来引导探索，优先奖励真正的推理过程。实验表明，DiRL能有效提升模型推理能力并减少对记忆捷径的依赖，为大型语言模型的强化学习提供了一种更高质量的探索策略。",
+      "llm_tldr": "针对强化学习中探索可能鼓励记忆而非推理的问题，本文提出DiRL框架，通过感知政策的内在推理-记忆方向来引导探索，优先奖励真正的推理过程。实验表明，DiRL能有效提升模型推理能力并减少对记忆捷径的依赖，为大型语言模型的强化学习提供了一种更高质量的探索策略。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
