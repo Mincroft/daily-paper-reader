@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-15",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T21:59:34",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/15/2606.13657v2-dense-supervision-sparse-updates-on-the-sparsity-and-geometry-of-on-policy-distillation",
+      "section": "deep",
+      "title_en": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+      "authors": "Guo Yu, Wenlin Liu, Yulan Hu, Hao-Xuan Ma, Jun-Peng Jiang, Han-Jia Ye",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13657v2",
+      "score": "9.0",
+      "evidence": "直接在线策略蒸馏分析",
+      "tldr": "针对在线策略蒸馏（OPD）的参数更新特性研究。OPD结合在线策略学生轨迹与密集教师监督，其更新具有稀疏性和坐标稀疏结构，主要出现在FFN模块。仅训练发现的子网络可近似恢复全训练性能，但自适应优化仍必要。更新数值满秩但谱集中，且方向远离源权重主奇异子空间，落在小权重坐标上。表明密集监督下OPD保留后训练稀疏几何特征。",
+      "tags": "query:opd",
+      "abstract_en": "On-policy distillation (\\textsc{OPD}) has recently become a prominent post-training recipe by combining two desirable ingredients: on-policy student trajectories and dense teacher supervision. However, how this hybrid changes a model's parameters remains unclear. Across several language and vision-language model pairs and \\textsc{OPD} use cases, our analysis yields two main findings. On sparsity, \\textsc{OPD} updates are small and coordinate-sparse. They are distributed across layers, with the largest relative movement usually appearing in FFN modules. This sparse structure is operationally useful: training only the discovered subnetwork nearly recovers full-training performance. The sparse support does not remove the need for adaptive optimization: SGD, previously reported to be competitive in \\textsc{RLVR}, underperforms AdamW in our \\textsc{OPD} optimizer ablation, suggesting that dense teacher supervision preserves useful momentum structure and heterogeneous second-moment scales. On geometry, the updates are numerically full-rank but spectrally concentrated; they lie mostly away from the principal singular subspaces of the source weights and fall disproportionately on coordinates where the source weights are close to zero. These findings suggest that dense teacher supervision does not turn \\textsc{OPD} into ordinary dense parameter rewriting; instead, \\textsc{OPD} retains important geometric signatures of on-policy post-training.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/15/2606.13795v1-diffusion-policy-optimization-without-drifting-apart",
+      "section": "deep",
+      "title_en": "Diffusion Policy Optimization without Drifting Apart",
+      "authors": "Haozhe Jiang, Haiwen Feng, Pieter Abbeel, Jiantao Jiao, Angjoo Kanazawa, Nika Haghtalab",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13795v1",
+      "score": "9.0",
+      "evidence": "提出DiPOD将自我蒸馏与在线策略梯度更新交织",
+      "tldr": "扩散策略的后训练中，现有策略梯度方法因双重漂移现象而不稳定，即优化变分代理导致ELBO与真实对数似然分离，代理梯度偏离真实策略梯度。为此提出DiPOD框架，通过在每次策略梯度更新中交错自蒸馏与策略改进，并加入同策略ELBO正则化，保持紧边界。在扩散语言模型后训练和连续控制任务中，DiPOD显著稳定训练过程，并取得更高奖励。该方法简单实用，为扩散策略优化提供了可靠方案。",
+      "tags": "query:opd",
+      "abstract_en": "RL post-training has become increasingly pivotal for improving diffusion policies, but existing diffusion policy-gradient methods are often unstable and cannot achieve reliable policy improvement. We identify the cause as the double-drift phenomenon: optimizing a variational surrogate can let the ELBO separate from the true log-likelihood, which then makes the resulting proxy policy gradient misaligned with the true policy gradient of expected return. We propose \\textbf{DiPOD}, a diffusion policy optimization framework that maintains tight-bound behavior throughout training by interleaving self-distillation with policy-improving gradient updates. This leads to a simple and practical algorithm: augmenting each diffusion policy-gradient update with an on-policy ELBO regularizer. Across diffusion language model post-training and continuous-control diffusion policies, DiPOD substantially stabilizes training and reaches higher rewards than previous methods.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/15/2606.14368v1-be-my-tutor-on-policy-co-distillation-for-mutual-llm-improvement-via-peer-feedback",
+      "section": "deep",
+      "title_en": "Be My Tutor: On-Policy Co-Distillation for Mutual LLM Improvement via Peer Feedback",
+      "authors": "Woohyeon Byeon, Jiwon Jeon, Jeonghye Kim, Youngchul Sung",
+      "date": "2026-06-12",
+      "pdf": "https://arxiv.org/pdf/2606.14368v1",
+      "score": "9.0",
+      "evidence": "提出on-policy协同蒸馏，通过同伴反馈实现LLM相互提升",
+      "tldr": "多领域大语言模型训练中，不同模型在不同领域各有所长，如何让它们相互促进而不损失原有能力是关键挑战。现有方法如单向蒸馏或单模型微调难以实现互惠提升。为此，本文提出在线策略共蒸馏（OPCoD），让每个模型基于自身正确样本进行自蒸馏，同时通过认知门控选择时机接收同伴反馈，并用反馈锚定将反馈信息扎根于问题。在科学问答任务上，OPCoD在所有领域对组合和两学生模型上持续优于基线，且未出现性能下降，实现了帕累托改进。该工作证明了同伴在线反馈与自蒸馏结合的有效性，为多模型协作学习提供了新思路。",
+      "tags": "query:opd",
+      "abstract_en": "We study multi-domain LLM training in which two models, each stronger in a different domain, co-evolve by tutoring each other through on-policy feedback. Unlike one-way distillation or single-model fine-tuning, our goal is mutual Pareto improvement: each model improves across domains without losing its original strength. To this end, we propose On-Policy Co-Distillation (OPCoD), where each student's self-distillation is conditioned on its own correct rollout and feedback from its peer. To make feedback exchange effective, OPCoD uses cognizance-based gating to decide when to give feedback and feedback anchoring to ground feedback in the problem. On Science Q\\&A tasks, OPCoD consistently outperforms baselines and achieves Pareto improvement across all evaluated domain pairs and students.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
