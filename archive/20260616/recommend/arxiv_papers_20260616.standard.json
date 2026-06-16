@@ -1,0 +1,262 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-16T22:53:58.627937+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.15576v1",
+      "source": "arxiv",
+      "title": "Localizing Credit at the Divergence: Path-Conditioned Self-Distillation for LLM Reasoning",
+      "abstract": "Reinforcement learning from verifiable rewards assigns a single scalar to each rollout, leaving token-level credit assignment underspecified in long reasoning traces. On-policy self-distillation addresses this by letting the same model act as a teacher conditioned on privileged information, producing a dense per-token signal. But the common choice of a ground-truth answer is only an endpoint cue: on terse-answer tasks, the teacher falls silent at the intermediate positions where path-level guidance matters most. We propose Hindsight Self-Distillation (HSD), which conditions the teacher on a successful peer rollout drawn from the current training group. Such a peer is an exact sample from the success-conditioned policy, requiring no additional sampled rollouts. By providing a full successful continuation rather than only the final answer, the resulting credit signal concentrates at the divergence position between a failed rollout and a successful peer. Across Qwen3-8B and Qwen3-32B on math and code benchmarks, HSD obtains the best result against GRPO variants and on-policy distillation baselines, with the largest gains on terse-answer tasks such as AIME.",
+      "authors": [
+        "Yu Li",
+        "Shu Hong",
+        "Tian Lan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-14T03:37:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.15576v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes path-conditioned self-distillation for on-policy RL",
+      "llm_evidence_cn": "提出路径条件自蒸馏用于on-policy强化学习",
+      "llm_evidence": "提出路径条件自蒸馏用于on-policy强化学习",
+      "canonical_evidence": "提出路径条件自蒸馏用于on-policy强化学习",
+      "llm_tldr_en": "Introduces Hindsight Self-Distillation that conditions teacher on successful peer rollouts, improving token-level credit assignment in RL.",
+      "llm_tldr_cn": "针对on-policy自蒸馏在简洁答案任务中中间位置教师信号缺失的问题，提出后见自蒸馏（HSD），以当前批次中的成功轨迹作为教师条件。该方法无需外部教师即可提供密集路径级监督，显著提升了LLM推理任务的性能。实验验证了其在多个推理基准上的有效性。",
+      "llm_tldr": "针对on-policy自蒸馏在简洁答案任务中中间位置教师信号缺失的问题，提出后见自蒸馏（HSD），以当前批次中的成功轨迹作为教师条件。该方法无需外部教师即可提供密集路径级监督，显著提升了LLM推理任务的性能。实验验证了其在多个推理基准上的有效性。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15912v1",
+      "source": "arxiv",
+      "title": "On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents",
+      "abstract": "Multi-turn agents that plan, invoke tools, and interact with environments offer a promising paradigm for solving complex tasks, yet their capabilities typically rely on very large models whose inference cost is prohibitive in practice.On-Policy Distillation (OPD) is a natural recipe for transferring such capabilities to smaller students, but we find that it suffers a characteristic failure mode in this setting: small student errors compound across turns and push the trajectory out of the teacher's familiar state distribution, so the teacher's supervision becomes least reliable precisely where the student needs it most.We propose Guided On-Policy Distillation (Guided-OPD), a simple yet effective algorithm that mixes teacher- and student-generated turns within each rollout and schedules the teacher's intervention probability along a curriculum that decays to zero.Strong guidance keeps early trajectories close to the teacher distribution and is then gradually withdrawn to recover the purely on-policy regime used at inference.On ALFWorld, ScienceWorld, and WebShop, distilling Qwen3 students from a Qwen3-30B-A3B teacher, Guided-OPD improves Score by 21.1\\% and Success Rate by 25.5\\% over vanilla OPD on average, with larger gains on smaller students.",
+      "authors": [
+        "Gengsheng Li",
+        "Mao Zheng",
+        "Mingyang Song",
+        "Ruiqi Liu",
+        "Tianyu Yang",
+        "Jie Sun",
+        "Qiyong Zhong",
+        "Haiyun Guo",
+        "Junfeng Fang",
+        "Dan Zhang",
+        "Jinqiao Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-14T16:41:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.15912v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes Guided On-Policy Distillation for multi-turn agents",
+      "llm_evidence_cn": "提出面向多轮智能体的指导式在线策略蒸馏",
+      "llm_evidence": "提出面向多轮智能体的指导式在线策略蒸馏",
+      "canonical_evidence": "提出面向多轮智能体的指导式在线策略蒸馏",
+      "llm_tldr_en": "Guided-OPD mixes teacher and student trajectories with curriculum turn-level guidance to prevent compounding errors in multi-turn on-policy distillation, improving student model performance.",
+      "llm_tldr_cn": "多轮智能体中的在线策略蒸馏面临学生错误累积导致教师监督不可靠的问题。本文提出指导式在线策略蒸馏（Guided-OPD），混合教师和学生生成的轨迹，并通过课程式回合级指导来稳定蒸馏过程。实验表明Guided-OPD有效减少了多轮设定下的错误累积，显著提升了学生模型的性能和推理效率，为将大模型能力迁移至小模型提供了实用方案。",
+      "llm_tldr": "多轮智能体中的在线策略蒸馏面临学生错误累积导致教师监督不可靠的问题。本文提出指导式在线策略蒸馏（Guided-OPD），混合教师和学生生成的轨迹，并通过课程式回合级指导来稳定蒸馏过程。实验表明Guided-OPD有效减少了多轮设定下的错误累积，显著提升了学生模型的性能和推理效率，为将大模型能力迁移至小模型提供了实用方案。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15920v1",
+      "source": "arxiv",
+      "title": "OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing",
+      "abstract": "Reinforcement learning for multimodal large language models (MLLMs) is often hindered by severe reward sparsity in complex reasoning tasks. This challenge is particularly pronounced in human-centered scenarios involving states, emotions, intentions, and behaviors, where heterogeneous multimodal signals and subjective human factors make high-quality chain-of-thought (CoT) annotations expensive and difficult to obtain. Although many multimodal datasets provide expert-annotated ground-truth labels, directly using these labels for supervised fine-tuning may encourage shortcut learning in multimodal perception and provides limited transparency for safety-critical human--AI interaction. To address these limitations, we propose OmniOPSD, a Rationale-Privileged On-Policy Self-Distillation framework that uses frontier-generated rationales as teacher-side privileged evidence rather than student imitation targets. OmniOPSD uses frontier-generated evidence-aware rationales only as training-time privileged evidence context for a local teacher. The student samples its own rollout from the original multimodal input, while the rationale-privileged teacher scores the same tokens and provides dense token-level supervision. Thus, the student learns on its own trajectory distribution without directly imitating frontier-model completions, and inference requires no labels, rationales, CoT annotations, or closed-source model access. Experiments on MER-UniBench show that OmniOPSD achieves state-of-the-art performance with an average score of $84.19$, and ablations further support the value of rationale-privileged teacher guidance.",
+      "authors": [
+        "Zebang Cheng",
+        "Shuimu Chen",
+        "Boxue Yang",
+        "Yuanshen Guan",
+        "Jingyi Chen",
+        "Zheng Lian",
+        "Xiaojiang Peng",
+        "Fei Ma",
+        "LaiZhong Cui",
+        "Qi Tian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-14T16:51:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.15920v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes OmniOPSD, an on-policy self-distillation method for MLLMs in affective computing",
+      "llm_evidence_cn": "提出OmniOPSD，一种用于情感计算中多模态大语言模型的on-policy自蒸馏方法",
+      "llm_evidence": "提出OmniOPSD，一种用于情感计算中多模态大语言模型的on-policy自蒸馏方法",
+      "canonical_evidence": "提出OmniOPSD，一种用于情感计算中多模态大语言模型的on-policy自蒸馏方法",
+      "llm_tldr_en": "Addresses reward sparsity in RL for multimodal LLMs by introducing rationale-privileged on-policy self-distillation that leverages chain-of-thought annotations.",
+      "llm_tldr_cn": "针对多模态大语言模型在情感计算任务中强化学习奖励稀疏的问题，本文提出OmniOPSD，一种结合理由（rationale）的on-policy自蒸馏方法。它利用专家标注的思维链作为教师信号，让学生在on-policy轨迹上学习。实验表明，该方法提升了模型在涉及状态、情感等复杂推理任务上的表现，同时增加了可解释性。该工作将on-policy蒸馏扩展到多模态人类中心场景。",
+      "llm_tldr": "针对多模态大语言模型在情感计算任务中强化学习奖励稀疏的问题，本文提出OmniOPSD，一种结合理由（rationale）的on-policy自蒸馏方法。它利用专家标注的思维链作为教师信号，让学生在on-policy轨迹上学习。实验表明，该方法提升了模型在涉及状态、情感等复杂推理任务上的表现，同时增加了可解释性。该工作将on-policy蒸馏扩展到多模态人类中心场景。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15260v1",
+      "source": "arxiv",
+      "title": "Trust-Region Diffusion Policies for Massively Parallel On-Policy RL",
+      "abstract": "Reinforcement learning with massively parallel simulations has become a standard framework for developing robust, deployable policies; however, most existing approaches still rely on simple Gaussian policy parameterizations. Diffusion models provide a more expressive policy class and have shown strong performance on challenging control problems, yet most diffusion-based RL methods are designed for offline or off-policy training. In this work, we ask whether diffusion policies can be trained effectively in the massively parallel, on-policy regime. To this end, we introduce Trust-region Diffusion Policies (TruDi), which enables diffusion policies for on-policy RL with massively parallel simulations. This setting is particularly challenging because the data distribution changes quickly across updates, making stable training with complex policies difficult. TruDi addresses this by integrating a trust-region optimization rule to enforce a KL-divergence constraint over the entire diffusion trajectory. Empirically, we evaluate TruDi on a diverse set of 4 massively parallel RL benchmarks comprising a total of 73 tasks. Across these tasks, TruDi consistently outperforms or is on-par with strong baselines on standard tasks and achieves clear gains on more challenging humanoid control tasks, establishing a strong new baseline for massively parallel on-policy RL.",
+      "authors": [
+        "Huy Le",
+        "Onur Celik",
+        "Denis Blessing",
+        "Tai Hoang",
+        "Claas A Voelcker",
+        "Axel Brunnbauer",
+        "Felix Richter",
+        "Michael Volpp",
+        "Gerhard Neumann"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-13T11:35:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.15260v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "develops diffusion policies for massively parallel on-policy RL",
+      "llm_evidence_cn": "为大规模并行on-policy强化学习开发扩散策略",
+      "llm_evidence": "为大规模并行on-policy强化学习开发扩散策略",
+      "canonical_evidence": "为大规模并行on-policy强化学习开发扩散策略",
+      "llm_tldr_en": "Introduces Trust-region Diffusion Policies (TruDi) enabling expressive diffusion policies in massively parallel on-policy RL, overcoming data scarcity challenge.",
+      "llm_tldr_cn": "针对现有扩散策略主要适用于离线或off-policy场景的局限，提出信任区域扩散策略（TruDi），使得扩散策略能够在大规模并行on-policy强化学习中进行有效训练。该方法通过信任区域约束解决了数据稀缺问题，为on-policy学习提供了更强的策略表达能力。",
+      "llm_tldr": "针对现有扩散策略主要适用于离线或off-policy场景的局限，提出信任区域扩散策略（TruDi），使得扩散策略能够在大规模并行on-policy强化学习中进行有效训练。该方法通过信任区域约束解决了数据稀缺问题，为on-policy学习提供了更强的策略表达能力。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.12890v1",
+      "source": "arxiv",
+      "title": "Learning to Adapt: Representation-Based Reinforcement Learning for Multi-Task Skill Transfer",
+      "abstract": "Reinforcement learning has achieved remarkable success in learning complex control policies, yet its applicability remains limited due to sample inefficiency and poor generalization across tasks. In this work, we propose RepMT-SAC, a framework for multi-task RL that enables efficient knowledge sharing and robust transfer to new tasks. RepMT-SAC uses spectral MDP decomposition to capture transferable dynamics, structuring the value function into a task-agnostic core with a minimal task-specific adjustment. This design allows for strong zero-shot performance on in-distribution tasks and rapid few-shot adaptation to out-of-distribution tasks. We evaluate RepMT-SAC on quadcopter trajectory-following tasks across in-distribution and out-of-distribution contexts, demonstrating that it outperforms baselines by up to 30%.",
+      "authors": [
+        "Aryan Naveen",
+        "Haitong Ma",
+        "Haldun Balim",
+        "Na Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-11T04:33:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.12890v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes RepMT-SAC for multi-task RL transfer with spectral MDP decomposition",
+      "llm_evidence_cn": "提出RepMT-SAC用于多任务强化学习迁移，使用谱MDP分解",
+      "llm_evidence": "提出RepMT-SAC用于多任务强化学习迁移，使用谱MDP分解",
+      "canonical_evidence": "提出RepMT-SAC用于多任务强化学习迁移，使用谱MDP分解",
+      "llm_tldr_en": "Introduces RepMT-SAC, a multi-task RL framework using spectral MDP decomposition for transferable dynamics, achieving zero-shot and few-shot transfer in quadcopter tasks.",
+      "llm_tldr_cn": "针对强化学习样本效率低和跨任务泛化差的问题，本文提出RepMT-SAC框架，通过谱MDP分解提取可迁移的动态结构，将价值函数分为任务无关核心和少量任务特定调整。在四旋翼轨迹跟踪任务上，该方法在分布内任务上取得强零样本性能，并能快速适应分布外任务。该工作为多任务迁移提供了高效的表征学习方法。",
+      "llm_tldr": "针对强化学习样本效率低和跨任务泛化差的问题，本文提出RepMT-SAC框架，通过谱MDP分解提取可迁移的动态结构，将价值函数分为任务无关核心和少量任务特定调整。在四旋翼轨迹跟踪任务上，该方法在分布内任务上取得强零样本性能，并能快速适应分布外任务。该工作为多任务迁移提供了高效的表征学习方法。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "policy transfer in reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.15243v1",
+      "source": "arxiv",
+      "title": "SPARK: Spatial Policy-driven Adaptive Reinforcement learning for Knowledge distillation",
+      "abstract": "Low-bit quantization enables deployment of image restoration (IR) networks on resource-constrained devices, but introduces rounding noise that disproportionately degrades high-frequency regions such as edges and fine textures. Existing knowledge distillation (KD) methods apply distillation signals uniformly across all spatial locations, overlooking the varying reconstruction difficulty across image regions. To address this, we propose SPARK (Spatial Policy-driven Adaptive Reinforcement Learning for Knowledge Distillation), a framework that adaptively allocates distillation effort using a lightweight reinforcement learning (RL) policy network. At each training step, a difficulty feature extractor computes four signals, namely Laplacian variance, pixel variance, student reconstruction error, and teacher-student knowledge gap, which are fed into a compact policy CNN that produces a stochastic spatial weight map to modulate the KD loss during quantization-aware training (QAT). SPARK is IR task-agnostic, adds no inference cost, and integrates into any existing QAT pipeline without architectural changes. Experiments on benchmark datasets demonstrate that SPARK consistently outperforms PTQ, QAT, and state-of-the-art (SOTA) KD approaches across multiple student architectures, achieving reconstruction quality closest to the full-precision teacher under significant computational constraints.",
+      "authors": [
+        "Mohamed Jismy Aashik Rasool",
+        "Shabir Ahmad",
+        "Gisong Oh",
+        "Teag Kuen Whangbo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-13T10:55:06+00:00",
+      "link": "https://arxiv.org/pdf/2606.15243v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses RL policy for adaptive knowledge distillation in image restoration",
+      "llm_evidence_cn": "使用强化学习策略自适应知识蒸馏在图像恢复中",
+      "llm_evidence": "使用强化学习策略自适应知识蒸馏在图像恢复中",
+      "canonical_evidence": "使用强化学习策略自适应知识蒸馏在图像恢复中",
+      "llm_tldr_en": "Proposes SPARK, which uses a lightweight RL policy network to adaptively allocate distillation effort per spatial region, improving low-bit quantized image restoration.",
+      "llm_tldr_cn": "针对低比特量化图像恢复中知识蒸馏信号均匀分配忽略区域差异的问题，本文提出SPARK框架，使用轻量级强化学习策略网络，在每个训练步根据空间难度特征自适应调整蒸馏强度。实验表明，该方法有效提升了低比特量化网络的恢复质量，尤其在边缘和纹理区域。这项研究展示了强化学习在知识蒸馏中的积极作用。",
+      "llm_tldr": "针对低比特量化图像恢复中知识蒸馏信号均匀分配忽略区域差异的问题，本文提出SPARK框架，使用轻量级强化学习策略网络，在每个训练步根据空间难度特征自适应调整蒸馏强度。实验表明，该方法有效提升了低比特量化网络的恢复质量，尤其在边缘和纹理区域。这项研究展示了强化学习在知识蒸馏中的积极作用。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

@@ -6,32 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-15
-- 运行时间：2026-06-15 21:59:25 UTC
+- 最新运行日期：2026-06-16
+- 运行时间：2026-06-16 22:57:48 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：3
-- 速读区：0
+- 本次总论文数：6
+- 精读区：4
+- 速读区：2
 
 ### 今日简报（AI）
-今日精读两篇9.0分论文，聚焦策略蒸馏的稀疏几何与扩散策略优化防漂移。  
-最值得关注的两大方向：策略蒸馏的稀疏更新机制可提升效率，扩散优化需避免漂移问题。  
-建议读者优先精读这两篇，掌握理论后尝试对比实验验证效果。
-- 详情：[/202606/15/README](/202606/15/README)
+今日聚焦LLM推理与多轮对话知识蒸馏，两篇高分论文（9.0/10）分别提出路径条件自蒸馏和课程级轮次引导蒸馏；速读方向为多任务技能迁移与空间策略自适应蒸馏。建议优先精读两篇9分论文，理解其蒸馏机制与推理优化方法。
+- 详情：[/202606/16/README](/202606/16/README)
 
 ### 精读区论文标签
-1. [Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation](/202606/15/2606.13657v2-dense-supervision-sparse-updates-on-the-sparsity-and-geometry-of-on-policy-distillation)  
+1. [Localizing Credit at the Divergence: Path-Conditioned Self-Distillation for LLM Reasoning](/202606/16/2606.15576v1-localizing-credit-at-the-divergence-path-conditioned-self-distillation-for-llm-reasoning)  
    标签：评分：9.0/10、query:opd
-   evidence：直接在线策略蒸馏分析
-2. [Diffusion Policy Optimization without Drifting Apart](/202606/15/2606.13795v1-diffusion-policy-optimization-without-drifting-apart)  
+   evidence：提出路径条件自蒸馏用于on-policy强化学习
+2. [On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents](/202606/16/2606.15912v1-on-policy-distillation-with-curriculum-turn-level-guidance-for-multi-turn-agents)  
    标签：评分：9.0/10、query:opd
-   evidence：提出DiPOD将自我蒸馏与在线策略梯度更新交织
-3. [Be My Tutor: On-Policy Co-Distillation for Mutual LLM Improvement via Peer Feedback](/202606/15/2606.14368v1-be-my-tutor-on-policy-co-distillation-for-mutual-llm-improvement-via-peer-feedback)  
+   evidence：提出面向多轮智能体的指导式在线策略蒸馏
+3. [OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing](/202606/16/2606.15920v1-omniopsd-rationale-privileged-on-policy-self-distillation-for-affective-computing)  
    标签：评分：9.0/10、query:opd
-   evidence：提出on-policy协同蒸馏，通过同伴反馈实现LLM相互提升
+   evidence：提出OmniOPSD，一种用于情感计算中多模态大语言模型的on-policy自蒸馏方法
+4. [Trust-Region Diffusion Policies for Massively Parallel On-Policy RL](/202606/16/2606.15260v1-trust-region-diffusion-policies-for-massively-parallel-on-policy-rl)  
+   标签：评分：8.0/10、query:opd
+   evidence：为大规模并行on-policy强化学习开发扩散策略
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [Learning to Adapt: Representation-Based Reinforcement Learning for Multi-Task Skill Transfer](/202606/16/2606.12890v1-learning-to-adapt-representation-based-reinforcement-learning-for-multi-task-skill-transfer)  
+   标签：评分：7.0/10、query:opd
+   evidence：提出RepMT-SAC用于多任务强化学习迁移，使用谱MDP分解
+2. [SPARK: Spatial Policy-driven Adaptive Reinforcement learning for Knowledge distillation](/202606/16/2606.15243v1-spark-spatial-policy-driven-adaptive-reinforcement-learning-for-knowledge-distillation)  
+   标签：评分：7.0/10、query:opd
+   evidence：使用强化学习策略自适应知识蒸馏在图像恢复中
 
 
 <div class="dpr-home-promo-card">
