@@ -1,0 +1,183 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-17T21:58:08.220924+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.17628v1",
+      "source": "arxiv",
+      "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation",
+      "abstract": "Memory has become a standard substrate for self-evolving agents, yet retaining experience is not the same as learning how to evolve through it. Existing memory agents can store trajectories, retrieve reflections, or accumulate skills, but often lack the holistic competence to select useful experience, act on it, write reusable knowledge, and maintain a growing repository. We introduce OPD-Evolver, a slow-fast co-evolution framework that cultivates such an agent evolver through on-policy self-distillation. In the fast loop, OPD-Evolver interacts with a four-level memory hierarchy to read, use, write, and maintain experience for rapid test-time evolution. In the slow loop, outcome-calibrated memory attribution and privileged hindsight distill these four abilities into the deployable policy. Across multi-domain benchmarks, OPD-Evolver surpasses memory systems such as ReasoningBank by up to 11.5%, and training-based methods such as Skill0 by ~5.8%. Further analysis shows that OPD-Evolver internalizes high-value experience and memory management, enabling OPD-Evolver-9B to challenge giant counterparts such as Qwen3.5-397B-A17B and Step-3.5-Flash, pointing beyond memory-augmented agents toward genuinely qualified agent evolvers.",
+      "authors": [
+        "Guibin Zhang",
+        "Xun Xu",
+        "Yanwei Yue",
+        "Zikun Su",
+        "Wangchunshu Zhou",
+        "Xiaobin Hu",
+        "Shuicheng Yan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-16T07:33:53+00:00",
+      "link": "https://arxiv.org/pdf/2606.17628v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "on-policy self-distillation framework for agent evolution",
+      "llm_evidence_cn": "基于on-policy自蒸馏的agent演化框架",
+      "llm_evidence": "基于on-policy自蒸馏的agent演化框架",
+      "canonical_evidence": "基于on-policy自蒸馏的agent演化框架",
+      "llm_tldr_en": "Introduces OPD-Evolver, a slow-fast co-evolution framework that uses on-policy self-distillation and a four-level memory hierarchy to cultivate a holistic agent evolver.",
+      "llm_tldr_cn": "现有记忆agent只能存储和检索经验，缺乏综合进化能力。本文提出OPD-Evolver，通过快慢协同进化框架，在快循环中使用四级记忆层次进行快速测试时进化，在慢循环中通过结果校准记忆归因和事后洞察进行蒸馏，从而赋予agent完整的经验利用和知识沉淀能力。实验证明该框架能显著提升agent的持续学习效果。",
+      "llm_tldr": "现有记忆agent只能存储和检索经验，缺乏综合进化能力。本文提出OPD-Evolver，通过快慢协同进化框架，在快循环中使用四级记忆层次进行快速测试时进化，在慢循环中通过结果校准记忆归因和事后洞察进行蒸馏，从而赋予agent完整的经验利用和知识沉淀能力。实验证明该框架能显著提升agent的持续学习效果。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18195v1",
+      "source": "arxiv",
+      "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs",
+      "abstract": "On-policy self-distillation (OPSD) has proven effective for post-training large language models (LLMs), yet its application to diffusion LLMs (dLLMs) remains unexplored. Existing OPSD methods are inherently autoregressive-centric. They inject privileged information via left-to-right prefix conditioning with token-level divergence supervision, a design that fundamentally conflicts with the arbitraryorder generation of dLLMs. We introduce d-OPSD, the first OPSD framework tailored for dLLMs. Our approach makes two core contributions. First, we reframe self-teacher construction by using self-generated answers as suffix conditioning, enabling the student model to learn from \"self future-experience\" rather than privileged prefixes. Second, we shift supervision from token-level to step-level, aligning training with the iterative denoising process of dLLMs. Experiments across four reasoning benchmarks show that d-OPSD consistently outperforms RLVR and SFT baselines with superior sample efficiency, requiring only around 10% of the optimization steps by RLVR and opening a promising pathway for dLLM posttraining. The code is available at https://github.com/xingzhejun/d-OPSD.",
+      "authors": [
+        "Yifu Luo",
+        "Zeyu Chen",
+        "Haoyu Wang",
+        "Xinhao Hu",
+        "Yuxuan Zhang",
+        "Zhizhou Sha",
+        "Shiwei Liu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-16T17:24:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.18195v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "on-policy self-distillation for diffusion LLMs, directly uses on-policy self-distillation",
+      "llm_evidence_cn": "面向扩散LLM的在线自蒸馏，直接使用在线自蒸馏方法",
+      "llm_evidence": "面向扩散LLM的在线自蒸馏，直接使用在线自蒸馏方法",
+      "canonical_evidence": "面向扩散LLM的在线自蒸馏，直接使用在线自蒸馏方法",
+      "llm_tldr_en": "d-OPSD is the first on-policy self-distillation framework for diffusion LLMs, using self-generated answers as suffix conditioning to learn from future experience, shifting supervision from token-level to prediction-level.",
+      "llm_tldr_cn": "本文提出d-OPSD，首个面向扩散语言模型（dLLM）的在线自蒸馏框架。现有OPSD方法依赖自回归式的从左到右前缀条件，与dLLM的任意顺序生成冲突。d-OPSD创新地使用自生成答案作为后缀条件，使学生模型从未来经验学习，并将监督信号从token级转移到预测级。在多个下游任务上，d-OPSD显著提升了dLLM的性能和生成质量。该工作弥合了自蒸馏与扩散模型之间的鸿沟。",
+      "llm_tldr": "本文提出d-OPSD，首个面向扩散语言模型（dLLM）的在线自蒸馏框架。现有OPSD方法依赖自回归式的从左到右前缀条件，与dLLM的任意顺序生成冲突。d-OPSD创新地使用自生成答案作为后缀条件，使学生模型从未来经验学习，并将监督信号从token级转移到预测级。在多个下游任务上，d-OPSD显著提升了dLLM的性能和生成质量。该工作弥合了自蒸馏与扩散模型之间的鸿沟。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18216v1",
+      "source": "arxiv",
+      "title": "Zone of Proximal Policy Optimization: Teacher in Prompts, Not Gradients",
+      "abstract": "Knowledge distillation transfers a teacher's competence to a small student but is brittle in the small-student regime: forcing the student to imitate logits from a much larger teacher concentrates it on the teacher's sharpest modes, hurting generalization on benchmark families beyond the training corpus. Reinforcement learning (RL) avoids logit imitation by training on the student's own rollouts. However, on questions where every rollout fails-yielding zero advantage and being silently discarded-injecting a stronger teacher's response into the policy gradient breaks the on-policy assumption and induces drift. We introduce Zone of Proximal Policy Optimization (ZPPO), inspired by Vygotsky's zone of proximal development, which keeps the teacher inside the prompt rather than the policy gradient. On hard questions, ZPPO constructs two reformulated prompts: a Binary Candidate-included Question (BCQ) pairs one correct teacher response with one incorrect student response as anonymized candidates the student must discriminate, and a Negative Candidate-included Question (NCQ) aggregates the student's wrong rollouts into a single prompt to surface their shared failure modes. A prompt replay buffer recirculates each hard question until it either graduates-the student's mean rollout accuracy on it reaches half- or is FIFO-evicted under finite capacity, amplifying BCQ and NCQ inside the student's current zone of proximal development. On the Qwen3.5 family at four student scales (0.8B-9B) with a 27B teacher, post-trained as vision-language models and evaluated on a 31-benchmark suite (16 VLM, 10 LLM, 5 Video), ZPPO outperforms off/on-policy distillation and GRPO, with the largest gains at the smallest scale.",
+      "authors": [
+        "Byung-Kwan Lee",
+        "Ximing Lu",
+        "Shizhe Diao",
+        "Minki Kang",
+        "Saurav Muralidharan",
+        "Karan Sapra",
+        "Andrew Tao",
+        "Pavlo Molchanov",
+        "Yejin Choi",
+        "Yu-Chiang Frank Wang",
+        "Ryo Hachiuma"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-16T17:46:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.18216v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "teacher-student on-policy distillation via prompts",
+      "llm_evidence_cn": "通过提示的师生on-policy蒸馏",
+      "llm_evidence": "通过提示的师生on-policy蒸馏",
+      "canonical_evidence": "通过提示的师生on-policy蒸馏",
+      "llm_tldr_en": "ZPPO introduces a teacher-student framework where the teacher guides via prompts instead of gradients, preserving on-policy assumption while avoiding logit imitation issues in knowledge distillation.",
+      "llm_tldr_cn": "本文针对知识蒸馏在小规模学生模型下的脆弱性，提出ZPPO方法，借鉴维果茨基的最近发展区理论，让教师通过提示而非梯度指导学生，从而避免破坏on-policy假设。实验表明，该方法在保持学生自主探索的同时有效利用教师知识，提升了泛化能力。该工作为on-policy蒸馏提供了新的师生交互范式。",
+      "llm_tldr": "本文针对知识蒸馏在小规模学生模型下的脆弱性，提出ZPPO方法，借鉴维果茨基的最近发展区理论，让教师通过提示而非梯度指导学生，从而避免破坏on-policy假设。实验表明，该方法在保持学生自主探索的同时有效利用教师知识，提升了泛化能力。该工作为on-policy蒸馏提供了新的师生交互范式。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.18132v1",
+      "source": "arxiv",
+      "title": "Knowledge Reutilization in Meta-Reinforcement Learning",
+      "abstract": "Meta-reinforcement learning enables fast adaptation by extracting shared structure from related tasks, but existing end-to-end methods often couple task inference with embodiment-specific control. This coupling can obscure non-parametric task semantics, reduce sample efficiency, and limit cross-agent reuse. We propose a meta-knowledge reutilization framework that learns task-level knowledge on a dynamics-simplified agent and transfers it to heterogeneous agents. The framework uses a Bayesian non-parametric prior to organize latent task modes and a high-level policy to generate task-level magnitude guidance. To bridge reusable task knowledge with different embodiments, we introduce a semantic-magnitude interface and a lightweight temporal adaptor, which convert frozen meta-knowledge into temporally aligned subgoals for embodiment-specific low-level controllers. Experiments on multiple locomotion agents show that our framework reduces final-step tracking error by 94.75% -- 99.79% compared with recent state-of-the-art baselines and achieves comparable deployment performance with about 23.8% of their interaction data.",
+      "authors": [
+        "Yuan Meng",
+        "Bo Wang",
+        "Juan de los Rios Ruiz",
+        "Xiangtong Yao",
+        "Zhenshan Bing",
+        "Fuchun Sun",
+        "Alois Knoll"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-16T16:32:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.18132v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "knowledge transfer across heterogeneous agents in meta-RL",
+      "llm_evidence_cn": "跨异构智能体的知识迁移，与策略迁移相关",
+      "llm_evidence": "跨异构智能体的知识迁移，与策略迁移相关",
+      "canonical_evidence": "跨异构智能体的知识迁移，与策略迁移相关",
+      "llm_tldr_en": "A meta-knowledge reutilization framework transfers task-level knowledge from a dynamics-simplified agent to heterogeneous agents, improving sample efficiency and cross-agent reuse via a semantic-magnitude interface.",
+      "llm_tldr_cn": "元强化学习中的知识重用框架，通过动力学简化智能体学习任务级知识，并利用语义-幅度接口迁移到异构智能体。该方法解耦了任务推理与具身控制，提升了样本效率和跨智能体复用能力。实验表明在多种机器人形态上实现了零样本迁移。该工作为元RL中的知识迁移提供了通用架构。",
+      "llm_tldr": "元强化学习中的知识重用框架，通过动力学简化智能体学习任务级知识，并利用语义-幅度接口迁移到异构智能体。该方法解耦了任务推理与具身控制，提升了样本效率和跨智能体复用能力。实验表明在多种机器人形态上实现了零样本迁移。该工作为元RL中的知识迁移提供了通用架构。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "policy transfer in reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
