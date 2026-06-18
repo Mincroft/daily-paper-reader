@@ -1,0 +1,392 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-18T21:07:49.460391+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.17199v1",
+      "source": "arxiv",
+      "title": "PowerOPD: Stabilizing On-Policy Distillation with Bounded Power Transformation",
+      "abstract": "Standard on-policy distillation (OPD) for large language models estimates the reverse-KL objective using student-sampled tokens, yielding an unbiased single-sample Monte Carlo estimator that avoids vocabulary-wide computation. However, we show that this estimator suffers from severe training pathologies in practice: sample inefficiency, unstable generation dynamics, and a substantial performance gap compared to exact full-vocabulary OPD. Reward-level diagnosis traces these pathologies to the log-ratio reward, which is unbounded by construction, producing extremely high-variance gradients concentrated at early positions and persisting throughout training; standard post-hoc scaling fail as they operate only after this distortion occurs. To solve this problem, we propose PowerOPD: a family of natively bounded, sign-consistent rewards from the Box-Cox power transformation, parameterized by alpha > 0, of which the log-ratio is the degenerate alpha -> 0 limit. Across six mathematical reasoning benchmarks and four Qwen3 teacher-student pairs, PowerOPD achieves benchmark-averaged Avg@8/Pass@8 gains of up to +6.37/+5.71 over vanilla OPD, +3.01/+3.54 over post-hoc stabilization, and +2.59/+8.90 over full-vocabulary OPD, while reducing wall-clock time by 59.2% and peak GPU memory by 23.1%. Larger alpha generally improves accuracy, consistently shortens responses, and keeps gradient norms more than 3,000x smaller than vanilla OPD.",
+      "authors": [
+        "Anhao Zhao",
+        "Junlong Tong",
+        "Yingqi Fan",
+        "Ping Nie",
+        "Wenjie Li",
+        "Xiaoyu Shen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-15T18:37:51+00:00",
+      "link": "https://arxiv.org/pdf/2606.17199v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Bounded power transformation stabilizes on-policy distillation",
+      "llm_evidence_cn": "有界幂变换稳定在线蒸馏",
+      "llm_evidence": "有界幂变换稳定在线蒸馏",
+      "canonical_evidence": "有界幂变换稳定在线蒸馏",
+      "llm_tldr_en": "Analyzes instability in on-policy distillation due to unbounded log-ratio reward and proposes PowerOPD with a bounded power transformation to stabilize training.",
+      "llm_tldr_cn": "标准在线蒸馏使用学生采样令牌估计反向KL散度，但其对数比率奖励无界导致梯度方差极大，造成样本低效和训练不稳定。本文通过有界幂变换对奖励进行缩放，稳定了梯度分布。实验证明PowerOPD显著缩小了与全词汇OPD的性能差距，同时保持了单样本估计的计算效率，为大规模语言模型的在线蒸馏提供了一种实用稳定的方案。",
+      "llm_tldr": "标准在线蒸馏使用学生采样令牌估计反向KL散度，但其对数比率奖励无界导致梯度方差极大，造成样本低效和训练不稳定。本文通过有界幂变换对奖励进行缩放，稳定了梯度分布。实验证明PowerOPD显著缩小了与全词汇OPD的性能差距，同时保持了单样本估计的计算效率，为大规模语言模型的在线蒸馏提供了一种实用稳定的方案。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19120v1",
+      "source": "arxiv",
+      "title": "Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation",
+      "abstract": "On-policy self-distillation (OPSD) trains a model on its own rollouts and uses a frozen copy to provide dense token-level targets conditioned on a reference target. This works well for LLM reasoning, but a direct extension to multimodal large language models (MLLMs) can create a shortcut: the privileged target may guide tokens mainly based on the text reference target rather than the image. We propose ViGOS, a visually grounded OPSD framework for MLLM post-training. The student first writes a visual description and then reasons toward the final answer. For valid rollouts, an image-only perception teacher supervises the description, while a privileged reasoning teacher supervises the reasoning and final answer on the same student prefix. A reference teacher is used only for invalid rollouts to recover the output format. Across general vision-language, expert reasoning, visual math, spatial grounding, and visual-language-prior benchmarks, ViGOS keeps the main benefits of OPSD and improves image-grounded behavior in shortcut-prone settings.",
+      "authors": [
+        "Sihan Wang",
+        "Xiyao Liu",
+        "Lianqing Liu",
+        "Zhi Han"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "published": "2026-06-17T14:33:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.19120v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "On-policy self-distillation for multimodal LLM",
+      "llm_evidence_cn": "多模态LLM的在线自蒸馏",
+      "llm_evidence": "多模态LLM的在线自蒸馏",
+      "canonical_evidence": "多模态LLM的在线自蒸馏",
+      "llm_tldr_en": "Proposes ViGOS, a visually grounded on-policy self-distillation framework for multimodal LLMs that decouples perception and reasoning to avoid shortcut learning, using two teachers.",
+      "llm_tldr_cn": "传统在线自蒸馏应用于多模态大模型时存在捷径问题，即模型倾向于仅依赖文本参考而非真实视觉信息。本文提出ViGOS框架，通过让学生先撰写视觉描述再进行推理，解耦感知与推理过程。引入一个仅基于图像的感知教师来监督描述生成，同时使用含上下文的推理教师指导答案推理。实验表明，该方法在多种多模态推理任务上显著提升了抗捷径能力，并增强了模型对视觉扰动的鲁棒性，为多模态模型后训练提供了一种有效的自蒸馏范式。",
+      "llm_tldr": "传统在线自蒸馏应用于多模态大模型时存在捷径问题，即模型倾向于仅依赖文本参考而非真实视觉信息。本文提出ViGOS框架，通过让学生先撰写视觉描述再进行推理，解耦感知与推理过程。引入一个仅基于图像的感知教师来监督描述生成，同时使用含上下文的推理教师指导答案推理。实验表明，该方法在多种多模态推理任务上显著提升了抗捷径能力，并增强了模型对视觉扰动的鲁棒性，为多模态模型后训练提供了一种有效的自蒸馏范式。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.13795v2",
+      "source": "arxiv",
+      "title": "DiPOD: Diffusion Policy Optimization without Drifting Apart",
+      "abstract": "RL post-training has become increasingly pivotal for improving diffusion policies, but existing diffusion policy-gradient methods are often unstable and cannot achieve reliable policy improvement. We identify the cause as the double-drift phenomenon: optimizing a variational surrogate can let the ELBO separate from the true log-likelihood, which then makes the resulting proxy policy gradient misaligned with the true policy gradient of expected return. We propose \\textbf{DiPOD}, a diffusion policy optimization framework that maintains tight-bound behavior throughout training by interleaving self-distillation with policy-improving gradient updates. This leads to a simple and practical algorithm: augmenting each diffusion policy-gradient update with an on-policy ELBO regularizer. Across diffusion language model post-training and continuous-control diffusion policies, DiPOD substantially stabilizes training and reaches higher rewards than previous methods.",
+      "authors": [
+        "Haozhe Jiang",
+        "Haiwen Feng",
+        "Pieter Abbeel",
+        "Jiantao Jiao",
+        "Angjoo Kanazawa",
+        "Nika Haghtalab"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-11T18:06:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.13795v2",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes on-policy self-distillation for diffusion policy optimization",
+      "llm_evidence_cn": "提出在策略自蒸馏用于扩散策略优化",
+      "llm_evidence": "提出在策略自蒸馏用于扩散策略优化",
+      "canonical_evidence": "提出在策略自蒸馏用于扩散策略优化",
+      "llm_tldr_en": "DiPOD is a diffusion policy optimization framework that interleaves self-distillation with policy gradient updates to maintain tight ELBO and stable improvement",
+      "llm_tldr_cn": "扩散策略RL后训练中，代理策略梯度漂移导致不稳定。DiPOD通过在每次梯度更新中插入在策略ELBO自蒸馏，保持紧密边界，实现可靠策略改进。实验表明DiPOD在多个任务上优于现有方法。",
+      "llm_tldr": "扩散策略RL后训练中，代理策略梯度漂移导致不稳定。DiPOD通过在每次梯度更新中插入在策略ELBO自蒸馏，保持紧密边界，实现可靠策略改进。实验表明DiPOD在多个任务上优于现有方法。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18974v1",
+      "source": "arxiv",
+      "title": "Visual-OPSD: Cross-Modal On-Policy Self-Distillation for Efficient Unified Multimodal Reasoning",
+      "abstract": "Unified multimodal models (UMMs) interleave generated ''visual thoughts'' (VTs) with text reasoning to improve spatial tasks. This incurs roughly an order-of-magnitude inference cost from multi-step diffusion. We find this cost yields limited direct benefit. On ThinkMorph, removing or noising VTs barely changes accuracy across nine benchmarks. Once rendered, attention concentrates on the VT regardless of content. Yet a KL diagnostic shows that conditioning on a privileged VT trace shifts the model's completion distribution. This suggests the generation pathway encodes useful reasoning beyond the rendered pixels. Motivated by this gap, we propose Visual On-Policy Self-Distillation(Visual-OPSD). Teacher and student share identical weights but differ in context: the teacher sees privileged VTs while the student sees only the question. Token-level JSD distillation on on-policy student trajectories transfers the teacher's reasoning to a text-only student. Across nine benchmarks, Visual-OPSD improves over its generative teacher by $+3.40$pp with $14.3\\times$ speedup (10.0s vs. 142.8s per sample) and outperforms same-scale VLMs by $+63.83$pp on VSP. A Gaussian-noise control ($+0.40$pp vs. $+10.28$pp for real VTs) and $58.4\\%$ closure of the KL gap confirm that gains come from the semantic content of the generation pathway.",
+      "authors": [
+        "Pengyu Li",
+        "Zhitao Gao",
+        "Lingling Zhang",
+        "Muye Huang",
+        "Yuanming Li",
+        "Fangzhi Xu",
+        "Jun Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T11:59:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.18974v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes Visual On-Policy Self-Distillation for multimodal reasoning",
+      "llm_evidence_cn": "提出面向多模态推理的视觉在策略自蒸馏方法",
+      "llm_evidence": "提出面向多模态推理的视觉在策略自蒸馏方法",
+      "canonical_evidence": "提出面向多模态推理的视觉在策略自蒸馏方法",
+      "llm_tldr_en": "Visual-OPSD is a cross-modal on-policy self-distillation method that improves efficiency of unified multimodal models by distilling from privileged visual thought traces",
+      "llm_tldr_cn": "统一多模态模型生成视觉思维成本高昂但收益有限。本文提出Visual-OPSD，通过在策略自蒸馏从特权视觉轨迹中提取有用推理信号，无需显式生成图像，显著降低推理成本并保持性能。实验证明该方法在多个基准上有效。",
+      "llm_tldr": "统一多模态模型生成视觉思维成本高昂但收益有限。本文提出Visual-OPSD，通过在策略自蒸馏从特权视觉轨迹中提取有用推理信号，无需显式生成图像，显著降低推理成本并保持性能。实验证明该方法在多个基准上有效。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19327v1",
+      "source": "arxiv",
+      "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+      "abstract": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a scalar signal, obscuring which aspects of a response should be improved. We propose \\textbf{Rubric-Conditioned Self-Distillation}, a framework that incorporates rubrics as structured, fine-grained feedback for on-policy self-distillation. Our method conditions the teacher model on criterion-level rubrics and uses it to provide token-level guidance on the student's own sampled trajectories. This design avoids treating a single reference rationale as the sole supervision target. Instead, rubrics specify what a strong response should satisfy, enabling more fine-grained credit assignment over the reasoning process than scalar reward optimization. We instantiate this framework with a two-stage pipeline that first learns to generate task-specific rubrics and then trains a rubric-guided reasoner. We evaluate on a diverse suite of science reasoning benchmarks and results show that rubric-conditioned self-distillation effectively converts rubric-level criteria into token-level guidance over the reasoning process, surpassing GRPO by 1.0 points and OPSD by 0.9 points on average.",
+      "authors": [
+        "Siyi Gu",
+        "Jialin Chen",
+        "Sophia Zhou",
+        "Arman Cohan",
+        "Rex Ying"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-17T17:54:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.19327v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes on-policy self-distillation with rubric conditioning",
+      "llm_evidence_cn": "提出基于评分标准的在策略自蒸馏",
+      "llm_evidence": "提出基于评分标准的在策略自蒸馏",
+      "canonical_evidence": "提出基于评分标准的在策略自蒸馏",
+      "llm_tldr_en": "Rubric-Conditioned Self-Distillation uses rubrics as fine-grained feedback for on-policy self-distillation in reasoning LLMs",
+      "llm_tldr_cn": "后训练中蒸馏依赖昂贵标注，RL信号过于粗粒度。本文提出基于评分标准的自蒸馏，将细粒度评价转化为结构化反馈，在策略上修正响应。实验表明该方法在保持最终答案正确性的同时改善了推理质量。",
+      "llm_tldr": "后训练中蒸馏依赖昂贵标注，RL信号过于粗粒度。本文提出基于评分标准的自蒸馏，将细粒度评价转化为结构化反馈，在策略上修正响应。实验表明该方法在保持最终答案正确性的同时改善了推理质量。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.16497v1",
+      "source": "arxiv",
+      "title": "daVinci-kernel: Co-Evolving Skill Selection, Summarization, and Utilization via RL for GPU Kernel Optimization",
+      "abstract": "GPU kernel optimization represents a paradigm where functional correctness is assumed and execution efficiency is the objective. We present daVinci-kernel, a reinforcement learning framework that couples skill discovery with skill exploitation through a dynamically evolving skill library. daVinci-kernel jointly trains three agents sharing one LLM backbone: a Skill Selection Agent that retrieves relevant techniques via BM25 and LLM reranking, a Policy Agent that generates multi-turn CUDA/Triton kernels conditioned on selected skills, and a Skill Summary Agent that distills successful rollouts into reusable skills. Candidate skills are added only after execution-based verification confirms reproducible speedups. All three agents share a single LLM backbone, are initialized via a structured SFT cold start on diversity-filtered data, and are then jointly optimized end-to-end with multi-turn REINFORCE and per-agent advantage estimation. On KernelBench, daVinci-kernel-14B achieves 37.2%, 70.6%, and 32.2% on Level 1, Level 2, and Level 3 under the Fast$_1$ threshold, outperforming the strongest prior RL-trained model, Dr.Kernel-14B.",
+      "authors": [
+        "Dayuan Fu",
+        "Mohan Jiang",
+        "Tongyu Wang",
+        "Dian Yang",
+        "Jiarui Hu",
+        "Liming Liu",
+        "Jinlong Hou",
+        "Pengfei Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-15T09:58:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.16497v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "skill distillation via RL in GPU kernel optimization",
+      "llm_evidence_cn": "在GPU内核优化中的技能蒸馏方法",
+      "llm_evidence": "在GPU内核优化中的技能蒸馏方法",
+      "canonical_evidence": "在GPU内核优化中的技能蒸馏方法",
+      "llm_tldr_en": "Proposes a skill distillation mechanism within an RL framework for GPU kernel optimization, where a summary agent distills successful rollouts into reusable skills.",
+      "llm_tldr_cn": "该论文提出daVinci-kernel框架，利用强化学习联合训练技能选择、策略生成和技能摘要三个代理。其中技能摘要代理将成功 rollout 蒸馏为可复用技能，形成动态演化的技能库。实验验证了该方法可复现加速效果。虽然并非标准的on-policy蒸馏，但蒸馏机制具有启发性。",
+      "llm_tldr": "该论文提出daVinci-kernel框架，利用强化学习联合训练技能选择、策略生成和技能摘要三个代理。其中技能摘要代理将成功 rollout 蒸馏为可复用技能，形成动态演化的技能库。实验验证了该方法可复现加速效果。虽然并非标准的on-policy蒸馏，但蒸馏机制具有启发性。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on policy distillation methods for reinforcement learning",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.14801v1",
+      "source": "arxiv",
+      "title": "QPILOTS: Efficient Test-Time Q-Steering for Flow Policies",
+      "abstract": "Flow-matching and diffusion policies are expressive action generators, but optimizing them with temporal-difference reinforcement learning (RL) remains difficult. Effective policy extraction requires exploiting the critic's action gradient, yet directly backpropagating this signal through a multi-step denoising process can be numerically unstable. Existing methods work around this either by discarding gradient information, distilling the policy into a simpler one-step actor, or repeatedly fine-tuning the denoising policy as the critic improves. We propose QPILOTS, a method that leaves the original policy unmodified and steers the denoising process at inference time. At each denoising step, instead of evaluating the critic on the noisy intermediate action where critic predictions are unreliable, we first project that intermediate state to an estimate of the final clean action and compute the critic gradient there. We introduce two variants: QPILOTS-U uses a fast single-point approximation, while QPILOTS-M draws differentiable posterior samples via a learned auxiliary network. On a standard offline-to-online RL benchmark, QPILOTS achieves the best aggregate performance, reaching an average success rate of 90% across 50 tasks. We also apply QPILOTS to steer a large, frozen, pretrained Vision-Language Action (VLA) foundation model, outperforming or matching prior inference-time approaches across six manipulation tasks in simulation.",
+      "authors": [
+        "Yifan Ruan",
+        "Chenyang Cao",
+        "Andreas Burger",
+        "Ali Pesaranghader",
+        "Kaveh Kamali",
+        "Jaehong Kim",
+        "Nandita Vijaykumar",
+        "Alan Aspuru-Guzik",
+        "Igor Gilitschenski",
+        "Nicholas Rhinehart"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-06-11T18:22:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.14801v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "uses distillation to simplify policy; knowledge distillation in RL context",
+      "llm_evidence_cn": "使用蒸馏简化策略，属于强化学习中的知识蒸馏",
+      "llm_evidence": "使用蒸馏简化策略，属于强化学习中的知识蒸馏",
+      "canonical_evidence": "使用蒸馏简化策略，属于强化学习中的知识蒸馏",
+      "llm_tldr_en": "Proposes QPILOTS, which steers denoising process at test time using critic gradients, avoiding distillation of flow policies, but mentions distillation as existing approach.",
+      "llm_tldr_cn": "针对流匹配和扩散策略难以用TD-RL优化的问题，提出QPILOTS方法。该方法不修改原始策略，而是在推理时利用评论家梯度引导去噪过程，避免了直接反传梯度或蒸馏策略的不稳定性。实验表明，该方法在多个控制任务上取得了优于现有蒸馏方法的性能，同时保持了原始策略的表达能力。",
+      "llm_tldr": "针对流匹配和扩散策略难以用TD-RL优化的问题，提出QPILOTS方法。该方法不修改原始策略，而是在推理时利用评论家梯度引导去噪过程，避免了直接反传梯度或蒸馏策略的不稳定性。实验表明，该方法在多个控制任务上取得了优于现有蒸馏方法的性能，同时保持了原始策略的表达能力。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.18810v1",
+      "source": "arxiv",
+      "title": "Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has driven substantial progress in training LLMs for reasoning tasks, but representative methods such as GRPO assign uniform credit across all tokens, wasting gradient on routine tokens while under-crediting pivotal reasoning steps. Existing token-level credit assignment methods require resources beyond the model's own rollouts. GRPO variants rely on process reward models or ground-truth answers. Knowledge distillation assigns credit through per-token divergence but requires external teachers (On-Policy Distillation) or privileged information (On-Policy Self Distillation). However, these dependencies limit applicability in the pure RLVR setting. We observe that conditioning the model on its own verified trajectories induces a measurable per-token KL divergence between the original and conditioned distributions, and prove that distilling from a self-teacher constructed by verified trajectories leads to infeasible weighted-average solutions when multiple verified trajectories exist. We propose SC-GRPO (Self-Conditioned GRPO), which uses KL divergence mentioned before as a multiplicative weight on GRPO gradients. Across five benchmarks spanning math, code, and agentic tasks, SC-GRPO consistently outperforms 8.1% over GRPO and 5.9% over DAPO with stronger OOD performance. Moreover, SC-GRPO achieves higher performance than OPD.",
+      "authors": [
+        "Yingyu Shan",
+        "Yuhang Guo",
+        "Zihao Cheng",
+        "Zeming Liu",
+        "Xiangrong Zhu",
+        "Xinyi Wang",
+        "Jiashu Yao",
+        "Wei Lin",
+        "Hongru Wang",
+        "Heyan Huang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-17T08:26:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.18810v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "discusses on-policy distillation as existing credit assignment method",
+      "llm_evidence_cn": "将在线蒸馏作为现有信用分配方法进行讨论",
+      "llm_evidence": "将在线蒸馏作为现有信用分配方法进行讨论",
+      "canonical_evidence": "将在线蒸馏作为现有信用分配方法进行讨论",
+      "llm_tldr_en": "Reviews on-policy distillation and self-distillation as token-level credit assignment methods in RLVR, then proposes a self-conditioned approach.",
+      "llm_tldr_cn": "本文针对RLVR中信用分配问题，指出在线蒸馏和在线自蒸馏等依赖外部教师或特权信息的方法局限性，并提出自条件化信用分配方法。论文明确将在线蒸馏作为重要对比基线，并分析了其在纯RLVR设置中的适用性限制，为该领域后续研究提供了方向。",
+      "llm_tldr": "本文针对RLVR中信用分配问题，指出在线蒸馏和在线自蒸馏等依赖外部教师或特权信息的方法局限性，并提出自条件化信用分配方法。论文明确将在线蒸馏作为重要对比基线，并分析了其在纯RLVR设置中的适用性限制，为该领域后续研究提供了方向。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.18844v1",
+      "source": "arxiv",
+      "title": "Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation",
+      "abstract": "Self-distillation improves reasoning in large language models by using the model's own rollouts as training signal, typically through implicit logit-level alignment that minimizes KL divergence toward a privileged target distribution. However, because this supervision is generated via uncontrolled sampling, it provides no diagnostic insight into the model's specific errors or corrective guidance for its individual failure patterns. Consequently, the model learns to imitate a privileged distribution rather than receiving fine-grained corrections that pinpoint where and why its reasoning fails. In this paper, we propose Trajectory-Augmented Policy Optimization (TAPO), which advances self-distillation from implicit distributional alignment to explicit trajectory construction. During RL training, the model produces both correct and incorrect rollouts to the same query, and TAPO leverages this contrastive structure to construct micro-reflective corrections, new training trajectories that retain the model's erroneous reasoning up to the point of failure, then insert a natural-language diagnosis and corrected reasoning guided by a correct reference from the same sampling group. Since each trajectory is anchored in the learner's own prefix and solutions, the corrective signal preserves the model's on-policy distribution to a greater extent than the position-wise alignment imposed by KL-based methods. To integrate these trajectories, TAPO introduces difficulty-aware candidate selection at the model's capability boundary and decoupled advantage estimation to prevent gradient contamination. Experiments on AIME 2024, AIME 2025, and HMMT 2025 show that TAPO achieves consistent improvements over GRPO under the same number of training steps. Further analysis demonstrates that TAPO strengthens both first-pass reasoning and error-correction effectiveness.",
+      "authors": [
+        "Zhilin Huang",
+        "Hang Gao",
+        "Ziqiang Dong",
+        "Yuan Chen",
+        "Yifeng Luo",
+        "Chujun Qin",
+        "Jingyi Wang",
+        "Yang Yang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-17T09:24:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.18844v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Self-distillation with learnable trajectory augmentation for LLM",
+      "llm_evidence_cn": "针对大语言模型的可学习轨迹增强自蒸馏",
+      "llm_evidence": "针对大语言模型的可学习轨迹增强自蒸馏",
+      "canonical_evidence": "针对大语言模型的可学习轨迹增强自蒸馏",
+      "llm_tldr_en": "Proposes TAPO, advancing self-distillation from implicit alignment to explicit trajectory-level corrections by constructing learnable micro-reflective trajectories for LLM reasoning.",
+      "llm_tldr_cn": "本文提出TAPO（轨迹增强策略优化），将自蒸馏从隐式对齐提升为显式轨迹级修正，通过构造可学习的微观反思轨迹来指出模型的具体错误，克服了传统自蒸馏缺乏诊断信息的缺点。实验表明该方法在推理任务上优于基线。",
+      "llm_tldr": "本文提出TAPO（轨迹增强策略优化），将自蒸馏从隐式对齐提升为显式轨迹级修正，通过构造可学习的微观反思轨迹来指出模型的具体错误，克服了传统自蒸馏缺乏诊断信息的缺点。实验表明该方法在推理任务上优于基线。",
+      "llm_tags": [
+        "query:opd:composite"
+      ],
+      "matched_query_tag": "query:opd:composite",
+      "matched_query_text": "Papers central to 请帮我查找与On-Policy Distillation相关的高质量论文, especially work that connects or combines: on-policy distillation reinforcement learning; knowledge distillation in reinforcement learning; teacher-student framework for reinforcement learning; on-policy learning methods; policy transfer in reinforcement learning; on policy distillation methods for reinforcement learning; improving sample efficiency with on policy distillation; teacher student distillation in reinforcement learning.",
+      "matched_requirement_id": "req-composite-opd",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
