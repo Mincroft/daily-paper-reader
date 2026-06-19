@@ -1,0 +1,141 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-19T20:18:35.237088+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.18844v1",
+      "source": "arxiv",
+      "title": "Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation",
+      "abstract": "Self-distillation improves reasoning in large language models by using the model's own rollouts as training signal, typically through implicit logit-level alignment that minimizes KL divergence toward a privileged target distribution. However, because this supervision is generated via uncontrolled sampling, it provides no diagnostic insight into the model's specific errors or corrective guidance for its individual failure patterns. Consequently, the model learns to imitate a privileged distribution rather than receiving fine-grained corrections that pinpoint where and why its reasoning fails. In this paper, we propose Trajectory-Augmented Policy Optimization (TAPO), which advances self-distillation from implicit distributional alignment to explicit trajectory construction. During RL training, the model produces both correct and incorrect rollouts to the same query, and TAPO leverages this contrastive structure to construct micro-reflective corrections, new training trajectories that retain the model's erroneous reasoning up to the point of failure, then insert a natural-language diagnosis and corrected reasoning guided by a correct reference from the same sampling group. Since each trajectory is anchored in the learner's own prefix and solutions, the corrective signal preserves the model's on-policy distribution to a greater extent than the position-wise alignment imposed by KL-based methods. To integrate these trajectories, TAPO introduces difficulty-aware candidate selection at the model's capability boundary and decoupled advantage estimation to prevent gradient contamination. Experiments on AIME 2024, AIME 2025, and HMMT 2025 show that TAPO achieves consistent improvements over GRPO under the same number of training steps. Further analysis demonstrates that TAPO strengthens both first-pass reasoning and error-correction effectiveness.",
+      "authors": [
+        "Zhilin Huang",
+        "Hang Gao",
+        "Ziqiang Dong",
+        "Yuan Chen",
+        "Yifeng Luo",
+        "Chujun Qin",
+        "Jingyi Wang",
+        "Yang Yang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-17T09:24:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.18844v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "self-distillation with trajectory augmentation in RL",
+      "llm_evidence_cn": "使用轨迹增强的自蒸馏强化学习方法",
+      "llm_evidence": "使用轨迹增强的自蒸馏强化学习方法",
+      "canonical_evidence": "使用轨迹增强的自蒸馏强化学习方法",
+      "llm_tldr_en": "Proposes TAPO, which advances self-distillation from implicit logit alignment to explicit micro-reflective trajectories, enabling fine-grained corrective supervision in RL.",
+      "llm_tldr_cn": "现有自蒸馏方法通过隐式logit对齐提供监督，但无法诊断模型的具体错误。本文提出TAPO（轨迹增强策略优化），将自蒸馏从隐式对齐推进到可学习的微反射轨迹，通过显式构造模型失败轨迹并提供细粒度修正信号，显著提升推理能力。在多个任务上，TAPO优于传统自蒸馏方法。该工作为强化学习中的知识蒸馏提供了新的视角。",
+      "llm_tldr": "现有自蒸馏方法通过隐式logit对齐提供监督，但无法诊断模型的具体错误。本文提出TAPO（轨迹增强策略优化），将自蒸馏从隐式对齐推进到可学习的微反射轨迹，通过显式构造模型失败轨迹并提供细粒度修正信号，显著提升推理能力。在多个任务上，TAPO优于传统自蒸馏方法。该工作为强化学习中的知识蒸馏提供了新的视角。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19659v1",
+      "source": "arxiv",
+      "title": "SAGE-OPD: Selective Agent-Guided Intervention for Multi-Turn On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) improves student models by training them on trajectories induced by their own policy, making it a promising approach for mitigating exposure bias in agent training. However, most OPD studies focus on single-turn settings, while realistic LLM agents interact with environments over multiple turns. In this regime, early errors can alter future observations and compound across the trajectory, and standard dense token-level OPD becomes brittle, as it may over-penalize semantically valid alternatives, reinforce local degeneracies such as repeated actions, and propagate unreliable teacher supervision on off-distribution histories. We propose SAGE-OPD, a verifier-free selective intervention framework specifically designed for multi-turn OPD. Instead of applying teacher supervision uniformly across all turns, SAGE-OPD first observes environment feedback and uses teacher judgment to decide whether each student response should be skipped or intervened on. To further address compounding errors, SAGE-OPD weights token-level distillation by teacher confidence, reducing the influence of uncertain teacher distributions on corrupted or ambiguous histories. Finally, SAGE-OPD applies loss normalization to preserve the overall loss scale of standard OPD while retaining selective turn-level weighting. Experiments on agent tasks show that SAGE-OPD consistently improves over baselines, achieving up to a 13.3% relative improvement in ALFWorld unseen success rate over standard OPD. Ablation studies further demonstrate that turn-level intervention, teacher confidence weighting, and loss normalization provide complementary benefits. Our results suggest that effective multi-turn OPD should remain on-policy, but teacher supervision should be selectively allocated to turns where intervention is necessary and reliable.",
+      "authors": [
+        "Yuhang Zhou",
+        "Lizhu Zhang",
+        "Yifan Wu",
+        "Mingyi Wang",
+        "Bo Peng",
+        "Jiayi Liu",
+        "Xiangjun Fan",
+        "Zhuokai Zhao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-17T23:58:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.19659v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-turn on-policy distillation with selective agent-guided intervention",
+      "llm_evidence_cn": "多轮on-policy蒸馏与选择性智能体引导干预",
+      "llm_evidence": "多轮on-policy蒸馏与选择性智能体引导干预",
+      "canonical_evidence": "多轮on-policy蒸馏与选择性智能体引导干预",
+      "llm_tldr_en": "SAGE-OPD addresses multi-turn on-policy distillation for LLM agents, using selective intervention to avoid penalties on valid alternatives and propagate reliable teacher supervision.",
+      "llm_tldr_cn": "现有on-policy蒸馏主要关注单轮设置，而多轮环境中早期错误会累积。SAGE-OPD提出一种无需验证器的选择性干预框架，针对多轮LLM智能体，通过选择性教师引导避免过度惩罚语义有效变体，并防止局部退化。该方法在多个多轮任务上提升了学生模型性能。",
+      "llm_tldr": "现有on-policy蒸馏主要关注单轮设置，而多轮环境中早期错误会累积。SAGE-OPD提出一种无需验证器的选择性干预框架，针对多轮LLM智能体，通过选择性教师引导避免过度惩罚语义有效变体，并防止局部退化。该方法在多个多轮任务上提升了学生模型性能。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.15793v1",
+      "source": "arxiv",
+      "title": "Proximal Policy Optimization for Amortized Discrete Sampling",
+      "abstract": "This paper explores policy gradient algorithms for training stochastic policies to sample from structured discrete probability distributions under the Generative Flow Network (GFlowNet) framework. Building on extensive theoretical connections between GFlowNets and entropy-regularized reinforcement learning, we derive equivalents of standard policy gradient algorithms for training GFlowNets, as well as experimentally explore their various methodological aspects, including baseline training and advantage estimation. Most importantly, our work is the first to derive and successfully apply proximal policy optimization to GFlowNets, showing its improved convergence speed and data efficiency compared to standard GFlowNet training objectives on benchmarks ranging from synthetic energies to molecular graph generation.",
+      "authors": [
+        "Anna Zykova-Myzina",
+        "Timofei Gritsaev",
+        "Daniil Tiapkin",
+        "Nikita Morozov"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-06-14T12:54:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.15793v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proximal policy optimization applied to GFlowNets for on-policy learning",
+      "llm_evidence_cn": "将PPO应用于GFlowNets进行on-policy学习",
+      "llm_evidence": "将PPO应用于GFlowNets进行on-policy学习",
+      "canonical_evidence": "将PPO应用于GFlowNets进行on-policy学习",
+      "llm_tldr_en": "Applies PPO to GFlowNets for on-policy sampling, showing improved convergence and data efficiency on discrete sampling benchmarks.",
+      "llm_tldr_cn": "本文首次将近端策略优化（PPO）成功应用于生成流网络（GFlowNets），利用策略梯度算法训练随机策略进行离散采样。实验表明，PPO相较于标准GFlowNet训练目标在收敛速度和数据效率上均有显著提升。",
+      "llm_tldr": "本文首次将近端策略优化（PPO）成功应用于生成流网络（GFlowNets），利用策略梯度算法训练随机策略进行离散采样。实验表明，PPO相较于标准GFlowNet训练目标在收敛速度和数据效率上均有显著提升。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
