@@ -6,31 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-19
-- 运行时间：2026-06-19 20:21:00 UTC
+- 最新运行日期：2026-06-20
+- 运行时间：2026-06-20 20:45:01 UTC
 - 运行状态：成功
 - 本次总论文数：3
-- 精读区：2
-- 速读区：1
+- 精读区：1
+- 速读区：2
 
 ### 今日简报（AI）
-今日精读两篇9分论文，聚焦自蒸馏与策略蒸馏方法，值得重点关注。
-其中最值得看的是《Learning from Your Own Mistakes》提出的可学习微反思轨迹自蒸馏，以及《SAGE-OPD》中的选择性智能体引导在线策略蒸馏。
-建议优先精读这两篇论文，深入理解其模型优化与知识迁移方案。
-- 详情：[/202606/19/README](/202606/19/README)
+今日精读1篇多智能体通信的形式化验证论文，并速读GUI智能体技能蒸馏与时间自模仿学习两篇。重点关注决策树蒸馏验证多智能体策略的方法，以及技能引导蒸馏在GUI智能体中的应用。建议优先了解形式化验证与可解释性结合，并尝试时间自模仿学习提升策略泛化。
+- 详情：[/202606/20/README](/202606/20/README)
 
 ### 精读区论文标签
-1. [Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation](/202606/19/2606.18844v1-learning-from-your-own-mistakes-constructing-learnable-micro-reflective-trajectories-for-self-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：使用轨迹增强的自蒸馏强化学习方法
-2. [SAGE-OPD: Selective Agent-Guided Intervention for Multi-Turn On-Policy Distillation](/202606/19/2606.19659v1-sage-opd-selective-agent-guided-intervention-for-multi-turn-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：多轮on-policy蒸馏与选择性智能体引导干预
+1. [Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation](/202606/20/2606.19632v1-formal-verification-of-learned-multi-agent-communication-policies-via-decision-tree-distillation)  
+   标签：评分：8.0/10、query:opd
+   evidence：利用决策树蒸馏将神经策略转化为可解释模型
 
 ### 速读区论文标签
-1. [Proximal Policy Optimization for Amortized Discrete Sampling](/202606/19/2606.15793v1-proximal-policy-optimization-for-amortized-discrete-sampling)  
-   标签：评分：6.0/10、query:opd
-   evidence：将PPO应用于GFlowNets进行on-policy学习
+1. [Skill-Guided Continuation Distillation for GUI Agents](/202606/20/2606.18890v1-skill-guided-continuation-distillation-for-gui-agents)  
+   标签：评分：7.0/10、query:opd
+   evidence：通过技能引导进行策略蒸馏，处理策略偏离状态
+2. [Temporal Self-Imitation Learning](/202606/20/2606.19752v1-temporal-self-imitation-learning)  
+   标签：评分：7.0/10、query:opd
+   evidence：自我模仿学习利用在线策略蒸馏提升样本效率
 
 
 <div class="dpr-home-promo-card">

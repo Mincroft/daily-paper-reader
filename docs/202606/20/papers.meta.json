@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-20",
+  "date": "2026-06-20",
+  "generated_at": "2026-06-20T20:45:07",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/20/2606.19632v1-formal-verification-of-learned-multi-agent-communication-policies-via-decision-tree-distillation",
+      "section": "deep",
+      "title_en": "Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation",
+      "authors": "Ahmad Farooq, Kamran Iqbal",
+      "date": "2026-06-17",
+      "pdf": "https://arxiv.org/pdf/2606.19632v1",
+      "score": "8.0",
+      "evidence": "利用决策树蒸馏将神经策略转化为可解释模型",
+      "tldr": "多智能体强化学习的神经通信策略缺乏形式化安全保证，阻碍其在无人机集群等场景部署。本文提出首个端到端验证框架，将神经策略蒸馏为决策树并自动翻译为PRISM模型检测器规格，通过成对分解组合验证。在5-7无人机协调任务中验证18个属性，88.9%满足，安全阈值全部达标，验证属性迁移偏差≤0.6百分点。离散VQ-VIB消息提升保真度11.6~13.6百分点并加速验证3-4倍，为深度MARL策略提供可迁移的正式安全验证。",
+      "tags": "query:opd",
+      "abstract_en": "Multi-agent reinforcement learning (MARL) enables agents to develop coordination strategies through emergent communication, but neural policies lack the formal safety guarantees required for safety-critical robotic deployment in drone swarms and autonomous vehicle fleets. We present the first end-to-end framework for safety verification of learned multi-agent communication policies through policy abstraction: neural policies are distilled into interpretable decision trees, then formally verified, with empirical validation confirming that verified safety properties transfer to original networks. Our four-stage pipeline consists of domain-specific feature extraction from agent observations, decision tree distillation achieving 97.9% +/- 1.2% fidelity to neural policies, automated translation to PRISM probabilistic model checker specifications with complete feature-to-state-variable correspondence, and compositional verification of Probabilistic Computation Tree Logic (PCTL) properties via pairwise decomposition with union-bound aggregation and empirical neighbor modeling. Evaluating Vector-Quantized Variational Information Bottleneck (VQ-VIB) policies for multi-drone coordination with 5-7 agents, we verify 18 temporal logic properties across safety, liveness, and cooperation, achieving 88.9% property satisfaction with all five safety thresholds satisfied (0.3% collision probability vs. 1% threshold). Monte Carlo validation of original neural policies confirms that verified safety properties transfer with <=0.6 percentage-point deviation (95% CI). Discrete VQ-VIB messages provide +11.6 to +13.6 percentage-point fidelity advantages over continuous methods, enabling 3-4x faster verification. Our framework provides empirically validated safety verification for distilled policy abstractions, serving as a practical bridge between deep MARL and formal safety workflows for multi-robot deployment.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/20/2606.18890v1-skill-guided-continuation-distillation-for-gui-agents",
+      "section": "quick",
+      "title_en": "Skill-Guided Continuation Distillation for GUI Agents",
+      "authors": "Zhimin Fan, Hongwei Yu, Yeqing Shen, Haolong Yan, Guozhen Peng, Tianhao Peng, Yudong Zhang, Xiaowen Zhang, Kaijun Tan, Zheng Ge, Xiangyu Zhang, Daxin Jiang",
+      "date": "2026-06-17",
+      "pdf": "https://arxiv.org/pdf/2606.18890v1",
+      "score": "7.0",
+      "evidence": "通过技能引导进行策略蒸馏，处理策略偏离状态",
+      "tldr": "GUI agent的行为克隆训练在闭环执行中因策略偏离专家轨迹而遭遇策略诱导的离轨状态，缺乏有效监督。为此提出技能引导连续蒸馏（SGCD），一个迭代自改进框架：先运行无技能策略到达离轨状态，再通过技能引导策略完成任务并生成成功延续，与专家轨迹混合以提供监督。技能从成功和失败轨迹中提取，包括延续计划、关键目标、失败陷阱和成功准则。在OSWorld-Verified上，SGCD将三个基础模型成功率从约30%提升至50%以上，展示了其有效性和通用性。",
+      "tags": "query:opd",
+      "abstract_en": "Improving GUI agents typically relies on behavior cloning on expert trajectories. However, as the current policy deviates from the expert policy, it inevitably encounters policy-induced off-trajectory states during closed-loop execution, i.e., states that fall outside the expert trajectories. Since expert trajectories provide no demonstrations for these unseen states, such states receive no effective supervision, leaving the policy unable to select the correct action. To close this supervision gap, we propose Skill-Guided Continuation Distillation (SGCD), an iterative self-improvement framework. SGCD first runs the plain policy without skill guidance for a few steps to reach realistic off-trajectory states. From these states, a skill-guided policy then completes the task and produces successful continuations, which are mixed with expert trajectories to supply supervision over policy-induced off-trajectory states. The skills are extracted from both successful and failed rollouts, consisting of Continuation Plans, Critical Targets, Failure Traps, and Success Criteria. On OSWorld-Verified, SGCD improves the success rate of three base models from the low-30\\% range to over 50\\%, demonstrating its effectiveness and generality.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/20/2606.19752v1-temporal-self-imitation-learning",
+      "section": "quick",
+      "title_en": "Temporal Self-Imitation Learning",
+      "authors": "Yinsen Jia, Boyuan Chen",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.19752v1",
+      "score": "7.0",
+      "evidence": "自我模仿学习利用在线策略蒸馏提升样本效率",
+      "tldr": "在长时域机器人操作任务中，奖励塑形会导致低效交互且高效行为易被遗忘。本文提出时间自模仿学习（TSIL），通过挖掘学习过程中产生的快速成功轨迹，将其转化为可重用的监督信号。TSIL利用配置条件自适应时间目标与效率加权自模仿学习，逐步优化策略。在15个任务上，TSIL显著提升学习效率、任务完成效率、高效行为复用率及训练稳定性。该工作表明，行为的时间结构本身即为超越手工奖励塑形的可扩展自监督信号。",
+      "tags": "query:opd",
+      "abstract_en": "Long-horizon robot manipulation policies trained with reward shaping can still exploit dense rewards through inefficient interaction, while rare efficient behaviors may be forgotten during training. We argue that temporal efficiency itself provides a powerful and underutilized source of self-supervision for reinforcement learning. We introduce Temporal Self-Imitation Learning (TSIL), a reinforcement learning framework that mines temporally efficient successful trajectories generated during learning and converts them into reusable supervision for future policy improvement. TSIL progressively refines learning using configuration-conditioned adaptive temporal targets derived from fast successful trajectories, while preserving and replaying efficient behaviors through efficiency-weighted self-imitation learning. Across 15 distinct long-horizon manipulation tasks, TSIL consistently improves learning efficiency, task-completion efficiency, revisitation of fast successful behaviors, and robustness to unstable training conditions. More broadly, our results suggest that the temporal structure of successful behavior itself provides a scalable self-supervisory signal for reinforcement learning beyond manually engineered reward shaping alone.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
