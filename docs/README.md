@@ -6,46 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-23
-- 运行时间：2026-06-23 21:10:56 UTC
+- 最新运行日期：2026-06-24
+- 运行时间：2026-06-24 20:55:44 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：5
-- 速读区：3
+- 本次总论文数：5
+- 精读区：4
+- 速读区：1
 
 ### 今日简报（AI）
-今天精读5篇、速读3篇，重点聚焦在线策略蒸馏理论与机器人控制策略迁移。  
-最值得看的是10分的《A Formula-Driven Survey and Research Agenda for On-Policy Distillation》和9分的《Prefix-Guided On-Policy Distillation》，前者给出系统化框架，后者提出从rollout中挖掘黄金轨迹的引导方法。  
-下一步建议优先阅读《FlowDPG》和《Steering Generative RL》，它们分别展示了流匹配策略在真实操控和稳定控制器中的实用潜力。
-- 详情：[/202606/23/README](/202606/23/README)
+今日精读2篇高分论文，聚焦on-policy蒸馏中的位置偏差与漂移门控机制。  
+最值得关注：策略蒸馏的位置偏差与逐块策略漂移控制，为LLM推理优化提供新思路。  
+建议读者进一步了解这些方法如何提升模型在长序列任务中的稳定性与效率。
+- 详情：[/202606/24/README](/202606/24/README)
 
 ### 精读区论文标签
-1. [A Formula-Driven Survey and Research Agenda for On-Policy Distillation](/202606/23/2606.22793v1-a-formula-driven-survey-and-research-agenda-for-on-policy-distillation)  
-   标签：评分：10.0/10、query:opd
-   evidence：关于在线策略蒸馏的综述
-2. [Prefix-Guided On-Policy Distillation: Mining Golden Trajectories from Rollouts](/202606/23/2606.21994v1-prefix-guided-on-policy-distillation-mining-golden-trajectories-from-rollouts)  
+1. [On the Position Bias of On-Policy Distillation](/202606/24/2606.22600v2-on-the-position-bias-of-on-policy-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：在线策略蒸馏、师生框架、长程推理
-3. [On the Position Bias of On-Policy Distillation](/202606/23/2606.22600v1-on-the-position-bias-of-on-policy-distillation)  
+   evidence：直接研究强化学习中的在线策略蒸馏位置偏差
+2. [Blockwise Policy-Drift Gating for On-Policy Distillation](/202606/24/2606.24084v1-blockwise-policy-drift-gating-for-on-policy-distillation)  
    标签：评分：9.0/10、query:opd
-   evidence：直接研究在线策略蒸馏的位置偏差
-4. [Finding the Evidence: Discovering Decision-Supporting Tokens for On-Policy Reasoning Distillation](/202606/23/2606.22830v1-finding-the-evidence-discovering-decision-supporting-tokens-for-on-policy-reasoning-distillation)  
+   evidence：提出用于在线策略蒸馏的块级策略漂移门控
+3. [AsyncOPD: How Stale Can On-Policy Distillation Be?](/202606/24/2606.24143v1-asyncopd-how-stale-can-on-policy-distillation-be)  
    标签：评分：9.0/10、query:opd
-   evidence：提出了面向在线策略推理蒸馏的决策-证据感知方法
-5. [ReNIO: Reweighting Negative Trajectory Importance for LLM On-Policy Distillation](/202606/23/2606.23104v1-renio-reweighting-negative-trajectory-importance-for-llm-on-policy-distillation)  
-   标签：评分：9.0/10、query:opd
-   evidence：提出ReNIO方法，对LLM在线策略蒸馏中的轨迹进行重加权
+   evidence：直接研究带有陈旧数据的在线策略蒸馏
+4. [KLip-PPO: A per-sample KL perspective on PPO-Clip](/202606/24/2606.23932v1-klip-ppo-a-per-sample-kl-perspective-on-ppo-clip)  
+   标签：评分：8.0/10、query:opd
+   evidence：提供了PPO的逐样本KL视角，PPO是核心的在策略强化学习算法
 
 ### 速读区论文标签
-1. [FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation](/202606/23/2606.22303v1-flowdpg-deterministic-policy-gradient-on-flow-matching-policies-for-real-world-manipulation)  
-   标签：评分：7.0/10、query:opd
-   evidence：将评论家梯度蒸馏到速度场，一种知识蒸馏形式
-2. [Steering Generative Reinforcement Learning into Stable Robotic Controller](/202606/23/2606.16572v1-steering-generative-reinforcement-learning-into-stable-robotic-controller)  
+1. [Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning](/202606/24/2606.24064v1-beyond-trajectory-imitation-strategy-guided-policy-optimization-for-llm-reasoning)  
    标签：评分：6.0/10、query:opd
-   evidence：通过潜在空间教师-学生蒸馏将生成策略转化为确定性控制器
-3. [Zero-shot Transfer of Reinforcement Learning Control Policies for the Swing-Up and Stabilization of a Cart-Pole System](/202606/23/2606.22145v1-zero-shot-transfer-of-reinforcement-learning-control-policies-for-the-swing-up-and-stabilization-of-a-cart-pole-system)  
-   标签：评分：6.0/10、query:opd
-   evidence：倒立摆系统中的零样本策略迁移
+   evidence：通过策略引导的策略优化实现强化学习中的知识蒸馏
 
 
 <div class="dpr-home-promo-card">

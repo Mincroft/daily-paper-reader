@@ -1,0 +1,215 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-24T20:52:13.254984+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.22600v2",
+      "source": "arxiv",
+      "title": "On the Position Bias of On-Policy Distillation",
+      "abstract": "On-Policy Distillation (OPD) improves the learning efficiency of standard reinforcement learning through dense, token-level supervision from teachers. In the standard KL objective of OPD, token-level losses are uniformly averaged, implying equal weights for all tokens. However, we discover that not all tokens are created equal: as student rollouts grow longer, they deviate further from the teacher's distribution, leading to degraded supervision quality at later positions. As a result, OPD using only the first 30% of tokens can perform comparably to using all tokens, whereas OPD using only the last 30% of tokens barely learns anything. In this work, we provide a principled understanding of this issue through the lens of constrained optimization. Based on these insights, we derive Importance-Weighted On-Policy Distillation (IW-OPD), in which the weight assigned to each token depends on the accumulated discrepancy between the student's and teacher's distributions, naturally upweighting earlier tokens and downweighting later ones with larger deviations. We show that IW-OPD converges significantly faster than OPD, with better learning efficiency, and achieves better final performance than standard OPD in both same-size and cross-scale settings, improving performance up to 6.9 points on AIME-2025.",
+      "authors": [
+        "Yan Xie",
+        "Sijie Zhu",
+        "Tiansheng Wen",
+        "Bo Chen",
+        "Yifei Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-21T17:20:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.22600v2",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Directly studies position bias in On-Policy Distillation for RL",
+      "llm_evidence_cn": "直接研究强化学习中的在线策略蒸馏位置偏差",
+      "llm_evidence": "直接研究强化学习中的在线策略蒸馏位置偏差",
+      "canonical_evidence": "直接研究强化学习中的在线策略蒸馏位置偏差",
+      "llm_tldr_en": "Discovers token-level position bias in OPD where later tokens degrade; proposes constrained optimization understanding and method.",
+      "llm_tldr_cn": "该论文发现在线策略蒸馏（OPD）中token级别的监督质量存在位置偏差：学生 rollout 越长，后续 token 与教师分布偏离越大。仅使用前30% token 即可达到全 token 性能，而后30% token 几乎无效。作者通过约束优化框架给出了原理性解释，并基于此提出了改进方法。",
+      "llm_tldr": "该论文发现在线策略蒸馏（OPD）中token级别的监督质量存在位置偏差：学生 rollout 越长，后续 token 与教师分布偏离越大。仅使用前30% token 即可达到全 token 性能，而后30% token 几乎无效。作者通过约束优化框架给出了原理性解释，并基于此提出了改进方法。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24084v1",
+      "source": "arxiv",
+      "title": "Blockwise Policy-Drift Gating for On-Policy Distillation",
+      "abstract": "On-policy distillation (OPD) trains a student policy using teacher signals computed on trajectories sampled by the student itself. Recent work shows that sampled-token OPD can be fragile on long-horizon reasoning tasks and that local teacher-support matching is a simple and effective repair. This paper introduces blockwise policy-drift gating, a lightweight student-only old-current drift controller for OPD under rollout reuse. The method computes log-probability shifts between the behavior student and the current student on the sampled token path, aggregates these shifts over fixed blocks or spans, and uses the resulting detached, mean-normalized gates to reweight OPD position losses. It does not change teacher targets, teacher top-K supports, or the rollout policy. In a six-variant Qwen3 math reasoning benchmark with a uniform 200-step training budget for all trained variants, we use pass@8 as the primary problem-level solve-rate metric. Fixed 64-token block gating improves sampled-token OPD mean pass@8 from 0.4978 to 0.5160 across AIME24, AIME25, MATH500, and AMC23. On Teacher-TopK/LSM, Block64 gives the best four-benchmark mean pass@8 among trained students. The results identify local old-current policy drift as a practical control signal for reused OPD rollouts and motivate block-level gating as a simple default for improving solve-rate robustness.",
+      "authors": [
+        "Liwen Zheng",
+        "Haiyun Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-23T02:58:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.24084v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes blockwise policy-drift gating for on-policy distillation",
+      "llm_evidence_cn": "提出用于在线策略蒸馏的块级策略漂移门控",
+      "llm_evidence": "提出用于在线策略蒸馏的块级策略漂移门控",
+      "canonical_evidence": "提出用于在线策略蒸馏的块级策略漂移门控",
+      "llm_tldr_en": "This paper introduces a lightweight drift controller for on-policy distillation that reweights position losses based on log-probability shifts over blocks, improving robustness on long-horizon tasks.",
+      "llm_tldr_cn": "在线策略蒸馏（OPD）在长程推理任务中存在脆弱性问题。本文提出块级策略漂移门控（Blockwise Policy-Drift Gating），一种轻量级的学生侧旧-当前漂移控制器。该方法计算行为策略与当前策略在采样token路径上的log概率偏移，按块聚合后归一化，用于重新加权OPD位置损失，而不改变教师目标、top-K支持或采样策略。实验表明，该门控有效缓解策略漂移，显著提升OPD在长程任务上的稳定性。",
+      "llm_tldr": "在线策略蒸馏（OPD）在长程推理任务中存在脆弱性问题。本文提出块级策略漂移门控（Blockwise Policy-Drift Gating），一种轻量级的学生侧旧-当前漂移控制器。该方法计算行为策略与当前策略在采样token路径上的log概率偏移，按块聚合后归一化，用于重新加权OPD位置损失，而不改变教师目标、top-K支持或采样策略。实验表明，该门控有效缓解策略漂移，显著提升OPD在长程任务上的稳定性。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24143v1",
+      "source": "arxiv",
+      "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+      "abstract": "On-policy distillation (OPD) trains a student on its own rollouts guided by teacher feedback and is becoming increasingly important for large language model (LLM) post-training. Like reinforcement learning (RL), however, OPD faces an on-policy systems bottleneck, as rollouts can dominate training time for reasoning workloads. Asynchronous training pipelines can alleviate this bottleneck by decoupling rollout generation from learner updates, but doing so introduces stale-policy data. While prior work has studied stale data in asynchronous RL, its effects in OPD remain underexplored. We present the first systematic study of staleness in asynchronous OPD, focusing on a practical setting where teacher feedback is implemented through local KL losses and full-vocabulary teacher logits are too expensive to store or transfer, necessitating finite teacher-score caches. We first show that KL direction changes the stale-data problem: teacher-weighted forward KL is more robust to stale rollouts, whereas student-weighted reverse KL is vulnerable. Second, for this vulnerable reverse-KL case, we study whether methods designed to stabilize asynchronous RL can mitigate OPD staleness. In our experiments, they do not improve over a simpler OPD-specific surrogate: recomputing the reverse-KL signal under the current student at learner time. Third, we analyze how finite teacher-score caches create a bias-variance tradeoff for sparse and sampled reverse-KL OPD estimators. This motivates multi-sample Monte Carlo (MC), which preserves MC correctability while reducing one-sample variance. Finally, we present and open-source AsyncOPD, a fully asynchronous OPD training pipeline built from these estimator choices. Experiments show that AsyncOPD improves training throughput by $1.6\\times$ to $3.8\\times$ over strict synchronous training while reaching comparable accuracy.",
+      "authors": [
+        "Wonjun Kang",
+        "Kevin Galim",
+        "Seunghyuk Oh",
+        "Minjun Kang",
+        "Sanghyun Park",
+        "Donghoon Kim",
+        "Minjae Lee",
+        "Minseo Kim",
+        "Rishabh Tiwari",
+        "Yuchen Zeng",
+        "Hyung Il Koo",
+        "Kangwook Lee"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-23T04:50:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.24143v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly studies on-policy distillation with stale data",
+      "llm_evidence_cn": "直接研究带有陈旧数据的在线策略蒸馏",
+      "llm_evidence": "直接研究带有陈旧数据的在线策略蒸馏",
+      "canonical_evidence": "直接研究带有陈旧数据的在线策略蒸馏",
+      "llm_tldr_en": "AsyncOPD systematically studies the effect of stale policy data in asynchronous on-policy distillation for LLMs, using KL divergence teacher feedback.",
+      "llm_tldr_cn": "当前在线策略蒸馏在大语言模型后训练中面临系统瓶颈，异步流水线引入陈旧策略数据但影响未知。本文首次系统研究异步OPD中的陈旧性，聚焦局部KL散度教师反馈场景。实验揭示了陈旧性对蒸馏效果的影响规律，为设计高效异步OPD系统提供了指导。",
+      "llm_tldr": "当前在线策略蒸馏在大语言模型后训练中面临系统瓶颈，异步流水线引入陈旧策略数据但影响未知。本文首次系统研究异步OPD中的陈旧性，聚焦局部KL散度教师反馈场景。实验揭示了陈旧性对蒸馏效果的影响规律，为设计高效异步OPD系统提供了指导。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23932v1",
+      "source": "arxiv",
+      "title": "KLip-PPO: A per-sample KL perspective on PPO-Clip",
+      "abstract": "Proximal Policy Optimization (PPO) is the standard policy-gradient algorithm for on-policy reinforcement learning. The literature presents it in two forms, a clipped surrogate that bounds the importance ratio between successive policies and a Kullback-Leibler penalty between them. These forms are treated as separate algorithms with their own gradients, their own hyperparameters, and their own reference implementations, and a sizeable body of empirical work compares them. We show that the gradient of the clipped surrogate is reproduced exactly by a Kullback-Leibler surrogate whose coefficient varies per sample, with closed-form dependence on the importance ratio and the advantage. The identity holds at every minibatch step and across the entire inner loop, and on five MuJoCo continuous-control benchmarks the two losses produce indistinguishable training curves. The reformulation exposes a structural feature of the clipped surrogate that the min notation hides. PPO-Clip's implicit per-sample penalty is a step function at the boundary of the trust region, and the shape of this coefficient is the natural design axis for generalising the algorithm. We sketch the resulting follow-up directions in the discussion.",
+      "authors": [
+        "Riccardo Colletti",
+        "Robin Holzinger"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-22T20:52:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.23932v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "provides a per-sample KL perspective on PPO, a core on-policy RL algorithm",
+      "llm_evidence_cn": "提供了PPO的逐样本KL视角，PPO是核心的在策略强化学习算法",
+      "llm_evidence": "提供了PPO的逐样本KL视角，PPO是核心的在策略强化学习算法",
+      "canonical_evidence": "提供了PPO的逐样本KL视角，PPO是核心的在策略强化学习算法",
+      "llm_tldr_en": "Shows that the gradient of PPO's clipped surrogate is exactly reproduced by a per-sample KL surrogate, bridging two algorithm variants.",
+      "llm_tldr_cn": "该论文证明PPO的裁剪代理梯度可以精确地由逐样本KL代理梯度复现，从而统一了PPO的两种常用形式，并提供了新的理论理解和实践指导。",
+      "llm_tldr": "该论文证明PPO的裁剪代理梯度可以精确地由逐样本KL代理梯度复现，从而统一了PPO的两种常用形式，并提供了新的理论理解和实践指导。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy learning methods",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.24064v1",
+      "source": "arxiv",
+      "title": "Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning",
+      "abstract": "Distilling reasoning capabilities from strong to weak language models typically involves imitating specific solution trajectories, effectively transferring what to answer rather than how to reason. This trajectory-level imitation encourages memorization of instance-specific steps rather than acquisition of transferable problem-solving skills, limiting generalization to novel problems. We propose Strategy-Guided Policy Optimization (SGPO), which replaces instance-level trajectory imitation with reusable strategy distillation. SGPO extracts structured strategy descriptions from strong-model responses and, for each problem, constructs both autonomous and strategy-guided trajectories to enable direct comparison of the model's behavior with and without strategic guidance. The framework then addresses two key questions. For how to distill, a token-level forward-KL objective selectively transfers the distributional shift induced by strategy conditioning into the unguided policy, with proximal constraints ensuring stability. For when to distill, adaptive instance-level weighting strengthens guidance when autonomous exploration falls short and reduces it as the model's own competence grows. Experiments on four mathematical benchmarks across two model families show that SGPO consistently outperforms SFT, on-policy RL, and hybrid-policy baselines, improving the average score by 2.2 points over the strongest baseline on Qwen2.5-7B-Instruct. Analysis reveals that the forward-KL objective provides an inherently selective distillation signal that outperforms direct trajectory imitation, and that strategy distillation exhibits complementary scaling with base model capability.",
+      "authors": [
+        "Tianyuan Shi",
+        "Canbin Huang",
+        "Bei Li",
+        "Xin Chen",
+        "Xiaojun Quan",
+        "Jingang Wang",
+        "Qifan Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-23T02:14:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.24064v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "knowledge distillation in reinforcement learning via strategy-guided policy optimization",
+      "llm_evidence_cn": "通过策略引导的策略优化实现强化学习中的知识蒸馏",
+      "llm_evidence": "通过策略引导的策略优化实现强化学习中的知识蒸馏",
+      "canonical_evidence": "通过策略引导的策略优化实现强化学习中的知识蒸馏",
+      "llm_tldr_en": "Proposes Strategy-Guided Policy Optimization (SGPO) that replaces trajectory imitation with reusable strategy distillation for improving LLM reasoning.",
+      "llm_tldr_cn": "该论文针对现有推理蒸馏方法局限于轨迹模仿、泛化能力弱的问题，提出策略引导策略优化（SGPO），用可重用的策略蒸馏替代实例级轨迹模仿，通过构建自主与策略引导轨迹的对比来提升模型泛化能力。实验表明SGPO在数学推理等任务上优于传统蒸馏方法，为强化学习中的知识蒸馏提供了新的范式。",
+      "llm_tldr": "该论文针对现有推理蒸馏方法局限于轨迹模仿、泛化能力弱的问题，提出策略引导策略优化（SGPO），用可重用的策略蒸馏替代实例级轨迹模仿，通过构建自主与策略引导轨迹的对比来提升模型泛化能力。实验表明SGPO在数学推理等任务上优于传统蒸馏方法，为强化学习中的知识蒸馏提供了新的范式。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
