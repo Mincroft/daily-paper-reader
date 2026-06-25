@@ -1,0 +1,262 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-25T21:33:37.879198+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.23740v1",
+      "source": "arxiv",
+      "title": "Weight-Space Geometry of Offline Reasoning Training",
+      "abstract": "Offline reinforcement-learning losses (RFT, RIFT, DFT, Offline GRPO, DPO) are widely used to distill reasoning from large teachers into smaller students, and are typically compared on downstream accuracy alone. We ask whether they are mechanistically distinct or converge to a similar weight update. Training six methods (SFT, RFT, DFT, RIFT, Offline GRPO, DPO) on identical math rollouts from a single base model (Qwen3-4B) with attention-only LoRA, we analyze the resulting deltas via cosine similarity, principal-angle subspace analysis, linear mode connectivity, and CKA. We observe: (i) SFT, RFT, and RIFT have nearly colinear weight deltas (cosine >= 0.97, top-1 principal angle ~7 deg median over 144 modules) and comparable GSM8K accuracy (87-88%, n=1319; pairwise McNemar p >= 0.15); (ii) DFT diverges further in direction than any reward-weighted method despite using the same data; (iii) Offline GRPO adds a substantial component orthogonal to the SFT direction (~67% globally, up to ~86% in late layers) while staying in the SFT loss basin; (iv) DPO sits in a near-orthogonal subspace, shows a mode-connectivity barrier, and collapses late-layer CKA to ~0.46. DPO also reaches the highest accuracy in our protocol on both GSM8K (93.5%, McNemar p < 10^-9 vs. each other method) and AIME26 (30.0% vs. 3.3-10.0%); its training uses a 10x smaller learning rate than the others (the standard convention), so the update-norm and accuracy gaps reflect loss-function and optimizer choices jointly, and a learning-rate-matched DPO comparison is left for future work.",
+      "authors": [
+        "Aleksandr Nikolich",
+        "Igor Kiselev",
+        "Vladimir Platonov",
+        "Karina Romanova"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-21T15:34:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.23740v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Distillation of reasoning from large to small models via offline RL losses",
+      "llm_evidence_cn": "通过离线RL损失将推理能力从大模型蒸馏到小模型",
+      "llm_evidence": "通过离线RL损失将推理能力从大模型蒸馏到小模型",
+      "canonical_evidence": "通过离线RL损失将推理能力从大模型蒸馏到小模型",
+      "llm_tldr_en": "This paper analyzes the weight-space geometry of offline reasoning distillation methods, showing that SFT, RFT, and RIFT produce nearly identical weight updates.",
+      "llm_tldr_cn": "该论文研究了多种离线RL损失（RFT、RIFT、DFT、Offline GRPO、DPO）用于将大教师模型的推理能力蒸馏到小学生模型时的机制差异。通过余弦相似度、主角度分析等方法，发现SFT、RFT和RIFT的权重更新几乎共线，精度相当；而DPO和GRPO则产生不同方向。这为选择蒸馏方法提供了几何视角。",
+      "llm_tldr": "该论文研究了多种离线RL损失（RFT、RIFT、DFT、Offline GRPO、DPO）用于将大教师模型的推理能力蒸馏到小学生模型时的机制差异。通过余弦相似度、主角度分析等方法，发现SFT、RFT和RIFT的权重更新几乎共线，精度相当；而DPO和GRPO则产生不同方向。这为选择蒸馏方法提供了几何视角。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25319v1",
+      "source": "arxiv",
+      "title": "V-Zero: Answer-Label-Free On-Policy Distillation with Contrastive Evidence Gating for Fine-Grained Visual Reasoning",
+      "abstract": "Fine-grained visual reasoning requires multimodal large language models (MLLMs) to identify task-relevant visual evidence and ground their reasoning in local image regions. Existing agentic methods typically rely on reinforcement learning with verifiable rewards or supervised fine-tuning on large-scale annotated reasoning traces, leading to costly exploration, hand-designed verification rules, or heavy dependence on textual supervision. A natural way to avoid such external answer labels is to learn from trajectories sampled by the student itself, which points to On-Policy Distillation (OPD). To understand what OPD can and cannot provide for visual reasoning, we revisit it as negative-free stop-gradient alignment. This perspective shows that, although OPD provides effective token-level correction, its ceiling is constrained by the absence of trajectory-level discrimination. Motivated by these observations, we propose V-Zero, an answer-label-free framework for visual reasoning with contrastive evidence gating. V-Zero uses no annotated textual answer labels; instead, during training it pairs a question-relevant regional crop with a negative visual view to evaluate student-sampled trajectories and gate dense token-level distillation. Experiments on multiple visual reasoning benchmarks show that V-Zero consistently improves fine-grained visual reasoning while preserving strong generalization. Notably, V-Zero is more than 5$\\times$ faster than previous supervised fine-tuning methods and more than 10$\\times$ faster than reinforcement learning baselines. Code and dataset will be released at https://github.com/eVI-group-SCU/V-Zero",
+      "authors": [
+        "Haoxiang Sun",
+        "Zhihang Yi",
+        "Langxuan Deng",
+        "Yuhao Zhou",
+        "Peiqi Jia",
+        "Jian Zhao",
+        "Li Yuan",
+        "Jiancheng Lv",
+        "Tao Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-24T02:32:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.25319v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "on-policy distillation for fine-grained visual reasoning without answer labels",
+      "llm_evidence_cn": "无需答案标签的细粒度视觉推理在策略蒸馏",
+      "llm_evidence": "无需答案标签的细粒度视觉推理在策略蒸馏",
+      "canonical_evidence": "无需答案标签的细粒度视觉推理在策略蒸馏",
+      "llm_tldr_en": "V-Zero applies on-policy distillation to multimodal LLMs for visual reasoning, using contrastive evidence gating to avoid external answer labels.",
+      "llm_tldr_cn": "该论文将在策略蒸馏（OPD）应用于多模态大模型的细粒度视觉推理，提出V-Zero方法。传统方法依赖强化学习或大规模标注推理轨迹，成本高。V-Zero利用学生自身采样的轨迹进行OPD，并通过对比证据门控机制聚焦于任务相关的视觉区域。实验证明该方法在无需外部答案标签的情况下实现了与有监督方法相当的性能，展示了OPD在视觉推理中的潜力，并分析了其能力边界。",
+      "llm_tldr": "该论文将在策略蒸馏（OPD）应用于多模态大模型的细粒度视觉推理，提出V-Zero方法。传统方法依赖强化学习或大规模标注推理轨迹，成本高。V-Zero利用学生自身采样的轨迹进行OPD，并通过对比证据门控机制聚焦于任务相关的视觉区域。实验证明该方法在无需外部答案标签的情况下实现了与有监督方法相当的性能，展示了OPD在视觉推理中的潜力，并分析了其能力边界。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26091v1",
+      "source": "arxiv",
+      "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+      "abstract": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level feedback. We show that this could come at a hidden cost: rollout diversity decreases and pass@k curves flatten (i.e., generating more rollouts fails to improve accuracy). We trace this to compounding biases in the design of self-distillation with sampled demonstrations. The teacher scores each student rollout while conditioned on a sampled correct rollout, channeling its feedback through the model's own biases. We theoretically analyze the optimal self-distillation policy and show that it tilts the base distribution by a pointwise conditional mutual information score between the student's rollout and the correct rollout used as context. Unlike the ideal optimal on-policy reinforcement learning (RL), which preserves probability ratios among equally correct rollouts, self-distillation can amplify existing probability gaps, concentrating mass on already-dominant modes. On a controlled graph path-finding task and science question-answering benchmarks, self-distilled models match or exceed RL on average performance but exhibit substantially lower functional and semantic diversity, failing on out-of-distribution settings that require diverse strategies.",
+      "authors": [
+        "Andrei Liviu Nicolicioiu",
+        "Mohammad Pezeshki",
+        "Aaron Courville"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-24T17:59:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.26091v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly studies on-policy self-distillation in RL",
+      "llm_evidence_cn": "直接研究强化学习中的在线策略自蒸馏",
+      "llm_evidence": "直接研究强化学习中的在线策略自蒸馏",
+      "canonical_evidence": "直接研究强化学习中的在线策略自蒸馏",
+      "llm_tldr_en": "Analyzes how on-policy self-distillation with sampled demonstrations reduces output diversity and flattens pass@k curves, revealing compounding biases.",
+      "llm_tldr_cn": "该论文系统研究了在线策略自蒸馏（教师条件于正确演示）的副作用：虽然提升pass@1准确率，但导致输出多样性下降和后pass@k曲线平坦。通过理论分析揭示自蒸馏策略会扭曲基础分布，产生复合偏差，为改进蒸馏方法提供重要见解。",
+      "llm_tldr": "该论文系统研究了在线策略自蒸馏（教师条件于正确演示）的副作用：虽然提升pass@1准确率，但导致输出多样性下降和后pass@k曲线平坦。通过理论分析揭示自蒸馏策略会扭曲基础分布，产生复合偏差，为改进蒸馏方法提供重要见解。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25800v1",
+      "source": "arxiv",
+      "title": "ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models",
+      "abstract": "Effective online adaptation of vision-language-action (VLA) models remains challenging, as sparse rewards provide weak supervision for high-dimensional autoregressive action policies. Although self-distillation can in principle provide denser training signals, we find that text-based privileged teachers conditioned on demonstrations, retrieved experiences, or high-level plans are ineffective for VLA adaptation, exposing a modality gap between symbolic guidance and low-level robot actions. We propose ROAD-VLA, an advantage-guided self-distillation framework that constructs a proximal teacher directly in action space by perturbing action-token logits with calibrated advantage estimates. This converts sparse rewards into dense token-level supervision while keeping the teacher close to the current policy. We further derive a policy-improvement lower bound under calibrated advantages and accurate teacher matching. Across seven robotic manipulation environments with in-distribution and out-of-distribution shifts, ROADVLA outperforms PPO in nearly all settings, demonstrating robust online VLA adaptation.",
+      "authors": [
+        "Kejing Wang",
+        "Toan Nguyen",
+        "Minh Hoang Nguyen",
+        "Simon Khan",
+        "Flora D. Salim"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-06-24T13:17:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.25800v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Self-distillation with advantage guidance for online adaptation",
+      "llm_evidence_cn": "使用优势引导的自蒸馏进行在线适应",
+      "llm_evidence": "使用优势引导的自蒸馏进行在线适应",
+      "canonical_evidence": "使用优势引导的自蒸馏进行在线适应",
+      "llm_tldr_en": "ROAD-VLA uses advantage-guided self-distillation to provide dense token-level supervision for online adaptation of VLA models.",
+      "llm_tldr_cn": "该论文针对视觉-语言-动作（VLA）模型在线适应中稀疏奖励的问题，提出ROAD-VLA框架，通过构建优势引导的自蒸馏教师，在动作空间中对token logit进行扰动，将稀疏奖励转化为稠密的token级监督信号。实验证明该方法在多种机器人操作任务上显著提升了适应效率。",
+      "llm_tldr": "该论文针对视觉-语言-动作（VLA）模型在线适应中稀疏奖励的问题，提出ROAD-VLA框架，通过构建优势引导的自蒸馏教师，在动作空间中对token logit进行扰动，将稀疏奖励转化为稠密的token级监督信号。实验证明该方法在多种机器人操作任务上显著提升了适应效率。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26006v1",
+      "source": "arxiv",
+      "title": "FORCE: Efficient VLA Reinforcement Fine-Tuning via Value-Calibrated Warm-up and Self-Distillation",
+      "abstract": "Vision-Language-Action (VLA) models are often constrained by the imitation ceiling imposed by sub-optimal data. While Reinforcement Learning (RL) fine-tuning can surpass this limit, it is notoriously sample inefficient. This challenge arises from two core issues: (1) catastrophic initial unlearning due to an unstable Q-function and (2) inefficient policy updates caused by low-quality exploration data, often forcing a reliance on costly human interventions. We introduce FORCE, a 3-stage framework that stabilizes fine-tuning by tackling both issues. FORCE first incorporates a Value-Calibrated Warm-Up phase, utilizing on-policy rollouts to mitigate the distributional shift of the Q-function. Subsequently, during the online stage, this calibrated Q-function acts as a filter for both the policy's own action proposals and expert data, ensuring only high-value actions are used for the policy update. We evaluate FORCE on various simulation and real-world tasks, and the result shows that FORCE achieves a 79% absolute improvement in success rates and outperform prior RL methods by 10%, while accelerating training by 32.5%. Critically, it mitigates the common success rate drop and achieves this robust performance without human intervention, marking a significant step towards deploying capable and autonomous robotic agents.",
+      "authors": [
+        "Shuyi Zhang",
+        "Yunfan Lou",
+        "Hongyang Cheng",
+        "Yichen Guo",
+        "Chuyao Fu",
+        "Yaoxu Lyu",
+        "Xiaojie Zhang",
+        "Haoran Li",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-24T16:23:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.26006v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uses on-policy rollouts and self-distillation for RL fine-tuning",
+      "llm_evidence_cn": "使用在线策略轨迹和自蒸馏进行强化学习微调",
+      "llm_evidence": "使用在线策略轨迹和自蒸馏进行强化学习微调",
+      "canonical_evidence": "使用在线策略轨迹和自蒸馏进行强化学习微调",
+      "llm_tldr_en": "FORCE stabilizes VLA reinforcement fine-tuning via value-calibrated warm-up with on-policy rollouts and self-distillation, improving sample efficiency.",
+      "llm_tldr_cn": "该论文针对视觉-语言-动作模型强化学习微调样本效率低的问题，提出FORCE框架，通过值校准热身阶段利用在线策略轨迹缓解Q函数分布偏移，并结合自蒸馏技术，有效避免灾难性遗忘，提升微调稳定性与样本效率。",
+      "llm_tldr": "该论文针对视觉-语言-动作模型强化学习微调样本效率低的问题，提出FORCE框架，通过值校准热身阶段利用在线策略轨迹缓解Q函数分布偏移，并结合自蒸馏技术，有效避免灾难性遗忘，提升微调稳定性与样本效率。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "on-policy distillation reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.24428v1",
+      "source": "arxiv",
+      "title": "Escaping the Self-Confirmation Trap: An Execute-Distill-Verify Paradigm for Agentic Experience Learning",
+      "abstract": "Experience-driven self-evolution is critical for large language model (LLM) agents to improve through open-world interaction. However, existing experience learning methods mostly rely on single-agent loops, where the same agent executes tasks, summarizes outcomes, and determines memory content. This setup makes agents vulnerable to the Self-Confirmation Trap: wrong-but-self-consistent trajectories are misidentified as successful experience, leading to cumulative errors during retrieval and reuse. To address this issue, we propose EDV, an Execute-Distill-Verify framework for reliable experience learning. In the Execute stage, multiple heterogeneous agents explore the same task space in parallel to generate diverse candidate trajectories. In the Distill stage, a dedicated third-party agent comparatively analyzes these trajectories to produce candidate experiences, reducing executor-centric summarization bias. In the Verify stage, the execution group validates candidates via a consensus mechanism, and only approved experiences are written into shared or private memory. By decoupling the three stages, EDV transforms experience learning from isolated self-reflection into collaborative construction, filtering erroneous and noisy content before memory insertion. We evaluate EDV on three challenging long-horizon benchmarks: tau2-bench, Mind2Web and MMTB. Results show EDV consistently outperforms strong baselines, validating that reliable experience construction is essential for robust agent self-evolution. Our code is available at https://github.com/shidingz/EDV.",
+      "authors": [
+        "Shiding Zhu",
+        "Yudi Qi",
+        "Yajie Wang",
+        "Jiaze Li",
+        "Chao Song",
+        "Yaorui Shi",
+        "Yibo Miao",
+        "Hanqi Gao",
+        "Kai Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-23T11:05:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.24428v1",
+      "tags": [
+        "keyword:OPD",
+        "query:OPD"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Execute-Distill-Verify paradigm for experience learning in LLM agents",
+      "llm_evidence_cn": "用于大语言模型代理经验学习的执行-蒸馏-验证范式",
+      "llm_evidence": "用于大语言模型代理经验学习的执行-蒸馏-验证范式",
+      "canonical_evidence": "用于大语言模型代理经验学习的执行-蒸馏-验证范式",
+      "llm_tldr_en": "EDV uses multi-agent execution and distillation to generate reliable experience for LLM agent self-evolution.",
+      "llm_tldr_cn": "该论文针对大语言模型代理经验学习中的自我确认陷阱，提出EDV（执行-蒸馏-验证）框架。通过多异构代理并行探索生成多样化候选经验，再通过蒸馏提取可靠知识，并验证一致性，从而避免错误经验的累积。实验表明EDV显著提升了代理在开放世界任务中的泛化能力。",
+      "llm_tldr": "该论文针对大语言模型代理经验学习中的自我确认陷阱，提出EDV（执行-蒸馏-验证）框架。通过多异构代理并行探索生成多样化候选经验，再通过蒸馏提取可靠知识，并验证一致性，从而避免错误经验的累积。实验表明EDV显著提升了代理在开放世界任务中的泛化能力。",
+      "llm_tags": [
+        "query:opd"
+      ],
+      "matched_query_tag": "query:opd",
+      "matched_query_text": "knowledge distillation in reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

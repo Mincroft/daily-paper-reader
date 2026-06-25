@@ -6,37 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-24
-- 运行时间：2026-06-24 20:55:44 UTC
+- 最新运行日期：2026-06-25
+- 运行时间：2026-06-25 21:37:33 UTC
 - 运行状态：成功
-- 本次总论文数：5
-- 精读区：4
+- 本次总论文数：6
+- 精读区：5
 - 速读区：1
 
 ### 今日简报（AI）
-今日精读2篇高分论文，聚焦on-policy蒸馏中的位置偏差与漂移门控机制。  
-最值得关注：策略蒸馏的位置偏差与逐块策略漂移控制，为LLM推理优化提供新思路。  
-建议读者进一步了解这些方法如何提升模型在长序列任务中的稳定性与效率。
-- 详情：[/202606/24/README](/202606/24/README)
+今日共处理6篇论文，精读5篇，速读1篇，重点关注离线推理训练与细粒度视觉推理两项高分研究。最值得看的是《Weight-Space Geometry of Offline Reasoning Training》和《V-Zero》均获9.0分，分别从权重空间几何与无标签蒸馏角度突破推理能力。建议优先学习V-Zero的对比证据门控机制，并尝试用离线推理几何分析指导模型压缩。
+- 详情：[/202606/25/README](/202606/25/README)
 
 ### 精读区论文标签
-1. [On the Position Bias of On-Policy Distillation](/202606/24/2606.22600v2-on-the-position-bias-of-on-policy-distillation)  
+1. [Weight-Space Geometry of Offline Reasoning Training](/202606/25/2606.23740v1-weight-space-geometry-of-offline-reasoning-training)  
    标签：评分：9.0/10、query:opd
-   evidence：直接研究强化学习中的在线策略蒸馏位置偏差
-2. [Blockwise Policy-Drift Gating for On-Policy Distillation](/202606/24/2606.24084v1-blockwise-policy-drift-gating-for-on-policy-distillation)  
+   evidence：通过离线RL损失将推理能力从大模型蒸馏到小模型
+2. [V-Zero: Answer-Label-Free On-Policy Distillation with Contrastive Evidence Gating for Fine-Grained Visual Reasoning](/202606/25/2606.25319v1-v-zero-answer-label-free-on-policy-distillation-with-contrastive-evidence-gating-for-fine-grained-visual-reasoning)  
    标签：评分：9.0/10、query:opd
-   evidence：提出用于在线策略蒸馏的块级策略漂移门控
-3. [AsyncOPD: How Stale Can On-Policy Distillation Be?](/202606/24/2606.24143v1-asyncopd-how-stale-can-on-policy-distillation-be)  
+   evidence：无需答案标签的细粒度视觉推理在策略蒸馏
+3. [On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity](/202606/25/2606.26091v1-on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity)  
    标签：评分：9.0/10、query:opd
-   evidence：直接研究带有陈旧数据的在线策略蒸馏
-4. [KLip-PPO: A per-sample KL perspective on PPO-Clip](/202606/24/2606.23932v1-klip-ppo-a-per-sample-kl-perspective-on-ppo-clip)  
+   evidence：直接研究强化学习中的在线策略自蒸馏
+4. [ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models](/202606/25/2606.25800v1-road-vla-robust-online-adaptation-via-self-distillation-for-vision-language-action-models)  
    标签：评分：8.0/10、query:opd
-   evidence：提供了PPO的逐样本KL视角，PPO是核心的在策略强化学习算法
+   evidence：使用优势引导的自蒸馏进行在线适应
+5. [FORCE: Efficient VLA Reinforcement Fine-Tuning via Value-Calibrated Warm-up and Self-Distillation](/202606/25/2606.26006v1-force-efficient-vla-reinforcement-fine-tuning-via-value-calibrated-warm-up-and-self-distillation)  
+   标签：评分：8.0/10、query:opd
+   evidence：使用在线策略轨迹和自蒸馏进行强化学习微调
 
 ### 速读区论文标签
-1. [Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning](/202606/24/2606.24064v1-beyond-trajectory-imitation-strategy-guided-policy-optimization-for-llm-reasoning)  
+1. [Escaping the Self-Confirmation Trap: An Execute-Distill-Verify Paradigm for Agentic Experience Learning](/202606/25/2606.24428v1-escaping-the-self-confirmation-trap-an-execute-distill-verify-paradigm-for-agentic-experience-learning)  
    标签：评分：6.0/10、query:opd
-   evidence：通过策略引导的策略优化实现强化学习中的知识蒸馏
+   evidence：用于大语言模型代理经验学习的执行-蒸馏-验证范式
 
 
 <div class="dpr-home-promo-card">
