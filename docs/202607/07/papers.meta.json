@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-07",
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T20:36:24",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/07/2606.29758v1-ps-ppo-prefix-sampling-ppo-for-critic-free-rlhf",
+      "section": "deep",
+      "title_en": "PS-PPO: Prefix-Sampling PPO for Critic-Free RLHF",
+      "authors": "Doo Hwan Hwang, Kee-Eung Kim",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.29758v1",
+      "score": "8.0",
+      "evidence": "无评论者PPO变体用于LLM的RLHF",
+      "tldr": "针对无评论家RLHF中长推理轨迹优化成本高的问题，提出PS-PPO方法。该方法通过提示条件截断分布采样截断时间步，仅对轨迹前缀进行反向传播，并应用重要性加权修正保持梯度无偏。实验表明，在数学推理等基准上大幅降低训练计算和峰值GPU内存，同时保持与强基线相当的精度。",
+      "tags": "query:multi-reward",
+      "abstract_en": "Reinforcement Learning from Human Feedback (RLHF) for Large Language Models increasingly relies on critic-free methods as a practical alternative to actor--critic training. Despite their simplicity, existing critic-free approaches propagate a trajectory-level learning signal uniformly across all tokens in a trajectory. This requires full-trajectory policy updates for every rollout, leading to substantial optimization cost for long reasoning traces, even though intermediate prefixes often contain enough information to largely determine the final outcome. We propose Prefix-Sampling Proximal Policy Optimization (PS-PPO), a compute-efficient critic-free method for RLHF that exploits this temporal redundancy. PS-PPO introduces a prompt-conditioned cutoff distribution and samples a cutoff timestep for each trajectory. During the update pass, PS-PPO backpropagates only through the sampled prefix of each trajectory and applies an importance-weighting correction so that the resulting truncated gradient estimator remains unbiased with respect to the full-trajectory objective. Experiments on mathematical reasoning and RLHF benchmarks show that PS-PPO achieves large reductions in training compute and peak GPU memory, while maintaining accuracy comparable to strong critic-free baselines.",
+      "source": "arxiv",
+      "selection_source": "carryover_cache"
+    },
+    {
+      "paper_id": "202607/07/2607.04963v1-stapo-selective-trajectory-aware-policy-optimization-for-llm-agent-training",
+      "section": "deep",
+      "title_en": "STAPO: Selective Trajectory-Aware Policy Optimization for LLM Agent Training",
+      "authors": "Qiuyi Qi, Tian Liang, Mutian Bao, Jinjian Zhang, Dongnan Liu, Wei Zhou, Linjian Mo, Ming Kong, Jie Liu, Feng Zhang, Qiang Zhu",
+      "date": "2026-07-06",
+      "pdf": "https://arxiv.org/pdf/2607.04963v1",
+      "score": "8.0",
+      "evidence": "提出选择性轨迹感知策略优化STAPO用于LLM智能体训练，与文本生成策略梯度方法相关",
+      "tldr": "大型语言模型代理在长程任务中面临稀疏奖励引起的轨迹忽略问题。现有基于香农熵的方法将状态复杂度与置信度混淆，不可靠。本文提出归一化熵衡量置信度偏离，并设计STAPO层级分组RL框架，通过轨迹感知奖励和独立惩罚联合优化异常步骤。在ALFWorld等任务中达到最优性能并有效缓解轨迹忽略。",
+      "tags": "query:multi-reward",
+      "abstract_en": "Reinforcement Learning (RL) is the dominant paradigm for training Large Language Model (LLM) agents on long-horizon tasks. However, sparse and delayed rewards often lead to trajectory neglect, in which agents lose focus on the task goal and interaction history at intermediate steps. Prior work has explored step-level supervision using Shannon-entropy-based uncertainty signals, which conflate inherent state complexity with agent confidence and therefore provide unreliable estimates of decision reliability. To address this issue, we propose normalized entropy, which measures confidence deviations relative to an agent's average behavior under a given state, thereby strengthening the association between low-quality actions and trajectory neglect. Building on this insight, we introduce Selective Trajectory-Aware Policy Optimization (STAPO), a hierarchical group-based RL framework. STAPO leverages normalized entropy to locate outlier steps associated with trajectory neglect and optimizes them via a joint mechanism of trajectory-aware reward and trajectory-independent penalty, enhancing trajectory awareness while preserving training stability. Extensive experiments on ALFWorld, WebShop, and Search-Augmented QA demonstrate that STAPO achieves state-of-the-art performance while substantially alleviating trajectory neglect, validating its effectiveness and robustness for agentic tasks.",
+      "source": "arxiv",
+      "selection_source": "carryover_cache"
+    }
+  ],
+  "errors": []
+}
