@@ -137,6 +137,50 @@ subscriptions:
             updated_at: '2026-05-31T15:27:42.897672+00:00'
       updated_at: '2026-05-31T15:25:52.317Z'
       paused: true
+    - tag: multi-reward
+      description: RL中的Multi-Reward Optimization与开放性问题优化论文
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: multi-reward optimization
+          keyword_cn: 多奖励优化
+          query: multi-reward optimization reinforcement learning
+        - keyword: multi-objective reinforcement learning
+          keyword_cn: 多目标强化学习
+          query: multi-objective reinforcement learning
+        - keyword: reward shaping
+          keyword_cn: 奖励塑形
+          query: reward shaping reinforcement learning
+        - keyword: creative text generation reinforcement learning
+          keyword_cn: 创意文本生成的强化学习
+          query: reinforcement learning for creative text generation
+        - keyword: policy gradient text generation
+          keyword_cn: 策略梯度文本生成
+          query: policy gradient methods for text generation
+      intent_queries:
+        - query: multi reward optimization reinforcement learning for text generation
+          query_cn: 多奖励优化在文本生成中的强化学习
+          enabled: true
+          source: manual
+          note: ''
+        - query: open ended optimization of language models using reinforcement learning
+          query_cn: 使用强化学习的语言模型开放式优化
+          enabled: true
+          source: manual
+          note: ''
+        - query: reinforcement learning for creative copywriting generation
+          query_cn: 强化学习用于创意文案生成
+          enabled: true
+          source: manual
+          note: ''
+        - query: reward design for multi objective reinforcement learning in natural language tasks
+          query_cn: 自然语言任务中多目标强化学习的奖励设计
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-07-07T15:36:12.257Z'
+      paused: true
 source_backends:
   arxiv:
     papers_table: arxiv_papers
