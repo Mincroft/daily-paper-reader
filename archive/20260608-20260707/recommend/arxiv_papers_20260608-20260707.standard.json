@@ -1,0 +1,1306 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-07T15:49:43.967887+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 29,
+    "deep_cap": 6,
+    "deep_selected": 21,
+    "quick_candidates": 29,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19134v1",
+      "source": "arxiv",
+      "title": "Pareto Q-Learning with Reward Machines",
+      "abstract": "We present Pareto Q-Learning with Reward Machines (PQLRM), a multi-objective reinforcement learning algorithm for tasks whose reward structure is specified by a set of reward machines (RMs). PQLRM combines Pareto Q-Learning (PQL), which maintains sets of vector-valued Q-estimates to approximate the Pareto front, with enhancements from Q-Learning with Reward Machines (QRM), which exploits the factored automaton structure of the reward signal. This yields a multi-policy algorithm that remains sample-efficient under non-Markovian, RM-encoded rewards. Experimental trials show that PQLRM converges faster than a naive PQL baseline applied to the cross-product MDP and can synthesize Pareto-optimal policies that QRM cannot.",
+      "authors": [
+        "Arnaud Lequen",
+        "Clément Legrand-Lixon",
+        "Léo Saulières"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-17T14:44:31+00:00",
+      "link": "https://arxiv.org/pdf/2606.19134v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "multi-objective RL with Pareto Q-learning and reward machines",
+      "llm_evidence_cn": "多目标强化学习结合Pareto Q学习与奖励机",
+      "llm_evidence": "多目标强化学习结合Pareto Q学习与奖励机",
+      "canonical_evidence": "多目标强化学习结合Pareto Q学习与奖励机",
+      "llm_tldr_en": "Combines Pareto Q-learning with reward machines to efficiently approximate the Pareto front in multi-objective RL tasks with non-Markovian rewards.",
+      "llm_tldr_cn": "多目标强化学习面临Pareto前沿近似效率低和非马尔可夫奖励的挑战。本文提出PQLRM，将Pareto Q学习与奖励机结合，利用值函数向量集和自动机结构加速收敛。实验表明PQLRM比基线更快收敛，并能合成奖励机无法提供的Pareto最优策略。",
+      "llm_tldr": "多目标强化学习面临Pareto前沿近似效率低和非马尔可夫奖励的挑战。本文提出PQLRM，将Pareto Q学习与奖励机结合，利用值函数向量集和自动机结构加速收敛。实验表明PQLRM比基线更快收敛，并能合成奖励机无法提供的Pareto最优策略。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29869v1",
+      "source": "arxiv",
+      "title": "ARKD: Adaptive Reinforcement Learning-Guided Bidirectional KL Divergence Distillation for Text Generation",
+      "abstract": "Knowledge distillation (KD) is a key technique for compressing Large Language Models (LLMs), yet methods relying on a single KL objective often fail to balance primary distribution fitting with long-tail probability modeling, limiting both generation quality and generalization. To address this, we analyze the complementary roles of forward and reverse KL divergence (FKL/RKL) in distribution alignment from theoretical and empirical perspectives. We then propose a reinforcement-learning-based adaptive KL-weighted distillation framework, in which a policy network dynamically assigns weights to FKL and RKL based on teacher-student distributional characteristics, guided by immediate reward signals to achieve dual alignment on principal and long-tail modes. Extensive experiments demonstrate consistent improvements across Rouge-L and BertScore metrics, surpassing greedy heuristics by 0.4-0.6 points and outperforming other baseline methods on diverse benchmarks.",
+      "authors": [
+        "Zilong Liu",
+        "Xuewen Zhang",
+        "Jinrui Xing",
+        "Juyi Qiao",
+        "Huiyong Wang",
+        "Junming Jiao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T07:05:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.29869v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "adaptive RL-guided bidirectional KL distillation for text generation",
+      "llm_evidence_cn": "自适应RL引导的双向KL蒸馏用于文本生成",
+      "llm_evidence": "自适应RL引导的双向KL蒸馏用于文本生成",
+      "canonical_evidence": "自适应RL引导的双向KL蒸馏用于文本生成",
+      "llm_tldr_en": "ARKD uses a policy network to dynamically weight forward and reverse KL divergences in knowledge distillation, guided by RL reward signals.",
+      "llm_tldr_cn": "知识蒸馏中使用单一KL目标难以平衡主分布拟合和长尾概率建模。本文分析前向和反向KL的互补作用，提出基于RL的适应性KL加权蒸馏框架，由策略网络根据师生分布特征动态分配权重，由即时奖励信号引导。实验证明该方法在文本生成质量和泛化性上优于现有蒸馏方法。",
+      "llm_tldr": "知识蒸馏中使用单一KL目标难以平衡主分布拟合和长尾概率建模。本文分析前向和反向KL的互补作用，提出基于RL的适应性KL加权蒸馏框架，由策略网络根据师生分布特征动态分配权重，由即时奖励信号引导。实验证明该方法在文本生成质量和泛化性上优于现有蒸馏方法。",
+      "llm_tags": [
+        "query:opd:composite"
+      ],
+      "matched_query_tag": "query:opd:composite",
+      "matched_query_text": "Papers central to 请帮我查找与On-Policy Distillation相关的高质量论文, especially work that connects or combines: on-policy distillation reinforcement learning; knowledge distillation in reinforcement learning; teacher-student framework for reinforcement learning; on-policy learning methods; policy transfer in reinforcement learning; on policy distillation methods for reinforcement learning; improving sample efficiency with on policy distillation; teacher student distillation in reinforcement learning.",
+      "matched_requirement_id": "req-composite-opd",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01392v1",
+      "source": "arxiv",
+      "title": "Multi-Objective Exploration and Preference Optimization via Mutual Information",
+      "abstract": "Aligning large language models with diverse and heterogeneous human values requires multi-objective alignment methods to effectively trade off conflicting preference dimensions. Current methods achieve this trade-off by training policies conditioned on preference vectors and leveraging online direct preference optimization. However, exploration uncertainty can cause the reward distributions of responses generated under different preference vectors to overlap, and the generated responses may fail to effectively align with the corresponding preference vectors. In this paper, we propose Multi-Objective Exploration and Preference Optimization via Mutual Information (MI-EPO), an information-theoretic framework. It unifies multi-objective exploration and alignment by maximizing the joint conditional mutual information among generated responses, preference feedback, and preference vectors. By incorporating a probabilistic routing mechanism, MI-EPO naturally decomposes objective alignment and preference-aware exploration, encouraging the model to generate responses that are distinguishable and aligned with different preference conditions. Experiments on safe alignment and helpful assistant tasks show that MI-EPO significantly improves the alignment between generated responses and preference vectors, makes the outputs more controllable, and achieves stable trade-offs across multiple objectives.",
+      "authors": [
+        "Hongyan Xie",
+        "Yikun Ban",
+        "Ruiyu Fang",
+        "Zixuang Huang",
+        "Deqing Wang",
+        "Jianxin Li",
+        "Shuangyong Song"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-01T18:50:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.01392v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "multi-objective alignment, preference optimization",
+      "llm_evidence_cn": "多目标对齐，偏好优化",
+      "llm_evidence": "多目标对齐，偏好优化",
+      "canonical_evidence": "多目标对齐，偏好优化",
+      "llm_tldr_en": "MI-EPO unifies multi-objective exploration and preference optimization via mutual information to handle conflicting preference dimensions in LLM alignment.",
+      "llm_tldr_cn": "针对大语言模型多目标对齐中探索不确定性导致偏好向量区分不足的问题，提出基于互信息的MI-EPO框架，统一了多目标探索与偏好优化。实验表明该方法能有效平衡冲突的偏好维度，生成与偏好向量更一致的响应。该方法为多奖励优化提供了一种信息论视角下的新框架，可推广至多目标RL任务。",
+      "llm_tldr": "针对大语言模型多目标对齐中探索不确定性导致偏好向量区分不足的问题，提出基于互信息的MI-EPO框架，统一了多目标探索与偏好优化。实验表明该方法能有效平衡冲突的偏好维度，生成与偏好向量更一致的响应。该方法为多奖励优化提供了一种信息论视角下的新框架，可推广至多目标RL任务。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.02869v1",
+      "source": "arxiv",
+      "title": "Reward Granularity in RLVR: Comparing Process and Outcome Reward Structures for Mathematical Reasoning in Small Language Models",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a promising paradigm for improving mathematical reasoning in language models. Yet most RLVR work rewards only the final answer (outcome-based rewards), leaving the impact of step-level process supervision (process rewards) underexplored especially for small models that lack the capacity to self-correct under sparse feedback. We systematically compare five reward conditions applied to Qwen2.5-0.5B fine-tuned with Group Relative Policy Optimization (GRPO) on GSM8K: a no-RL baseline, process-only, outcome-only, and three hybrid weightings ($λ\\in \\{0.9, 0.5, 0.1\\}$ process weight). Process-only supervision achieves 63.73% test accuracy versus 53.75% for outcome-only, a nearly 10-percentage point gap while yielding reasoning traces with higher step validity and lower deviation from ground-truth chain length. Hybrid rewards generally correlate positively with process weight, with one notable anomaly: the low-process / high-outcome configuration ($λ=0.1$) underperforms pure outcome supervision, suggesting conflicting optimization signals. Error analysis using GPT-4o as a judge reveals distinct failure mode distributions: process models generate structurally inconsistent but arithmetically grounded traces, while outcome models produce concise but derivation-error-prone chains. Our results demonstrate that reward granularity is a first-order design decision for RLVR, with process-level supervision substantially improving both accuracy and trace fidelity in small language models.",
+      "authors": [
+        "Anagha Radhakrishna Palandye",
+        "Rebecca Glick",
+        "Osheen Kaul"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-03T02:16:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.02869v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "comparison of process and outcome reward structures",
+      "llm_evidence_cn": "过程奖励与结果奖励结构比较",
+      "llm_evidence": "过程奖励与结果奖励结构比较",
+      "canonical_evidence": "过程奖励与结果奖励结构比较",
+      "llm_tldr_en": "Systematic comparison of process vs. outcome rewards for small models in mathematical reasoning, showing process-only supervision achieves highest accuracy.",
+      "llm_tldr_cn": "尽管RLVR常用结果奖励，但小模型在稀疏反馈下难以自我纠正。本文在Qwen2.5-0.5B上系统比较了五种奖励条件，发现纯过程奖励在GSM8K上达到63.73%测试准确率，优于结果奖励和混合奖励。该研究证明了过程奖励对小模型数学推理的有效性。",
+      "llm_tldr": "尽管RLVR常用结果奖励，但小模型在稀疏反馈下难以自我纠正。本文在Qwen2.5-0.5B上系统比较了五种奖励条件，发现纯过程奖励在GSM8K上达到63.73%测试准确率，优于结果奖励和混合奖励。该研究证明了过程奖励对小模型数学推理的有效性。",
+      "llm_tags": [
+        "query:prm:composite"
+      ],
+      "matched_query_tag": "query:prm:composite",
+      "matched_query_text": "Papers central to 请帮我查找 Process Reward Model 的最新的高质量论文, especially work that connects or combines: process reward model; process reward modeling; reward model training; step-level reward; process reward model evaluation; process reward model survey; latest high quality papers on process reward model; process reward model research advances; process reward model survey recent.",
+      "matched_requirement_id": "req-composite-prm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09293v1",
+      "source": "arxiv",
+      "title": "One Model, Multiple Goals: Adaptive Multi-Objective Learning for E-commerce Dialogue Systems",
+      "abstract": "Dialogue systems in e-commerce scenarios often need to satisfy multiple objectives: accurately reasoning over user profiles (e.g., eligibility, credit limit) to ensure correct decision-making and user state interpretation, while also generating natural and faithful responses. These goals are complementary but not identical. In this work, we propose MORE, an adaptive Multi-Objective REinforcement learning framework that jointly optimizes reasoning accuracy and linguistic naturalness. Our preliminary experiments show that directly mixing rewards with diverging optimization dynamics can cause oscillations and unstable learning. Thus, instead of optimizing a single mixed reward, we treat reasoning functions as constraints that guide policy optimization. At inference time, the system directly generates responses without explicit reasoning steps, while still benefiting from reasoning-enhanced scaffold and avoiding additional inference overhead. To better balance linguistic objectives during response generation, we introduce an adaptive multi-reward mechanism that aggregates signals such as fluency and naturalness and dynamically reweighs them via gradient feedback. We evaluate MORE on two real-world dialogue systems at ByteDance and the MultiWOZ 2.2 benchmark, where it consistently outperforms strong baselines. In 14-day online experiments on ByteDance production traffic, MORE improves overall and reached conversion by 16.53% and 30.09%, while increasing user satisfaction and reducing handoff rates. Notably, in a human-machine comparison, MORE recovers about 60% of the incremental conversion lift achieved by human agents.",
+      "authors": [
+        "Mingzhe Li",
+        "Jing Xiang",
+        "Enguo Zhou",
+        "Lang Gao",
+        "Tai Li",
+        "Qishen Zhang",
+        "Xiangliang Zhang",
+        "Xiuying Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-08T10:01:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.09293v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-objective reinforcement learning for dialogue systems",
+      "llm_evidence_cn": "面向对话系统的多目标强化学习",
+      "llm_evidence": "面向对话系统的多目标强化学习",
+      "canonical_evidence": "面向对话系统的多目标强化学习",
+      "llm_tldr_en": "MORE framework uses adaptive multi-objective RL to jointly optimize reasoning accuracy and naturalness in e-commerce dialogue.",
+      "llm_tldr_cn": "电商对话系统需同时满足推理准确和语言自然等多重目标，但直接混合奖励会导致训练震荡。本文提出MORE框架，采用自适应多目标强化学习，将推理函数作为约束指导策略优化，在保持推理准确的同时提升回复自然度，实验表明该方法优于单目标混合基线。",
+      "llm_tldr": "电商对话系统需同时满足推理准确和语言自然等多重目标，但直接混合奖励会导致训练震荡。本文提出MORE框架，采用自适应多目标强化学习，将推理函数作为约束指导策略优化，在保持推理准确的同时提升回复自然度，实验表明该方法优于单目标混合基线。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15866v1",
+      "source": "arxiv",
+      "title": "STRIDE: Strategic Trajectory Reasoning via Discriminative Estimation for Verifiable Reinforcement Learning",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has become an effective post-training paradigm for improving the reasoning abilities of large language models. However, existing RLVR methods typically rely on final-answer correctness to assign trajectory-level rewards, providing sparse supervision and treating all tokens uniformly regardless of their actual contribution to reasoning. Although recent studies introduce intermediate signals such as process rewards, high-entropy tokens, and semantic uncertainty, these signals are often not inherently verifiable and may fail to distinguish beneficial strategic patterns from harmful ones. To address this limitation, we propose STRIDE (Strategic Trajectory Reasoning with Discriminative Estimation), a fine-grained RLVR framework that derives strategic reasoning supervision from verifiable outcomes. STRIDE contrasts successful and failed trajectories within each response group to estimate the outcome-discriminative preference of each $n$-gram strategic pattern, and further combines this signal with reasoning saliency entropy to identify decision-relevant strategic patterns. These patterns are assigned differentiated advantage values during RL optimization, enabling more precise credit assignment while preserving the verifiability of RLVR. Extensive experiments demonstrate that STRIDE consistently improves reasoning performance across diverse models, tasks, and extended settings, including VLMs and agent-based systems.",
+      "authors": [
+        "Qinjian Zhao",
+        "Zhihao Dou",
+        "Dinggen Zhang",
+        "Xiangyu Li",
+        "Chaoda Song",
+        "Zhongwei Wan",
+        "Xinpeng Li",
+        "Yanyan Zhang",
+        "Kaijie Chen",
+        "Qingtao Pan",
+        "Chengcheng Feng",
+        "Zhiqiang Gao",
+        "Xiaoyu Xia"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-14T15:37:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.15866v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "process reward signals for verifiable RL",
+      "llm_evidence_cn": "用于可验证RL的过程奖励信号",
+      "llm_evidence": "用于可验证RL的过程奖励信号",
+      "canonical_evidence": "用于可验证RL的过程奖励信号",
+      "llm_tldr_en": "STRIDE introduces discriminative estimation to distinguish beneficial strategic patterns from harmful ones in process rewards for RLVR.",
+      "llm_tldr_cn": "现有RLVR方法对token均匀分配奖励，而过程奖励信号可能无法区分有益与有害模式。提出STRIDE，通过判别估计识别策略性轨迹模式，提供更细粒度的过程奖励。实验表明在数学推理任务中提升了性能，优于仅用最终结果奖励的方法。",
+      "llm_tldr": "现有RLVR方法对token均匀分配奖励，而过程奖励信号可能无法区分有益与有害模式。提出STRIDE，通过判别估计识别策略性轨迹模式，提供更细粒度的过程奖励。实验表明在数学推理任务中提升了性能，优于仅用最终结果奖励的方法。",
+      "llm_tags": [
+        "query:prm:composite"
+      ],
+      "matched_query_tag": "query:prm:composite",
+      "matched_query_text": "Papers central to 请帮我查找 Process Reward Model 的最新的高质量论文, especially work that connects or combines: process reward model; process reward modeling; reward model training; step-level reward; process reward model evaluation; process reward model survey; latest high quality papers on process reward model; process reward model research advances; process reward model survey recent.",
+      "matched_requirement_id": "req-composite-prm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15911v1",
+      "source": "arxiv",
+      "title": "Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search",
+      "abstract": "This paper focuses on automatically generating informative ad descriptions in sponsored search. Unlike ad titles which are usually optimized to attract user click feedbacks, ad descriptions have a longer text span and possess the potential of incorporating world knowledge to address user search intents while presenting the fine-grained selling points of the ads. We propose Interactor, a multi-turn iterative creation framework optimized with agentic RL for ad description generation. The generation model acts as a policy that interacts with a customized environment consisting of multiple generative reward models. Given initial generations by the policy, the customized GenRMs evaluate multi-dimensional qualities including knowledge capacity and landing page consistency, providing both binary signals and reasoning feedbacks. The policy then iteratively refines the descriptions based on such feedbacks to ensure continuous improvement. Experiments on industrial datasets show that the Interactor framework significantly outperforms state-of-the-art approaches in generating knowledge-rich and faithful ad descriptions. Since May 2026, it has been deployed online in a leading search ads system, contributing to both ad revenue and user experience.",
+      "authors": [
+        "Penghui Wei",
+        "Jiayu Wu",
+        "Chao Ye",
+        "Zhi Guo",
+        "Shuanglong Li",
+        "Lin Liu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "published": "2026-06-14T16:40:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.15911v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL framework for creative ad description generation with multiple reward models",
+      "llm_evidence_cn": "用于创意广告描述生成的RL框架，使用多个奖励模型",
+      "llm_evidence": "用于创意广告描述生成的RL框架，使用多个奖励模型",
+      "canonical_evidence": "用于创意广告描述生成的RL框架，使用多个奖励模型",
+      "llm_tldr_en": "Proposes Interactor, an agentic RL framework for iterative ad description generation using multiple generative reward models, optimizing multi-dimensional quality.",
+      "llm_tldr_cn": "针对赞助搜索中广告描述生成任务，提出Interactor多轮迭代创建框架。该框架将生成模型作为策略，与包含多个生成式奖励模型的环境交互，从知识性、针对性等多维度评估并优化生成结果。实验表明该方法能生成信息丰富、符合用户意图的广告描述，是RL用于创意文本生成的典型应用。",
+      "llm_tldr": "针对赞助搜索中广告描述生成任务，提出Interactor多轮迭代创建框架。该框架将生成模型作为策略，与包含多个生成式奖励模型的环境交互，从知识性、针对性等多维度评估并优化生成结果。实验表明该方法能生成信息丰富、符合用户意图的广告描述，是RL用于创意文本生成的典型应用。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reinforcement learning for creative copywriting generation",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.16111v1",
+      "source": "arxiv",
+      "title": "Towards Pareto-Optimal Tool-Integrated Agents with Pareto Ranking Policy Optimization",
+      "abstract": "Recent advances in tool-integrated language agents have significantly improved their ability to solve complex reasoning tasks. However, existing alignment methods predominantly focus on maximizing task accuracy, while overlooking auxiliary objectives such as tool-use efficiency, which are essential for practical deployment. To address this gap, we introduce ParetoPO, a two-stage multi-objective optimization framework for aligning tool-using large language models (LLMs) under competing objectives. In the first stage, ParetoPO leverages hypervolume-guided dynamic scalarization to adapt reward weights based on global Pareto frontier progress. In the second stage, it replaces scalarized learning signals with Pareto-ranking-based advantage computation, promoting nondominated trajectories through dominance-aware credit assignment. This design enables fine-grained, action-level optimization across multiple conflicting objectives. Experimental results on mathematic reasoning and multi-hop QA tasks show that ParetoPO consistently discovers policies with superior accuracy-efficiency trade-offs compared to static and heuristic baselines.",
+      "authors": [
+        "Junyi Li",
+        "Xiaowei Qian",
+        "Yingyi Zhang",
+        "Wenlin Zhang",
+        "Guojing Li",
+        "Sheng Zhang",
+        "Xiao Han",
+        "Yichao Wang",
+        "Xiangyu Zhao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-15T01:58:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.16111v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-objective optimization framework for tool-integrated agents using Pareto ranking",
+      "llm_evidence_cn": "使用Pareto排名的多目标优化框架用于工具集成智能体",
+      "llm_evidence": "使用Pareto排名的多目标优化框架用于工具集成智能体",
+      "canonical_evidence": "使用Pareto排名的多目标优化框架用于工具集成智能体",
+      "llm_tldr_en": "Proposes ParetoPO, a two-stage multi-objective RL framework that uses hypervolume-guided scalarization and Pareto-ranking advantages to align tool-using LLMs under competing objectives.",
+      "llm_tldr_cn": "现有工具集成语言模型对齐方法仅关注准确率，忽视工具使用效率。本文提出ParetoPO，两阶段多目标优化框架：第一阶段用超体积引导动态标量化调整奖励权重，第二阶段用Pareto排名优势替代标量化信号。实验表明该方法在多个任务上实现了准确率与效率的Pareto最优。",
+      "llm_tldr": "现有工具集成语言模型对齐方法仅关注准确率，忽视工具使用效率。本文提出ParetoPO，两阶段多目标优化框架：第一阶段用超体积引导动态标量化调整奖励权重，第二阶段用Pareto排名优势替代标量化信号。实验表明该方法在多个任务上实现了准确率与效率的Pareto最优。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.16771v1",
+      "source": "arxiv",
+      "title": "GD$^2$PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization",
+      "abstract": "As LLMs advance, post-training reinforcement learning (RL) increasingly relies on multi-dimensional rewards to cultivate comprehensive capabilities. This shift demands new algorithms capable of optimizing diverse and potentially competing objectives simultaneously. To address this, existing methods such as Group reward-Decoupled Policy Optimization (GDPO) decompose the overall score into independent reward groups, then compute the RL loss separately within each group. However, this strategy still encounters multi-reward conflicts: a single rollout can yield positive advantages on certain reward dimensions but negative ones on others, causing opposing signals to cancel each other out during aggregation, further hindering RL training efficiency. Inspired by Dynamic sAmpling Policy Optimization (DAPO), which improves RL training efficiency by filtering out ineffective rollouts with near-zero advantages, we propose Group-Dynamic reward-Decoupled Policy Optimization (GD$^2$PO). Specifically, GD$^2$PO employs a conflict-aware filtering mechanism to mask out rollouts suffering from severe reward-wise disagreement. By preventing conflicting signals from canceling each other out, this masking strategy preserves and enhances the magnitude of effective RL advantages, thereby significantly accelerating learning efficiency. Furthermore, we introduce query-level reweighting to dynamically adjust the update intensity of each query based on its overall reward consensus. Experiments on various multi-reward scenarios, including tool calling and human preference alignment, demonstrate that GD$^2$PO consistently and significantly outperforms existing baselines. The code is available at https://github.com/Qwen-Applications/GD2PO.",
+      "authors": [
+        "Haotian Liu",
+        "Yihao Liu",
+        "Jingwei Ni",
+        "Siyuan Huang",
+        "Xinpeng Liu",
+        "Pengyu Cheng",
+        "Jiajun Song",
+        "Ruijin Ding",
+        "Junfeng Li",
+        "Zhechao Yu",
+        "Mengyu Zhou",
+        "Hongteng Xu",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-15T14:19:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.16771v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly addresses multi-reward conflicts in RL for LLMs",
+      "llm_evidence_cn": "直接解决LLM中多奖励冲突问题",
+      "llm_evidence": "直接解决LLM中多奖励冲突问题",
+      "canonical_evidence": "直接解决LLM中多奖励冲突问题",
+      "llm_tldr_en": "Proposes GD^2PO to mitigate multi-reward conflicts by group-dynamic reward decoupling, improving multi-dimensional reward optimization.",
+      "llm_tldr_cn": "针对LLM后训练中多维度奖励优化时出现的奖励冲突问题，提出GD^2PO算法。该方法通过动态分组奖励解耦策略优化，缓解不同奖励维度间的信号抵消。实验证明能有效提升多奖励目标下的综合性能，为多奖励强化学习提供了可扩展的解决方案。",
+      "llm_tldr": "针对LLM后训练中多维度奖励优化时出现的奖励冲突问题，提出GD^2PO算法。该方法通过动态分组奖励解耦策略优化，缓解不同奖励维度间的信号抵消。实验证明能有效提升多奖励目标下的综合性能，为多奖励强化学习提供了可扩展的解决方案。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-reward optimization reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18111v1",
+      "source": "arxiv",
+      "title": "Learning Fair Pareto-Optimal Policies in Multi-Objective Reinforcement Learning",
+      "abstract": "Fairness is an important aspect of decision-making in multi-objective reinforcement learning (MORL), where policies must ensure both optimality and equity across multiple, potentially conflicting objectives. While single-policy MORL methods can learn fair policies for fixed user preferences using welfare functions such as the generalized Gini welfare function (GGF), they fail to provide the diverse set of policies necessary for dynamic or unknown user preferences. To address this limitation, we formalize the fair optimization problem in multi-policy MORL, where the goal is to learn a set of Pareto-optimal policies that ensure fairness across all possible user preferences. Our key technical contributions are threefold: (1) We show that for concave, piecewise-linear welfare functions (e.g., GGF), fair policies remain in the convex coverage set (CCS), which is an approximated Pareto front for linear scalarization. (2) We demonstrate that non-stationary policies, augmented with accrued reward histories, and stochastic policies improve fairness by dynamically adapting to historical inequities. (3) We propose three novel algorithms, which include integrating GGF with multi-policy multi-objective Q-Learning (MOQL), state-augmented multi-policy MOQL for learning non-statoinary policies, and its novel extension for learning stochastic policies. We evaluate our algorithms across various domains and compare our methods against the state-of-the-art MORL baselines. The empirical results show that our methods learn a set of fair policies that accommodate different user preferences.",
+      "authors": [
+        "Umer Siddique",
+        "Peilang Li",
+        "Yongcan Cao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-16T16:16:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.18111v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "formulates fair Pareto-optimal policy learning in multi-objective RL",
+      "llm_evidence_cn": "形式化多目标强化学习中的公平Pareto最优策略学习",
+      "llm_evidence": "形式化多目标强化学习中的公平Pareto最优策略学习",
+      "canonical_evidence": "形式化多目标强化学习中的公平Pareto最优策略学习",
+      "llm_tldr_en": "Proposes multi-policy MORL for fair Pareto-optimal policies across all user preferences, using generalized Gini welfare function.",
+      "llm_tldr_cn": "本文聚焦多目标强化学习中的公平性问题，形式化了多策略MORL中的公平优化目标。提出学习一组Pareto最优且公平的策略集，覆盖所有可能用户偏好。技术贡献包括证明凹性条件下的理论性质并设计有效算法。实验表明该方法在保证公平性的同时不牺牲最优性，为多目标决策提供了伦理保障。",
+      "llm_tldr": "本文聚焦多目标强化学习中的公平性问题，形式化了多策略MORL中的公平优化目标。提出学习一组Pareto最优且公平的策略集，覆盖所有可能用户偏好。技术贡献包括证明凹性条件下的理论性质并设计有效算法。实验表明该方法在保证公平性的同时不牺牲最优性，为多目标决策提供了伦理保障。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.20008v1",
+      "source": "arxiv",
+      "title": "VIMPO: Value-Implicit Policy Optimization for LLMs",
+      "abstract": "Reinforcement learning with verifiable rewards has become a central tool for improving the reasoning ability of large language models, but current methods face a trade-off between simplicity and credit assignment. Group-relative methods such as GRPO avoid training a critic, but typically assign a trajectory-level advantage to every token. Actor-critic methods provide denser learning signals, but require a learned value function with its own training instability. We introduce VIMPO, a critic-free policy optimization method that derives a policy-implied value function from the optimality conditions of KL-regularized reinforcement learning. For autoregressive generation, the resulting value recurrence can be written in terms of policy-reference log-ratios and anchored by the terminal condition that no future reward remains at the end of a trajectory. This gives a simple value loss that incorporates outcome-level verifiable rewards without training a critic. The same derivation also yields a critic-free actor advantage, allowing VIMPO to separate reward incorporation through the value loss from policy improvement through a PPO-style actor update. On mathematical RLVR benchmarks, VIMPO improves over GRPO across MATH-500, AIME 2024, AIME 2025, and OlympiadBench, with especially larger gains on competition-style evaluations. Under noisy rewards, VIMPO retains a consistent advantage over GRPO, suggesting that policy-implied value optimization can provide finer credit assignment while preserving the practical simplicity of critic-free training.",
+      "authors": [
+        "Zhewei Kang",
+        "Aosong Feng",
+        "Sergey Levine",
+        "Dawn Song",
+        "Xuandong Zhao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-18T09:44:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.20008v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "critic-free policy optimization with implicit value function",
+      "llm_evidence_cn": "无评论者策略优化，含隐式价值函数",
+      "llm_evidence": "无评论者策略优化，含隐式价值函数",
+      "canonical_evidence": "无评论者策略优化，含隐式价值函数",
+      "llm_tldr_en": "VIMPO derives a policy-implied value function from KL-regularized RL optimality conditions, enabling dense credit assignment without a learned critic.",
+      "llm_tldr_cn": "现有方法在简单性和信用分配之间存在权衡：GRPO无评论者但分配粗糙，Actor-Critic密集但不稳定。VIMPO从KL正则化RL的优化条件推导出策略隐含的价值函数，实现无评论者的密集信用分配。实验表明在推理任务上性能优于GRPO并接近Actor-Critic的稳定版本。",
+      "llm_tldr": "现有方法在简单性和信用分配之间存在权衡：GRPO无评论者但分配粗糙，Actor-Critic密集但不稳定。VIMPO从KL正则化RL的优化条件推导出策略隐含的价值函数，实现无评论者的密集信用分配。实验表明在推理任务上性能优于GRPO并接近Actor-Critic的稳定版本。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "policy gradient methods for text generation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.22766v1",
+      "source": "arxiv",
+      "title": "READ More than What You See: Reinforcement Learning for Accurate and Coherent Audio Description Generations",
+      "abstract": "Audio Description aims to generate concise narrations of essential visual content in audio-visual media for blind and low-vision audiences. Existing methods either rely on prompting off-the-shelf multimodal models, which often mismatch AD style, or partially optimize training-based systems with next-token prediction, which under-explores model capacity and biases generation toward generic expressions. We present READ, the first reinforcement-learning (RL) framework for training-based AD generation. READ formulates AD as sequence-level optimization with reference-matching, length, and format rewards, and further introduces a dedicated coherence reward under context-aware supervision to promote narratively coherent descriptions. Experiments on MAD-Eval, CMD-AD, and TV-AD show that READ substantially outperforms prior methods across diverse evaluation metrics. Our results highlight RL as a promising paradigm for accurate and coherent AD generation. Our codes, models, and benchmark results will be publicly available.",
+      "authors": [
+        "Bo Fang",
+        "Xinyao Zhang",
+        "Yuxin Song",
+        "Hui Zhang",
+        "Hang Zhou",
+        "Antoni B. Chan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T02:05:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.22766v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-reward optimization RL for text generation (audio description)",
+      "llm_evidence_cn": "多奖励优化强化学习用于文本生成（音频描述）",
+      "llm_evidence": "多奖励优化强化学习用于文本生成（音频描述）",
+      "canonical_evidence": "多奖励优化强化学习用于文本生成（音频描述）",
+      "llm_tldr_en": "READ is the first RL framework for audio description generation, using multiple rewards for sequence-level optimization.",
+      "llm_tldr_cn": "现有音频描述生成方法往往忽略模型容量和生成质量，本文提出READ框架，首次将强化学习引入训练式音频描述生成。READ设计参考匹配、长度、格式和连贯性等多重奖励，进行序列级优化，生成更准确、连贯且符合风格要求的描述。实验结果表明，READ在自动和人工评估上均大幅超越现有方法。",
+      "llm_tldr": "现有音频描述生成方法往往忽略模型容量和生成质量，本文提出READ框架，首次将强化学习引入训练式音频描述生成。READ设计参考匹配、长度、格式和连贯性等多重奖励，进行序列级优化，生成更准确、连贯且符合风格要求的描述。实验结果表明，READ在自动和人工评估上均大幅超越现有方法。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi reward optimization reinforcement learning for text generation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23190v1",
+      "source": "arxiv",
+      "title": "FlowTTS-GRPO: Online Reinforcement Learning with Multi-Objective Reward Optimization for Flow-Matching Based Text-to-Speech",
+      "abstract": "Existing Reinforcement Learning (RL) research for Text-to-Speech (TTS) focuses on large language models (LLMs), leaving Flow-Matching (FM) under-explored. We present FlowTTS-GRPO, an online RL framework for FM-based TTS. By converting ordinary differential equation (ODE) trajectories into stochastic differential equation (SDE) paths, our method enables direct fine-tuning of open-source FM models without auxiliary models. We show that a weighted reward combination converges faster than a probabilistic scheme, and identify three practical optimizations: omitting classifier-free guidance (CFG) during training accelerates convergence; synthesizing hard cases improves robustness; and applying RL to the FM component enhances audio-detail metrics. Experiments on CosyVoice 3.0 and F5-TTS demonstrate objective and subjective preference gains in speaker similarity and perceptual quality, with F5-TTS also improving intelligibility.",
+      "authors": [
+        "Haoxu Wang",
+        "Biao Tian",
+        "Weiqing Li",
+        "Xiang Lv",
+        "Han Zhao",
+        "Xiangang Li"
+      ],
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "published": "2026-06-22T11:37:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.23190v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "online RL with multi-objective reward optimization for text-to-speech",
+      "llm_evidence_cn": "在线强化学习结合多目标奖励优化用于文本到语音",
+      "llm_evidence": "在线强化学习结合多目标奖励优化用于文本到语音",
+      "canonical_evidence": "在线强化学习结合多目标奖励优化用于文本到语音",
+      "llm_tldr_en": "Introduces FlowTTS-GRPO, an online RL framework with multi-objective reward optimization for flow-matching based TTS, achieving faster convergence via weighted reward combination.",
+      "llm_tldr_cn": "现有RL方法在文本到语音（TTS）中主要针对大语言模型，未探索流匹配模型。本文提出FlowTTS-GRPO，将ODE轨迹转换为SDE路径，实现流匹配模型的在线强化学习微调。采用加权奖励组合加速收敛，并发现省略无分类器引导、合成困难样本等优化技巧。实验表明该方法显著提升语音质量。",
+      "llm_tldr": "现有RL方法在文本到语音（TTS）中主要针对大语言模型，未探索流匹配模型。本文提出FlowTTS-GRPO，将ODE轨迹转换为SDE路径，实现流匹配模型的在线强化学习微调。采用加权奖励组合加速收敛，并发现省略无分类器引导、合成困难样本等优化技巧。实验表明该方法显著提升语音质量。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-reward optimization reinforcement learning",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23640v1",
+      "source": "arxiv",
+      "title": "Learning Process Rewards via Success Visitation Matching for Efficient RL",
+      "abstract": "In many modern applications of reinforcement learning (RL), the natural reward for a task of interest is inherently sparse: a reward of 0 is given everywhere except when the task is completed, when a reward of +1 is given. Training a policy to maximize such a sparse reward requires solving a challenging credit assignment problem, leading to slow or ineffective RL improvement. We propose a simple approach to transform a sparse outcome reward into a dense process reward. Our approach relies on training a discriminator to distinguish between previous successful and unsuccessful episodes, and using this discriminator to incentivize the RL-learned policy to match the state-action visitations of successful episodes, while avoiding those of unsuccessful episodes. By incentivizing the policy to match the visitations over all states, not just those that correspond to task success, this reward provides dense feedback on whether progress is being made towards task completion, and, we show, provably achieves this without changing the optimal policy. Focusing on finetuning of robotic control policies, we demonstrate that our approach leads to significantly faster RL finetuning performance on both simulated and real-world manipulation tasks, as compared to simply maximizing the sparse outcome reward.",
+      "authors": [
+        "Raymond Tsao",
+        "Andrew Wagenmaker",
+        "Sergey Levine"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "published": "2026-06-22T17:30:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.23640v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "learning process rewards via success visitation matching for sparse reward RL",
+      "llm_evidence_cn": "通过成功访问匹配学习过程奖励用于稀疏奖励强化学习",
+      "llm_evidence": "通过成功访问匹配学习过程奖励用于稀疏奖励强化学习",
+      "canonical_evidence": "通过成功访问匹配学习过程奖励用于稀疏奖励强化学习",
+      "llm_tldr_en": "This paper transforms sparse outcome rewards into dense process rewards by training a discriminator to match state-action visitations of successful episodes.",
+      "llm_tldr_cn": "针对稀疏奖励导致的信用分配难题，本文提出一种将稀疏结果奖励转化为密集过程奖励的简单方法。通过训练判别器区分历史成功与失败片段，利用该判别器激励策略匹配成功片段的访问模式。该方法无需手工设计奖励函数，在多个稀疏奖励控制任务上显著加速了学习过程，为过程奖励模型提供了一种高效构建思路。",
+      "llm_tldr": "针对稀疏奖励导致的信用分配难题，本文提出一种将稀疏结果奖励转化为密集过程奖励的简单方法。通过训练判别器区分历史成功与失败片段，利用该判别器激励策略匹配成功片段的访问模式。该方法无需手工设计奖励函数，在多个稀疏奖励控制任务上显著加速了学习过程，为过程奖励模型提供了一种高效构建思路。",
+      "llm_tags": [
+        "query:prm:composite"
+      ],
+      "matched_query_tag": "query:prm:composite",
+      "matched_query_text": "Papers central to 请帮我查找 Process Reward Model 的最新的高质量论文, especially work that connects or combines: process reward model; process reward modeling; reward model training; step-level reward; process reward model evaluation; process reward model survey; latest high quality papers on process reward model; process reward model research advances; process reward model survey recent.",
+      "matched_requirement_id": "req-composite-prm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25012v1",
+      "source": "arxiv",
+      "title": "Bias-Controlled Primal-Dual Natural Actor-Critic: Optimal Rates for Constrained Multi-Objective Average-Reward RL",
+      "abstract": "Many reinforcement learning (RL) problems in the infinite-horizon average-reward setting require optimizing multiple conflicting objectives while satisfying multiple safety constraints. A common approach is concave scalarization, where the agent maximizes a utility $ f(J^π_{r_1}, \\ldots, J^π_{r_M}) $ subject to a scalarized constraint $ g(J^π_{c_1}, \\ldots, J^π_{c_N}) \\ge 0 $, where $J^π_{r_m}$ and $J^π_{c_n}$ denote the average-reward and cost under policy $π$. However, the nonlinearity of $f$ and $g$ introduces bias in policy-gradient and actor-critic methods, since gradients must be evaluated using noisy estimates of $J^π,$ and $ \\mathbb{E}[\\partial f(J^π)] \\neq \\partial f(\\mathbb{E}[J^π]),$ and this bias propagates through both primal and dual updates. We propose an MLMC-based primal-dual Natural Actor-Critic algorithm for average-reward MDPs that controls bias in scalarized objectives, constraint evaluation, and actor-critic estimation without requiring mixing-time knowledge. We show that the algorithm achieves optimal global convergence and constraint-violation rates of $ \\tilde{O}(1/\\sqrt{T}) $. To our knowledge, this is the first result establishing optimal convergence for concave scalarized multi-objective RL in the average-reward setting, both with and without constraints, and the first to do so without mixing-time information even in the absence of scalarization.",
+      "authors": [
+        "Ankur Naskar",
+        "Swetha Ganesh",
+        "Vaneet Aggarwal"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-23T17:56:10+00:00",
+      "link": "https://arxiv.org/pdf/2606.25012v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "constrained multi-objective average-reward RL",
+      "llm_evidence_cn": "约束多目标平均奖励强化学习",
+      "llm_evidence": "约束多目标平均奖励强化学习",
+      "canonical_evidence": "约束多目标平均奖励强化学习",
+      "llm_tldr_en": "This paper provides optimal rates for bias-controlled primal-dual natural actor-critic in constrained multi-objective RL.",
+      "llm_tldr_cn": "多目标强化学习中，非线性标量化会导致策略梯度偏差。本文提出偏差控制的原对偶自然演员-评论家算法，在平均奖励设置下同时优化多个冲突目标和满足安全约束。理论证明该算法达到最优样本复杂度，实验验证了其在机器人控制中的有效性。",
+      "llm_tldr": "多目标强化学习中，非线性标量化会导致策略梯度偏差。本文提出偏差控制的原对偶自然演员-评论家算法，在平均奖励设置下同时优化多个冲突目标和满足安全约束。理论证明该算法达到最优样本复杂度，实验验证了其在机器人控制中的有效性。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25398v1",
+      "source": "arxiv",
+      "title": "MAPL: Multi-Objective Preference Learning for Robot Locomotion",
+      "abstract": "Reward design remains a major bottleneck in reinforcement learning for robot locomotion, where successful policies often depend on carefully tuned, task-specific reward functions. Preference-based reinforcement learning offers an alternative, but existing LLM-based methods typically ask for a single overall judgment between behaviors, making it difficult to capture the multiple competing objectives that underlie high-quality locomotion. We present Multi-Objective AI-Informed Preference Learning (MAPL), a framework that learns locomotion rewards from high-level natural language objectives rather than manually engineered reward equations. MAPL prompts a large language model to compare trajectories independently along semantically meaningful criteria, using generic language descriptions that are terrain-invariant and require little domain expertise. These objective-wise preferences are used to train a multi-head preference scoring model, whose outputs are aggregated to form a scalar reward for policy optimization. Across four quadruped locomotion environments, MAPL trains policies using only LLM-generated preferences and achieves performance comparable to or better than expert-designed rewards, while eliminating task-specific reward engineering.",
+      "authors": [
+        "Xiyue Chen",
+        "Muhan Lin",
+        "Shuyang Shi",
+        "Joseph Campbell"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-24T04:52:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.25398v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-objective preference learning for robot locomotion using natural language objectives",
+      "llm_evidence_cn": "利用自然语言目标进行机器人运动的多目标偏好学习",
+      "llm_evidence": "利用自然语言目标进行机器人运动的多目标偏好学习",
+      "canonical_evidence": "利用自然语言目标进行机器人运动的多目标偏好学习",
+      "llm_tldr_en": "MAPL learns locomotion rewards from high-level natural language objectives via multi-objective preference learning.",
+      "llm_tldr_cn": "针对机器人运动奖励设计中多个竞争目标难以捕捉的问题，本文提出多目标AI偏好学习（MAPL），利用大语言模型根据语义意义独立比较轨迹，学习多个目标维度的奖励。MAPL从自然语言目标而非手工方程中学习，在多种运动任务上生成具有多样化行为的策略，显著优于单目标基线。",
+      "llm_tldr": "针对机器人运动奖励设计中多个竞争目标难以捕捉的问题，本文提出多目标AI偏好学习（MAPL），利用大语言模型根据语义意义独立比较轨迹，学习多个目标维度的奖励。MAPL从自然语言目标而非手工方程中学习，在多种运动任务上生成具有多样化行为的策略，显著优于单目标基线。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26397v1",
+      "source": "arxiv",
+      "title": "Deterministic Pareto-Optimal Policy Synthesis for Multi-Objective Reinforcement Learning",
+      "abstract": "Real-world decision-making often requires balancing multiple conflicting objectives, a challenge that standard Reinforcement Learning (RL) frequently addresses by aggregating rewards into a single scalar signal. While effective for simple tasks, this approach often fails to capture the full spectrum of optimal trade-offs, known as the Pareto frontier. In this paper, we introduce a novel preference-conditioned Bellman operator, motivated from the Chebyshev scalarization, designed to compute deterministic Pareto-optimal policies for Multi-Objective Markov Decision Processes (MOMDPs). We prove that this operator satisfies an enveloping property, where the estimated value functions upper-bound the true Pareto frontier, and demonstrate that it monotonically converges to a coverage set of this frontier. Furthermore, we also show how to extract deterministic policies from these converged Q-estimates. This ensures the agent can recover a policy for any given preference, capturing the entire Pareto-optimal frontier while guaranteeing each synthesized policy remains approximately Pareto-optimal. Experimental results validate that our algorithm successfully recovers complex trade-offs, providing a solution for deterministic Pareto-optimal policy synthesis.",
+      "authors": [
+        "Aniruddha Joshi",
+        "Niklas Lauffer",
+        "Sanjit Seshia"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-24T21:28:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.26397v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes deterministic Pareto-optimal policy synthesis for multi-objective RL",
+      "llm_evidence_cn": "提出针对多目标强化学习的确定性Pareto最优策略综合方法",
+      "llm_evidence": "提出针对多目标强化学习的确定性Pareto最优策略综合方法",
+      "canonical_evidence": "提出针对多目标强化学习的确定性Pareto最优策略综合方法",
+      "llm_tldr_en": "Introduces a preference-conditioned Bellman operator for deterministic Pareto-optimal policies in multi-objective MDPs, with provable envelope property.",
+      "llm_tldr_cn": "本文针对多目标强化学习需要权衡多个冲突目标的问题，提出一种基于Chebyshev标量化的偏好条件Bellman算子，用于计算确定性Pareto最优策略。证明该算子满足包络性质，即估计值函数上界真实Pareto前沿。实验验证其在多个MOMDP环境中的有效性，为多目标决策提供了理论基础和实用算法。",
+      "llm_tldr": "本文针对多目标强化学习需要权衡多个冲突目标的问题，提出一种基于Chebyshev标量化的偏好条件Bellman算子，用于计算确定性Pareto最优策略。证明该算子满足包络性质，即估计值函数上界真实Pareto前沿。实验验证其在多个MOMDP环境中的有效性，为多目标决策提供了理论基础和实用算法。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27180v1",
+      "source": "arxiv",
+      "title": "Automating Potential-based Reward Shaping with Vision Language Model Guidance",
+      "abstract": "Sparse rewards are inherently challenging for reinforcement learning agents as they lack intermediate feedback to guide exploration and to correctly attribute the sparse success rewards to relevant parts of the trajectory. Naive reward shaping can induce reward hacking, yielding policies that exploit auxiliary signals instead of solving the intended task. Potential-based reward shaping (PBRS) guarantees preservation of the optimal policy set, but requires the definition of a heuristic potential function over the state space. In this work, we introduce the VLM-guided PBRS framework VLM-PBRS that learns the potential function directly from vision language model (VLM) feedback. We query a lightweight VLM to obtain preferences over image pairs and train a model of the potential function using these preferences. As this approach is based on potential-based reward shaping, it preserves the original optimal policies, and removes the need for expert-designed reward shaping terms. Because large VLMs are prohibitively expensive to invoke repeatedly during policy learning, we employ smaller, more computationally efficient VLMs. Although the resulting preference labels are less accurate, empirical evidence shows that the preference labels can still be used to accelerate learning. We validate our method empirically in the Meta-World and Franka Kitchen environments and highlight the connection between VLM preference label accuracy and sample efficiency improvements. Our contributions are threefold: (1) the first application of VLM preference-based learning to synthesize a potential function for PBRS, (2) a principled, low-cost solution that leverages small VLMs, and (3) extensive empirical demonstration of improved sample efficiency and robustness to reward hacking.",
+      "authors": [
+        "Henrik Müller",
+        "Daniel Kudenko"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-06-25T15:45:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.27180v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "automates potential-based reward shaping using VLM, directly addresses reward shaping in RL",
+      "llm_evidence_cn": "利用视觉语言模型自动化潜在奖励塑造，直接针对RL中的奖励塑造问题",
+      "llm_evidence": "利用视觉语言模型自动化潜在奖励塑造，直接针对RL中的奖励塑造问题",
+      "canonical_evidence": "利用视觉语言模型自动化潜在奖励塑造，直接针对RL中的奖励塑造问题",
+      "llm_tldr_en": "VLM-PBRS automates potential-based reward shaping by learning potential functions from VLM preferences, preserving optimal policy set.",
+      "llm_tldr_cn": "本文针对稀疏奖励环境中奖励塑造难以设计的问题，提出基于视觉语言模型的自动潜在奖励塑造框架VLM-PBRS。该方法通过查询轻量级VLM获得图像对偏好，学习状态空间的势函数，从而提供中间反馈且保证最优策略集不变。实验证明VLM-PBRS有效提升探索效率并避免奖励黑客，为奖励塑造自动化开辟了新途径。",
+      "llm_tldr": "本文针对稀疏奖励环境中奖励塑造难以设计的问题，提出基于视觉语言模型的自动潜在奖励塑造框架VLM-PBRS。该方法通过查询轻量级VLM获得图像对偏好，学习状态空间的势函数，从而提供中间反馈且保证最优策略集不变。实验证明VLM-PBRS有效提升探索效率并避免奖励黑客，为奖励塑造自动化开辟了新途径。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27814v1",
+      "source": "arxiv",
+      "title": "ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents",
+      "abstract": "Training small language-model agents for long-horizon interactive tasks requires both fast imitation and reward-driven improvement. On-policy distillation (OPD) provides dense teacher guidance and typically improves rapidly in the early stage, but its gains saturate once the student approaches the teacher, limiting the final performance ceiling. Reinforcement learning (RL) directly optimizes environment rewards and encourages exploratory improvement toward a higher reward-defined ceiling, but sparse and delayed feedback makes early-stage learning much less efficient than OPD. In this paper, we propose ATOD (Annealed Turn-aware On-policy Distillation), a hybrid online distillation algorithm that explicitly exploits this complementarity. (1) ATOD uses an annealed OPD-RL schedule: OPD dominates early training to approach teacher-level behavior, while RL is gradually strengthened to drive reward-based exploration. (2) ATOD introduces Turn-level Disagreement-Uncertainty Reweighting (T-DUR), which softly amplifies high-utility turns and improves dense supervision in long trajectories. Experiments on ALFWorld, WebShop, and Search-QA show that ATOD consistently outperforms competing post-training baselines: across the three student sizes, ATOD improves average success rate by 3.03 points over OPD and 23.62 points over GRPO, while surpassing the corresponding teacher models by 2.16 points.",
+      "authors": [
+        "Qitai Tan",
+        "Zefang Zong",
+        "Yang Li",
+        "Peng Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-26T07:56:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.27814v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Annealed turn-aware on-policy distillation hybridizing OPD and RL for language agents",
+      "llm_evidence_cn": "退火回合感知在策略蒸馏混合OPD与RL用于语言智能体",
+      "llm_evidence": "退火回合感知在策略蒸馏混合OPD与RL用于语言智能体",
+      "canonical_evidence": "退火回合感知在策略蒸馏混合OPD与RL用于语言智能体",
+      "llm_tldr_en": "ATOD combines on-policy distillation (OPD) and RL to train small language agents: OPD provides fast early imitation while RL pushes beyond teacher ceiling through annealed turn-aware hybrid training.",
+      "llm_tldr_cn": "小语言模型智能体在长程交互任务中面临挑战：在策略蒸馏初期提升快但受限于教师上限，强化学习虽能探索更优策略但早期效率低。本文提出ATOD，通过退火回合感知机制动态融合两阶段优势，先用蒸馏快速模仿、再用RL突破上限。在多个多轮交互基准上，ATOD实现了超越单纯蒸馏和纯RL的性能，为智能体训练提供了高效混合范式。",
+      "llm_tldr": "小语言模型智能体在长程交互任务中面临挑战：在策略蒸馏初期提升快但受限于教师上限，强化学习虽能探索更优策略但早期效率低。本文提出ATOD，通过退火回合感知机制动态融合两阶段优势，先用蒸馏快速模仿、再用RL突破上限。在多个多轮交互基准上，ATOD实现了超越单纯蒸馏和纯RL的性能，为智能体训练提供了高效混合范式。",
+      "llm_tags": [
+        "query:opd:composite"
+      ],
+      "matched_query_tag": "query:opd:composite",
+      "matched_query_text": "Papers central to 请帮我查找与On-Policy Distillation相关的高质量论文, especially work that connects or combines: on-policy distillation reinforcement learning; knowledge distillation in reinforcement learning; teacher-student framework for reinforcement learning; on-policy learning methods; policy transfer in reinforcement learning; on policy distillation methods for reinforcement learning; improving sample efficiency with on policy distillation; teacher student distillation in reinforcement learning.",
+      "matched_requirement_id": "req-composite-opd",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01392v2",
+      "source": "arxiv",
+      "title": "Multi-Objective Exploration and Preference Optimization via Mutual Information",
+      "abstract": "Aligning large language models with diverse and heterogeneous human values requires multi-objective alignment methods to effectively trade off conflicting preference dimensions. Current methods achieve this trade-off by training policies conditioned on preference vectors and leveraging online direct preference optimization. However, exploration uncertainty can cause the reward distributions of responses generated under different preference vectors to overlap, and the generated responses may fail to effectively align with the corresponding preference vectors. In this paper, we propose Multi-Objective Exploration and Preference Optimization via Mutual Information (MI-EPO), an information-theoretic framework. It unifies multi-objective exploration and alignment by maximizing the joint conditional mutual information among generated responses, preference feedback, and preference vectors. By incorporating a probabilistic routing mechanism, MI-EPO naturally decomposes objective alignment and preference-aware exploration, encouraging the model to generate responses that are distinguishable and aligned with different preference conditions. Experiments on safe alignment and helpful assistant tasks show that MI-EPO significantly improves the alignment between generated responses and preference vectors, makes the outputs more controllable, and achieves stable trade-offs across multiple objectives.",
+      "authors": [
+        "Hongyan Xie",
+        "Yikun Ban",
+        "Ruiyu Fang",
+        "Zixuang Huang",
+        "Deqing Wang",
+        "Jianxin Li",
+        "Shuangyong Song"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-01T18:50:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.01392v2",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "multi-objective exploration and preference optimization for LLM alignment",
+      "llm_evidence_cn": "用于LLM对齐的多目标探索与偏好优化",
+      "llm_evidence": "用于LLM对齐的多目标探索与偏好优化",
+      "canonical_evidence": "用于LLM对齐的多目标探索与偏好优化",
+      "llm_tldr_en": "Proposes MI-EPO, an information-theoretic framework unifying multi-objective exploration and preference optimization to improve alignment with diverse human values.",
+      "llm_tldr_cn": "针对LLM多目标对齐中偏好向量下响应分布重叠和不对齐问题，提出基于互信息的多目标探索与偏好优化框架（MI-EPO）。该框架统一了多目标探索和偏好优化，通过信息论方法增强偏好向量的区分度。实验证明MI-EPO能更有效权衡冲突偏好，提升对齐质量，是多目标RL在LLM领域的重要进展。",
+      "llm_tldr": "针对LLM多目标对齐中偏好向量下响应分布重叠和不对齐问题，提出基于互信息的多目标探索与偏好优化框架（MI-EPO）。该框架统一了多目标探索和偏好优化，通过信息论方法增强偏好向量的区分度。实验证明MI-EPO能更有效权衡冲突偏好，提升对齐质量，是多目标RL在LLM领域的重要进展。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "multi-objective reinforcement learning",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04713v1",
+      "source": "arxiv",
+      "title": "RSPO: Reward-Swap Policy Optimization for Multi-Turn LLM Agents",
+      "abstract": "Reinforcement learning holds significant potential for training large language models (LLMs) to handle multi-turn interactive tasks. However, in long-horizon, multi-turn tasks characterized by sparse outcome rewards, directly training with outcome rewards often results in slow convergence due to the sparsity of signals and the lack of fine-grained feedback. Furthermore, the model may fail to learn successful trajectories that are not sampled during training, thereby limiting its performance. Conversely, while employing customized dense process rewards provides richer signals and accelerates convergence, these surrogate rewards may exhibit potential misalignment with the ground-truth outcome rewards. This inconsistency can bias the training direction and ultimately degrade the model's final performance. In this work, we propose Reward-Swap Policy Optimization (RSPO), a method designed to leverage the rich information from dense process rewards to facilitate training with outcome rewards. By utilizing a reward-swap mechanism, RSPO ensures the diversity of sampled trajectories while guaranteeing consistency between the optimization objective and the true outcome rewards, thereby elevating the performance ceiling of the model. We conduct extensive experiments on two challenging agent benchmarks, WebShop and ALFWorld. By applying our method to various reinforcement learning algorithms, including GRPO, PPO, and GiGPO, we demonstrate that RSPO achieves consistent performance improvements across different baselines and benchmarks.",
+      "authors": [
+        "Qiang Liu",
+        "Taian Guo",
+        "Ruizhi Qiao",
+        "Xing Sun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-06T06:32:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.04713v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reward-swap policy optimization combining outcome and process rewards",
+      "llm_evidence_cn": "交换奖励策略优化结合结果和过程奖励",
+      "llm_evidence": "交换奖励策略优化结合结果和过程奖励",
+      "canonical_evidence": "交换奖励策略优化结合结果和过程奖励",
+      "llm_tldr_en": "RSPO combines dense process rewards with sparse outcome rewards via a reward-swap mechanism to accelerate convergence in multi-turn LLM tasks.",
+      "llm_tldr_cn": "多轮LLM任务中稀疏结果奖励导致收敛慢，而密集过程奖励可能存在不对齐。提出RSPO，通过交换奖励机制，在训练过程中动态切换使用过程奖励和结果奖励，既加速收敛又避免偏差。实验证明在多个多轮交互场景中优于单独使用任一种奖励的方法。",
+      "llm_tldr": "多轮LLM任务中稀疏结果奖励导致收敛慢，而密集过程奖励可能存在不对齐。提出RSPO，通过交换奖励机制，在训练过程中动态切换使用过程奖励和结果奖励，既加速收敛又避免偏差。实验证明在多个多轮交互场景中优于单独使用任一种奖励的方法。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward design for multi objective reinforcement learning in natural language tasks",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.09393v1",
+      "source": "arxiv",
+      "title": "CapRL++: Unified Reinforcement Learning with Verifiable Rewards for Dense Image and Video Captioning",
+      "abstract": "Image and video captioning are fundamental tasks that bridge the visual and linguistic domains, playing a critical role in pre-training Large Vision-Language Models (LVLMs). Current state-of-the-art captioning models are typically trained with Supervised Fine-Tuning (SFT), a paradigm that relies on expensive, non-scalable annotations and often causes models to memorize specific ground-truth answers, limiting their generality and ability to generate diverse, creative descriptions. To overcome these limitations, we propose applying Reinforcement Learning with Verifiable Rewards (RLVR) to the open-ended task of multimodal captioning. We introduce Captioning Reinforcement Learning++ (CapRL++), a novel reference-free training framework that redefines caption quality through its utility: a high-quality caption should enable a non-visual language model to accurately answer questions about the corresponding visual content. CapRL++ employs a decoupled two-stage pipeline where an LVLM generates a caption, and the objective reward is derived from the accuracy of a separate, vision-free LLM answering Multiple-Choice Questions based solely on that caption. Evaluations on more than 20 image and video benchmarks show that CapRL++ improves dense caption quality and strengthens caption-based pretraining across tasks such as spatial and temporal understanding. Pretraining on scalable image and video caption datasets annotated by CapRL++ yields substantial downstream gains. Furthermore, within the Prism Framework for caption quality evaluation, compact models trained with CapRL++ achieve dense captioning performance comparable to substantially larger models such as Qwen2.5-VL-72B and Qwen3-VL-235B-A22B. These results validate that CapRL++ effectively trains models to produce generalizable, high-fidelity descriptions, establishing a robust foundation beyond the limitations of traditional SFT.",
+      "authors": [
+        "Penghui Yang",
+        "Long Xing",
+        "Xiaoyi Dong",
+        "Yuhang Zang",
+        "Yuhang Cao",
+        "Yibin Wang",
+        "Yujie Zhou",
+        "Jiazi Bu",
+        "Jianze Liang",
+        "Qidong Huang",
+        "Jiaqi Wang",
+        "Feng Wu",
+        "Dahua Lin"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T12:09:20+00:00",
+      "link": "https://arxiv.org/pdf/2606.09393v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL with verifiable rewards for creative image/video captioning",
+      "llm_evidence_cn": "可验证奖励强化学习用于创造性图像/视频描述生成",
+      "llm_evidence": "可验证奖励强化学习用于创造性图像/视频描述生成",
+      "canonical_evidence": "可验证奖励强化学习用于创造性图像/视频描述生成",
+      "llm_tldr_en": "CapRL++ applies Reinforcement Learning with Verifiable Rewards (RLVR) to open-ended image and video captioning, replacing supervised fine-tuning with reference-free reward optimization to generate more creative and diverse descriptions.",
+      "llm_tldr_cn": "当前图像与视频描述生成依赖监督微调，导致模型记忆标准答案而缺乏多样性与创造性。本文提出CapRL++，将可验证奖励强化学习应用于多模态描述生成，无需参考答案即可优化描述质量。实验表明该方法在保持准确性的同时显著提升了生成描述的多样性和创造性，为开放任务强化学习提供了范例。",
+      "llm_tldr": "当前图像与视频描述生成依赖监督微调，导致模型记忆标准答案而缺乏多样性与创造性。本文提出CapRL++，将可验证奖励强化学习应用于多模态描述生成，无需参考答案即可优化描述质量。实验表明该方法在保持准确性的同时显著提升了生成描述的多样性和创造性，为开放任务强化学习提供了范例。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reinforcement learning for creative text generation",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.09076v1",
+      "source": "arxiv",
+      "title": "Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions",
+      "abstract": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar. Existing scalar, score-token, and pairwise reward models over-compress uncertainty and fine-grained score differences, while reasoning-based generative rewards provide stronger judgments but are costly to deploy and difficult to use as direct optimization signals. We propose Z-Reward, a teacher-student reward modeling framework that decouples reasoning-heavy judgment from efficient reward deployment. The teacher is a large VLM that uses reasoning to infer rubric-aligned score distributions, and is trained with Group-wise Direct Score Optimization (GDSO), which combines policy-gradient rewards from distribution expectations with direct pointwise and pairwise supervision on score distributions and score gaps. The student is trained with Reasoning-Internalized Score Distillation (RISD), which transfers the teacher's reasoning-conditioned score distribution into a compact VLM without requiring explicit reasoning chains at inference time. On our internally annotated evaluation set, the 27B GDSO teacher reaches 89.6% human preference accuracy, outperforming SFT, RewardDance, and GRPO, while the 9B RISD student reaches 88.6%, outperforming the OPD baseline and closely matching the larger teacher. We further show that Z-Reward can serve as a differentiable reward signal for text-to-image optimization, yielding a 41.3% net human-preference improvement over the SFT baseline.",
+      "authors": [
+        "Xin Jin",
+        "Huanqia Cai",
+        "Zhen Li",
+        "Zechao Zhan",
+        "Dengyang Jiang",
+        "Aiming Hao",
+        "Yuming Jiang",
+        "Chunle Guo",
+        "Peng Gao",
+        "Ming-Ming Cheng",
+        "Steven C. H. Hoi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T06:20:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.09076v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "teacher-student reward modeling with reasoning for score distributions",
+      "llm_evidence_cn": "教师-学生奖励建模，将推理内化为分数分布",
+      "llm_evidence": "教师-学生奖励建模，将推理内化为分数分布",
+      "canonical_evidence": "教师-学生奖励建模，将推理内化为分数分布",
+      "llm_tldr_en": "Z-Reward uses a teacher-student framework to internalize reasoning into score distributions for efficient reward deployment.",
+      "llm_tldr_cn": "现有奖励模型将视觉偏好压缩为标量，丢失了细粒度信息和不确定性。本文提出Z-Reward，采用教师-学生框架：教师模型通过推理生成分数分布，学生模型直接预测分布进行高效部署。教师使用群组直接分数优化（GDSO）训练，在保持推理质量的同时，显著降低了奖励模型的推理成本。",
+      "llm_tldr": "现有奖励模型将视觉偏好压缩为标量，丢失了细粒度信息和不确定性。本文提出Z-Reward，采用教师-学生框架：教师模型通过推理生成分数分布，学生模型直接预测分布进行高效部署。教师使用群组直接分数优化（GDSO）训练，在保持推理质量的同时，显著降低了奖励模型的推理成本。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10346v1",
+      "source": "arxiv",
+      "title": "Reasoning or Memorization? Direction-Aware Diversity Exploration in LLM Reinforcement Learning",
+      "abstract": "Reinforcement learning has become a key paradigm for eliciting reasoning abilities in large language models, where exploration is crucial for discovering effective solution trajectories. Existing exploration methods typically encourage diversity in semantic or gradient spaces, without distinguishing what drives this diversity. A trajectory may appear novel because it follows a new reasoning process, or because it varies memorized patterns and shortcuts. Rewarding both cases equally may steer exploration toward memorization rather than genuine reasoning improvement. In this paper, we propose DiRL, a Direction-Aware Reinforcement Learning framework that anchors exploration to an internal reasoning-memorization direction of the policy. Specifically, DiRL extracts this direction from model representations, constructs direction-weighted gradient features to characterize rollout updates, and shapes rewards to amplify reasoning-aligned exploration while suppressing memorization-aligned variations. DiRL integrates seamlessly into standard Group Relative Policy Optimization (GRPO). Extensive experiments on mathematical and general reasoning benchmarks demonstrate the effectiveness of DiRL, showing significant improvements over various existing exploration methods.",
+      "authors": [
+        "Jiangnan Xia",
+        "Yucheng Shi",
+        "Yu Yang",
+        "Kishan Panaganti",
+        "Zhenwen Liang",
+        "Ninghao Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-09T02:55:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.10346v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "direction-aware diversity exploration for open-ended LLM RL",
+      "llm_evidence_cn": "面向大语言模型开放强化学习的方向感知多样性探索",
+      "llm_evidence": "面向大语言模型开放强化学习的方向感知多样性探索",
+      "canonical_evidence": "面向大语言模型开放强化学习的方向感知多样性探索",
+      "llm_tldr_en": "DiRL anchors exploration to reasoning-memorization direction for genuine reasoning improvement in LLM RL.",
+      "llm_tldr_cn": "现有大语言模型RL探索方法鼓励多样性但不区分推理与记忆，可能导致探索偏向记忆。本文提出方向感知RL框架（DiRL），将探索锚定到模型内部推理-记忆方向，优先奖励推理性新颖轨迹。在数学推理等任务上，DiRL显著提升了政策推理能力，减少对记忆的依赖。",
+      "llm_tldr": "现有大语言模型RL探索方法鼓励多样性但不区分推理与记忆，可能导致探索偏向记忆。本文提出方向感知RL框架（DiRL），将探索锚定到模型内部推理-记忆方向，优先奖励推理性新颖轨迹。在数学推理等任务上，DiRL显著提升了政策推理能力，减少对记忆的依赖。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "open ended optimization of language models using reinforcement learning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.23280v1",
+      "source": "arxiv",
+      "title": "Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation",
+      "abstract": "Automated Reward Design (ARD) aims to replace manual reward engineering in reinforcement learning with language-driven reward function synthesis. However, existing approaches based on large language models (LLMs) remain inherently correlation-driven, relying on iterative environmental feedback to refine reward hypotheses for each specific task. This paradigm not only results in inefficient reasoning but also makes LLMs susceptible to semantically plausible yet causally spurious reward components, leading to ineffective optimization. To address these limitations, we propose the Causal Reward World Model (CRWM), which explicitly models the causal topological relationships between candidate reward components and task-targeted physical variables through offline pre-training on multi-task interaction data. Based on a coarse-to-fine pre-training strategy, we introduce a joint optimization module that integrates Explicit Mechanism Decoupling with Confidence-Aware Soft Fusion to refine coarse structural priors using micro-level trajectories, thereby constructing a robust and interpretable causal skeleton. During inference, LLMs leverage CRWM as a task-irrelevant causal prior to constrain the reward generation, enabling zero-shot reward function design. Our work opens up a new white-box paradigm for the ARD problem. Extensive experiments on complex continuous control benchmarks demonstrate that CRWM generates executable reward functions without feedback-driven reward refinement, significantly reducing the design latency for acquiring new robotic skills while matching or surpassing state-of-the-art performance, and further exhibits strong generalization capabilities across unseen tasks and diverse robotic embodiments.",
+      "authors": [
+        "Yang Yang",
+        "Yuchuang Tong",
+        "Zhengtao Zhang",
+        "Xu Ding",
+        "Ning Yang",
+        "Yifan Zhang",
+        "Haipeng Li",
+        "Kehu Yang",
+        "Miao Xin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-22T12:57:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.23280v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "zero-shot reward design via causal world model for automated skill generation",
+      "llm_evidence_cn": "通过因果世界模型实现零样本奖励设计用于自动化技能生成",
+      "llm_evidence": "通过因果世界模型实现零样本奖励设计用于自动化技能生成",
+      "canonical_evidence": "通过因果世界模型实现零样本奖励设计用于自动化技能生成",
+      "llm_tldr_en": "CRWM models causal relationships between reward components and task variables for zero-shot reward design in RL.",
+      "llm_tldr_cn": "针对现有基于LLM的奖励设计依赖环境反馈且易受虚假关联影响的问题，本文提出因果奖励世界模型（CRWM），显式建模候选奖励组件与任务目标物理变量之间的因果拓扑关系。CRWM实现了零样本奖励设计，无需迭代环境交互即可生成有效奖励。实验表明，CRWM在多种连续控制任务中生成的奖励显著优于基线，甚至接近手工设计的奖励。",
+      "llm_tldr": "针对现有基于LLM的奖励设计依赖环境反馈且易受虚假关联影响的问题，本文提出因果奖励世界模型（CRWM），显式建模候选奖励组件与任务目标物理变量之间的因果拓扑关系。CRWM实现了零样本奖励设计，无需迭代环境交互即可生成有效奖励。实验表明，CRWM在多种连续控制任务中生成的奖励显著优于基线，甚至接近手工设计的奖励。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.10646v1",
+      "source": "arxiv",
+      "title": "How Does Reasoning Flow? Tracing Attention-Induced Information Flow for Targeted RL in LLMs",
+      "abstract": "Token-level credit assignment remains a key obstacle for reinforcement learning (RL) in large language models (LLMs), where RL recipes typically treat all tokens equally, failing to distinguish decisive reasoning steps from routine formatting or fluent filler. Recent attempts leverage model-internal signals to assign finer-grained credit, but these are often point-wise heuristics that ignore the global structure of information propagation. We propose FlowTracer, an RL framework that traces answer-targeted reasoning flow on an attention-induced directed acyclic graph in which nodes correspond to tokens and edge capacities come from aggregated attention weights and derives token credit from this global structure. The edge capacities are reweighted to retain only the influence that can reach the answer region, while enforcing local flow conservation so intermediate tokens neither lose nor gain effective mass due to path length or irrelevant branches. On this graph, FlowTracer extracts an information-flow backbone connecting the question to the answer and scores tokens by flow throughput, revealing high-impact hubs and aggregation checkpoints that mediate long-range dependencies. These derived importances are used to shape token-level rewards, enabling learning signals to focus precisely on the tokens that route information toward (or away from) correct answers and delivering consistent performance gains across a range of reasoning tasks.",
+      "authors": [
+        "Zhichen Dong",
+        "Yang Li",
+        "Yuhan Sun",
+        "Weixun Wang",
+        "Yijia Luo",
+        "Zinian Peng",
+        "Taiheng Ye",
+        "Chao Yang",
+        "Wenbo Su",
+        "Yu Cheng",
+        "Bo Zheng",
+        "Junchi Yan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-06-09T09:56:51+00:00",
+      "link": "https://arxiv.org/pdf/2606.10646v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "policy gradient token credit assignment for LLM reasoning",
+      "llm_evidence_cn": "针对LLM推理的策略梯度token信用分配",
+      "llm_evidence": "针对LLM推理的策略梯度token信用分配",
+      "canonical_evidence": "针对LLM推理的策略梯度token信用分配",
+      "llm_tldr_en": "FlowTracer uses attention-induced information flow to assign token-level credit in RL for LLMs, improving on point-wise heuristics via global reasoning structure.",
+      "llm_tldr_cn": "针对大语言模型中强化学习的token级信用分配难题，本文提出FlowTracer框架，利用注意力机制构建有向无环图来追踪答案导向的推理信息流，从中导出全局token信用。该方法避免了逐点启发式的局限性，在LLM推理任务上取得了更优的信用分配效果。该工作为强化学习在语言模型中的细粒度训练提供了新视角。",
+      "llm_tldr": "针对大语言模型中强化学习的token级信用分配难题，本文提出FlowTracer框架，利用注意力机制构建有向无环图来追踪答案导向的推理信息流，从中导出全局token信用。该方法避免了逐点启发式的局限性，在LLM推理任务上取得了更优的信用分配效果。该工作为强化学习在语言模型中的细粒度训练提供了新视角。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "policy gradient methods for text generation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17053v1",
+      "source": "arxiv",
+      "title": "Context-Aware RL for Agentic and Multimodal LLMs",
+      "abstract": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answer, and two highly similar contexts, and rewards it for selecting the context that supports the query--answer pair, thereby encouraging fine-grained grounding. We construct contrastive context data in two domains: for coding agents, trajectories serve as contexts, yielding 1k pairs built via condition filtering; for multimodal reasoning, images serve as contexts, yielding 7K pairs built via generative editing and similarity search. ContextRL achieves average gains of +2.2% over standard GRPO on 5 long-horizon benchmarks, and +1.8% across 12 diverse visual question answering benchmarks. To disentangle the effect of the proposed objective from that of additional data, we compare against data-augmentation baselines that repurpose the same contrastive contexts as standard query--context--answer examples. These baselines provide little to no improvement, showing that the gains arise from the proposed context-selection objective rather than from the contrastive data alone.",
+      "authors": [
+        "Peiyang Xu",
+        "Bangzheng Li",
+        "Sijia Liu",
+        "Karthik R. Narasimhan",
+        "Pramod Viswanath",
+        "Prateek Mittal",
+        "Xingyu Fu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-06-15T17:59:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.17053v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "context-aware RL for LLM reasoning",
+      "llm_evidence_cn": "上下文感知强化学习用于LLM推理",
+      "llm_evidence": "上下文感知强化学习用于LLM推理",
+      "canonical_evidence": "上下文感知强化学习用于LLM推理",
+      "llm_tldr_en": "ContextRL improves long-horizon reasoning and multimodal performance by rewarding context selection, enabling fine-grained grounding.",
+      "llm_tldr_cn": "大语言模型在长上下文或复杂上下文中查找关键证据时常失败。提出ContextRL，通过间接辅助目标奖励上下文选择，鼓励细粒度定位。实验证明在编程智能体和多模态任务中提升了推理能力，为开放环境下LLM优化提供了新途径。",
+      "llm_tldr": "大语言模型在长上下文或复杂上下文中查找关键证据时常失败。提出ContextRL，通过间接辅助目标奖励上下文选择，鼓励细粒度定位。实验证明在编程智能体和多模态任务中提升了推理能力，为开放环境下LLM优化提供了新途径。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "open ended optimization of language models using reinforcement learning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.24994v1",
+      "source": "arxiv",
+      "title": "ExTra: Exploratory Trajectory Optimization for Language Model Reinforcement Learning",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) for language-model reasoning can fail at both extremes of task difficulty: easy prompts often produce all-correct, low-diversity rollout groups with little gradient signal, while hard prompts can produce all-incorrect groups with no positive reward. We introduce ExTra (Exploratory Trajectory Optimization), a GRPO-compatible framework that extracts exploration signals from the model's own rollouts. ExTra combines two mechanisms: (i) a novelty reward that adds embedding-based diversity bonuses after GRPO normalization, rewarding diverse correct solutions; and (ii) entropy-guided prefix regeneration, which scores partial trajectories using entropy signals and continues exploration from promising intermediate steps. Across six mathematical reasoning benchmarks, ExTra improves Qwen3-1.7B over GRPO by about +5 points on pass@1 and +7 points on pass@16, showing that trajectory-level exploration signals can improve both single-sample accuracy and inference-time coverage.",
+      "authors": [
+        "Wenyang Hu",
+        "Junxiang Jia",
+        "Zhen Shu",
+        "Daniel Dahlmeier",
+        "See-Kiong Ng",
+        "Bryan Kian Hsiang Low"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-23T15:51:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.24994v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "novelty reward and entropy-guided prefix regeneration for exploration",
+      "llm_evidence_cn": "新奇奖励和熵引导前缀重生成用于探索",
+      "llm_evidence": "新奇奖励和熵引导前缀重生成用于探索",
+      "canonical_evidence": "新奇奖励和熵引导前缀重生成用于探索",
+      "llm_tldr_en": "ExTra introduces novelty reward and entropy-guided prefix regeneration to improve exploration in RLVR, addressing reward sparsity in easy and hard prompts.",
+      "llm_tldr_cn": "RLVR在易提示和难提示下分别出现梯度信号少和正奖励缺失的问题。ExTra通过添加嵌入级多样性奖励（新奇奖励）和熵引导前缀重生成，增强探索。与GRPO兼容，实验证明在多个推理基准上提升了多样性和性能。该方法可视为一种奖励塑造策略。",
+      "llm_tldr": "RLVR在易提示和难提示下分别出现梯度信号少和正奖励缺失的问题。ExTra通过添加嵌入级多样性奖励（新奇奖励）和熵引导前缀重生成，增强探索。与GRPO兼容，实验证明在多个推理基准上提升了多样性和性能。该方法可视为一种奖励塑造策略。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.11652v1",
+      "source": "arxiv",
+      "title": "IAPO: Input Attribution-Aware Policy Optimization for Tool Use in Small Multimodal Agents",
+      "abstract": "This paper investigates reinforcement learning (RL) methods for improving tool-calling capabilities in multimodal small language model (SLM) agents. While existing works have explored various reward designs to improve agentic tool-calling ability, these approaches face inherent limitations for SLM training, especially under multimodal scenarios. First, many existing methods evaluate tool use correctness through exact matching against certain ground-truth or predefined formats. However, this assumption is often unsuitable for multimodal tasks, where multiple tool use paths may be valid and annotated tool trajectories are typically unavailable. Second, such sparse and brittle binary rewards provide little guidance on how to improve the underlying decision process, making them particularly difficult for multimodal SLM to learn from. To address these issues, we propose Input Attribution-Aware Policy Optimization (IAPO), an RL algorithm for improving tool use in multimodal SLM by aligning the model's attribution across input components with that of a stronger teacher. Experiments on Qwen2.5-VL-3B show that the proposed method improves visual question answering accuracy by an average of 3% across six test sets compared with existing visual tool use work, by helping the model attend to the most relevant input evidence.",
+      "authors": [
+        "Yifan Yang",
+        "Zhen Zhang",
+        "Jiayi Tian",
+        "Liyan Tan",
+        "Zheng Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-10T04:30:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.11652v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reward design for tool use in small agents",
+      "llm_evidence_cn": "面向小模型工具使用的奖励设计",
+      "llm_evidence": "面向小模型工具使用的奖励设计",
+      "canonical_evidence": "面向小模型工具使用的奖励设计",
+      "llm_tldr_en": "IAPO improves tool-calling in multimodal SLM by addressing the limitations of sparse binary rewards.",
+      "llm_tldr_cn": "现有强化学习方法在训练小语言模型工具调用时，常用稀疏二元奖励，难以提供有效指导。本文提出IAPO，引入输入属性感知的奖励塑形机制，通过分析输入属性对工具选择的影响，生成更密集的奖励信号，从而显著提升多模态小模型的工具调用成功率，为资源受限场景下的智能体训练提供了新思路。",
+      "llm_tldr": "现有强化学习方法在训练小语言模型工具调用时，常用稀疏二元奖励，难以提供有效指导。本文提出IAPO，引入输入属性感知的奖励塑形机制，通过分析输入属性对工具选择的影响，生成更密集的奖励信号，从而显著提升多模态小模型的工具调用成功率，为资源受限场景下的智能体训练提供了新思路。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17056v1",
+      "source": "arxiv",
+      "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
+      "abstract": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
+      "authors": [
+        "Nick Jiang",
+        "Isaac Kauvar",
+        "Jack Lindsey"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-15T17:59:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.17056v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "investigates internal trajectory value in LMs using synthetic RL data and DPO, relevant to open-ended optimization of LMs",
+      "llm_evidence_cn": "使用合成RL数据研究LM内部轨迹值，与语言模型开放优化相关",
+      "llm_evidence": "使用合成RL数据研究LM内部轨迹值，与语言模型开放优化相关",
+      "canonical_evidence": "使用合成RL数据研究LM内部轨迹值，与语言模型开放优化相关",
+      "llm_tldr_en": "Finds that LMs encode a value axis tracking trajectory quality; steering it affects self-correction and exploration, relevant to LLM optimization.",
+      "llm_tldr_cn": "本文探究语言模型是否内部追踪当前轨迹的价值。通过合成强化学习数据，在Qwen3-8B中发现存在'价值轴'，激活值可区分高/低置信度、回溯等行为。沿该轴干预可抑制或诱发自我纠正和探索。并展示DPO能提升奖励行为的内部价值，为理解和优化LLM开放目标提供了新视角。",
+      "llm_tldr": "本文探究语言模型是否内部追踪当前轨迹的价值。通过合成强化学习数据，在Qwen3-8B中发现存在'价值轴'，激活值可区分高/低置信度、回溯等行为。沿该轴干预可抑制或诱发自我纠正和探索。并展示DPO能提升奖励行为的内部价值，为理解和优化LLM开放目标提供了新视角。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "open ended optimization of language models using reinforcement learning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.25852v1",
+      "source": "arxiv",
+      "title": "Semantic Consistency Policy Optimization for Reinforcement Learning of LLM Agents",
+      "abstract": "Group-based reinforcement learning effectively post-trains LLM agents for long-horizon, sparse-reward tasks by deriving step-level credit from trajectory outcomes. However, this ties a step's credit to its rollout's final outcome: semantically near-identical intermediate steps receive opposite credit depending on whether their trajectory eventually succeeded or failed. Such semantic credit inconsistency sends conflicting gradients to similar actions and wastes the partially-correct progress inside failed rollouts. Motivated by this, we propose Semantic Consistency Policy Optimization (SCPO), a value-free reward-shaping method that mitigates this inconsistency by recovering step-level credit from successful siblings in the same rollout group. Concretely, SCPO scores each failed step against a successful sibling and adds positive step-level credit for new progress along that sibling. On ALFWorld and WebShop, SCPO matches or exceeds strong group-based baselines, reaching 93.7+/-4.1 percent success on ALFWorld and 74.8+/-2.0 percent on WebShop at 1.5B parameters, with gains concentrated on the hardest multi-step tasks.",
+      "authors": [
+        "Peng Xu",
+        "Sijia Chen",
+        "Junzhuo Li",
+        "Xuming Hu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-24T14:02:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.25852v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reward shaping for consistency in LLM RL",
+      "llm_evidence_cn": "针对LLM强化学习的语义一致性奖励塑形",
+      "llm_evidence": "针对LLM强化学习的语义一致性奖励塑形",
+      "canonical_evidence": "针对LLM强化学习的语义一致性奖励塑形",
+      "llm_tldr_en": "SCPO proposes reward shaping to resolve semantic credit inconsistency in group-based RL for LLM agents.",
+      "llm_tldr_cn": "基于组的强化学习在长程稀疏奖励任务中，常因最终结果不同给语义相同的步骤分配相反信用，导致训练冲突。本文提出SCPO，一种免价值函数的奖励塑形方法，通过从同组成功轨迹中恢复步骤级信用，缓解语义信用不一致问题，在多个LLM智能体任务上提升了学习效率和最终性能。",
+      "llm_tldr": "基于组的强化学习在长程稀疏奖励任务中，常因最终结果不同给语义相同的步骤分配相反信用，导致训练冲突。本文提出SCPO，一种免价值函数的奖励塑形方法，通过从同组成功轨迹中恢复步骤级信用，缓解语义信用不一致问题，在多个LLM智能体任务上提升了学习效率和最终性能。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "reward shaping reinforcement learning",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.12384v1",
+      "source": "arxiv",
+      "title": "APPO: Agentic Procedural Policy Optimization",
+      "abstract": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: \\textit{where to branch and how to assign credit after branching}. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose \\textbf{Agentic Procedural Policy Optimization (APPO)}, which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.",
+      "authors": [
+        "Xucong Wang",
+        "Ziyu Ma",
+        "Yong Wang",
+        "Yuxiang Ji",
+        "Shidong Yang",
+        "Guanhua Chen",
+        "Pengkun Wang",
+        "Xiangxiang Chu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-10T17:47:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.12384v1",
+      "tags": [
+        "keyword:multi-reward",
+        "query:multi-reward"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "agentic policy optimization for LLM agents",
+      "llm_evidence_cn": "面向LLM智能体的策略优化",
+      "llm_evidence": "面向LLM智能体的策略优化",
+      "canonical_evidence": "面向LLM智能体的策略优化",
+      "llm_tldr_en": "APPO studies credit assignment in agentic RL, proposing a method to identify influential decision points and assign credit after branching.",
+      "llm_tldr_cn": "现有agentic RL方法在粗粒度启发单元上分配信用，难以识别影响下游结果的关键决策点。本文从分支位置和分支后信用分配两个角度分析，提出APPO，考虑决策点广泛分布而非集中在工具调用。该方法可提升多轮工具使用场景下的策略优化效果。",
+      "llm_tldr": "现有agentic RL方法在粗粒度启发单元上分配信用，难以识别影响下游结果的关键决策点。本文从分支位置和分支后信用分配两个角度分析，提出APPO，考虑决策点广泛分布而非集中在工具调用。该方法可提升多轮工具使用场景下的策略优化效果。",
+      "llm_tags": [
+        "query:multi-reward"
+      ],
+      "matched_query_tag": "query:multi-reward",
+      "matched_query_text": "policy gradient methods for text generation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
