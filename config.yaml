@@ -181,6 +181,48 @@ subscriptions:
           note: ''
       updated_at: '2026-07-07T15:36:12.257Z'
       paused: true
+    - tag: PRM
+      description: 请帮我查找 Process Reward Model 的最新的高质量论文
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: process reward model
+          keyword_cn: 过程奖励模型
+          query: process reward model
+        - keyword: process reward modeling
+          keyword_cn: 过程奖励建模
+          query: process reward modeling
+        - keyword: reward model training
+          keyword_cn: 奖励模型训练
+          query: reward model training
+        - keyword: step-level reward
+          keyword_cn: 步骤级奖励
+          query: step-level reward
+        - keyword: process reward model evaluation
+          keyword_cn: 过程奖励模型评估
+          query: process reward model evaluation
+        - keyword: process reward model survey
+          keyword_cn: 过程奖励模型综述
+          query: process reward model survey
+      intent_queries:
+        - query: latest high quality papers on process reward model
+          query_cn: 过程奖励模型的最新高质量论文
+          enabled: true
+          source: manual
+          note: ''
+        - query: process reward model research advances
+          query_cn: 过程奖励模型研究进展
+          enabled: true
+          source: manual
+          note: ''
+        - query: process reward model survey recent
+          query_cn: 最近的过程奖励模型综述
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-07-07T15:39:23.823Z'
+      paused: true
 source_backends:
   arxiv:
     papers_table: arxiv_papers
